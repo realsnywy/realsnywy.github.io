@@ -1,102 +1,93 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>projectS (W.I.P.)</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+    <title>projectS (WIP)</title>
     <link rel="icon"
-        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text x='50' y='50' font-size='80' dominant-baseline='middle' text-anchor='middle'>🐲</text></svg>"
+    href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text x='50' y='60' font-size='80' dominant-baseline='middle' text-anchor='middle'>🐲</text></svg>"
         type="image/svg+xml">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400&family=Lato:wght@400&display=swap"
+        rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body {
-            font-family: 'Montserrat', sans-serif;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-        }
-
-        .container {
-            text-align: center;
-            flex: 1;
+            background-color: #2d2d2d;
+            color: #e5e5e5;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-        }
-
-        .logo {
-            width: 150px;
-            height: 150px;
-            margin-right: 20px;
-            margin-bottom: 10px;
-        }
-
-        .logo svg {
-            width: 100%;
-            height: 100%;
-        }
-
-        .footer {
-            background-color: #f0f0f0;
-            padding: 10px;
+            height: 100vh;
             text-align: center;
-            font-family: 'Lato', sans-serif;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            height: 50px;
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0 10px;
+            overflow: hidden;
         }
 
         h1 {
+            margin: 10px 0;
             font-weight: bold;
+            font-size: 1.5rem;
+        }
+
+        h2 {
+            margin: 10px 0;
+            font-size: 1.2rem;
+        }
+
+        @media (min-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+        }
+
+        footer {
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 14px;
+            font-family: 'Lato', sans-serif;
+        }
+
+        svg {
+            max-width: 100%;
+            height: auto;
         }
     </style>
 </head>
 
 <body>
-    <div class="container">
-        <div class="logo">
-            <svg width="69.159164mm" height="100.6362mm" viewBox="0 0 261.3893 380.35776" version="1.1" id="svg5"
-                xml:space="preserve" inkscape:version="1.3.2 (091e20e, 2023-11-25, custom)"
-                sodipodi:docname="Mint (Filled).svg" inkscape:export-filename="Mint (B&amp;W).png"
-                inkscape:export-xdpi="320" inkscape:export-ydpi="320"
-                xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-                xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns="http://www.w3.org/2000/svg"
-                xmlns:svg="http://www.w3.org/2000/svg">
-                <sodipodi:namedview id="namedview7" pagecolor="#ffffff" bordercolor="#000000" borderopacity="0.25"
-                    inkscape:showpageshadow="2" inkscape:pageopacity="0.0" inkscape:pagecheckerboard="0"
-                    inkscape:deskcolor="#d1d1d1" inkscape:document-units="mm" showgrid="false" inkscape:zoom="1.0000001"
-                    inkscape:cx="-93.999995" inkscape:cy="206.49999" inkscape:window-width="1920"
-                    inkscape:window-height="1017" inkscape:window-x="-8" inkscape:window-y="-8"
-                    inkscape:window-maximized="1" inkscape:current-layer="layer1" />
-                <defs id="defs2"><inkscape:path-effect effect="mirror_symmetry" start_point="160.46405,70.009061"
-                        end_point="160.46405,442.94534" center_point="160.46405,256.4772" id="path-effect2013"
-                        is_visible="true" lpeversion="1.2" lpesatellites="" mode="free" discard_orig_path="false"
-                        fuse_paths="true" oposite_fuse="false" split_items="false" split_open="false"
-                        link_styles="false" /></defs>
-                <g inkscape:label="Camada 1" inkscape:groupmode="layer" id="layer1"
-                    transform="translate(-4.8284283e-7,-1.4847951e-5)">
+
+    <div>
+        <div>
+            <svg width="200px" height="auto" viewBox="0 0 261.3893 380.35776" xmlns="http://www.w3.org/2000/svg">
+                <g>
                     <path
-                        style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:15.1181;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+                        style="fill:#e5e5e5;stroke:#e5e5e5;stroke-width:15.1181;stroke-linecap:round;stroke-linejoin:round"
                         d="M 160.46405,72.636005 C 137.284,112.71062 125.09089,132.9889 117.44305,176.34825 L 93.387114,148.40499 c -8.509574,44.1769 -3.564749,78.5771 -0.537352,90.26658 L 64.459386,219.74503 c -3.280648,18.60136 -7.889878,54.65133 6.326152,93.7186 C 63.3335,308.9857 47.148596,298.8053 37.328455,293.13775 c -0.0052,56.47112 48.004714,144.10614 123.135595,144.73867 75.13088,-0.63253 123.14078,-88.26755 123.13559,-144.73867 -9.82014,5.66755 -26.00504,15.84795 -33.45708,20.32588 14.21603,-39.06727 9.6068,-75.11724 6.32615,-93.7186 l -28.39037,18.92654 c 3.02739,-11.68948 7.97222,-46.08968 -0.53735,-90.26658 l -24.05594,27.94326 C 195.83721,132.9889 183.6441,112.71062 160.46405,72.636005 Z"
-                        id="path2009" class="UnoptimicedTransforms" sodipodi:nodetypes="cccccccc"
-                        inkscape:path-effect="#path-effect2013"
-                        inkscape:original-d="M 162.5903,68.957004 C 138.02319,111.50911 125.32142,131.68193 117.44305,176.34825 L 93.387114,148.40499 c -8.509574,44.1769 -3.564749,78.5771 -0.537352,90.26658 L 64.459386,219.74503 c -3.280648,18.60136 -7.889878,54.65133 6.326152,93.7186 C 63.3335,308.9857 47.148596,298.8053 37.328455,293.13775 c -0.0052,56.67688 48.355214,144.74518 123.957925,144.74211"
                         transform="translate(-29.769404,-65.077694)" />
                 </g>
             </svg>
-
         </div>
-        <h1>projectS está sendo refeito...</h1>
-        <h2>Sim... ainda.</h2>
+        <h1>projectS is being built from scratch...</h1>
+        <h2>Exciting things to come as we get closer to 2025!</h2>
     </div>
-    <footer class="footer">
-        <p>2024 @ Gabriel Furtado</p>
+
+    <footer>
+        2024 @ Gabriel "Snywy" Furtado
     </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 
 </html>
