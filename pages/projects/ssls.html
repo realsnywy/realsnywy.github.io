@@ -1,0 +1,199 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SSLS - Snywy</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="../../styles.css">
+  <style>
+    .back-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: rgba(var(--text-rgb), 0.7);
+      text-decoration: none;
+      margin-bottom: 30px;
+      font-size: 0.95rem;
+      transition: all 0.3s ease;
+    }
+
+    .back-btn:hover {
+      color: var(--text-primary);
+      transform: translateX(-5px);
+    }
+
+    .project-detail {
+      max-width: 800px;
+      margin: 0 auto;
+      animation: fadeIn 0.8s ease-out;
+    }
+
+    .project-header-detail {
+      margin-bottom: 40px;
+    }
+
+    .project-detail h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+
+    .project-meta-detail {
+      display: flex;
+      gap: 12px;
+      margin-bottom: 20px;
+      flex-wrap: wrap;
+    }
+
+    .section-title {
+      font-size: 1.3rem;
+      font-weight: 700;
+      margin-top: 30px;
+      margin-bottom: 15px;
+      color: var(--text-primary);
+    }
+
+    .project-detail p {
+      line-height: 1.8;
+      color: rgba(var(--text-rgb), 0.85);
+      margin-bottom: 15px;
+    }
+
+    .features-list {
+      list-style: none;
+      padding: 0;
+      margin: 20px 0;
+    }
+
+    .features-list li {
+      padding: 10px 0;
+      padding-left: 30px;
+      color: rgba(var(--text-rgb), 0.8);
+      position: relative;
+    }
+
+    .features-list li:before {
+      content: "▸";
+      position: absolute;
+      left: 0;
+      color: rgba(var(--text-rgb), 0.5);
+    }
+
+    .cta-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: 20px;
+      padding: 10px 20px;
+      background: rgba(var(--text-rgb), 0.1);
+      border: 1px solid rgba(var(--text-rgb), 0.2);
+      border-radius: 4px;
+      color: var(--text-primary);
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .cta-link:hover {
+      background: rgba(var(--text-rgb), 0.15);
+      border-color: rgba(var(--text-rgb), 0.4);
+      transform: translateX(5px);
+    }
+
+    .highlight-box {
+      background: rgba(var(--text-rgb), 0.05);
+      border-left: 3px solid rgba(var(--text-rgb), 0.3);
+      padding: 20px;
+      border-radius: 4px;
+      margin: 20px 0;
+    }
+  </style>
+</head>
+
+<body class="d-flex flex-column min-vh-100" style="background-color: var(--bg-primary); color: var(--text-primary);">
+
+  <main class="container px-3 flex-grow-1 py-4">
+    <div class="project-detail">
+      <a href="#" onclick="parent.navigateTo('projects'); return false;" class="back-btn">
+        <i class="bi bi-arrow-left"></i> Back to Projects
+      </a>
+
+      <div class="project-header-detail">
+        <h1>SSLS - Snywy's Silly Little Script</h1>
+        <div class="project-meta-detail">
+          <span class="project-tag">PowerShell</span>
+          <span class="project-tag">Windows</span>
+          <span class="project-tag">Automation</span>
+          <span class="status-badge status-completed">Completed</span>
+        </div>
+      </div>
+
+      <p>
+        A modular PowerShell automation utility designed for rapid Windows 11 (and 10) setup after a fresh
+        installation. SSLS streamlines the tedious post-formatting process by bundling mass software
+        installation, system optimizations, and quick shortcuts into one comprehensive tool.
+      </p>
+
+      <div class="highlight-box">
+        <strong>Status:</strong> Fully functional and ready to use. Updates are rare and focused on personal
+        needs.
+      </div>
+
+      <h2 class="section-title">✨ Key Features</h2>
+      <ul class="features-list">
+        <li><strong>Mass Installation (Ninite-style):</strong> Select multiple programs and install everything at
+          once via winget</li>
+        <li><strong>System Tweaks (Windows 11 Ready):</strong> Classic context menu restoration, performance
+          mode, debloating, and privacy adjustments</li>
+        <li><strong>Optimization Presets:</strong> Input lag reduction (mouse, fullscreen, HAGS), visual tweaks
+          (dark mode, transparency)</li>
+        <li><strong>Quick Shortcuts:</strong> Direct access to deep Windows settings (activation, default apps,
+          etc.)</li>
+        <li><strong>Smart Maintenance:</strong> Automatic restore point creation, manual command execution,
+          undo functionality</li>
+        <li><strong>Multi-language Support:</strong> Real-time language switching via JSON configuration files
+        </li>
+      </ul>
+
+      <h2 class="section-title">📦 Included Software Categories</h2>
+      <p>The utility includes curated software from the official Windows Package Manager (winget) across these
+        categories:</p>
+      <ul class="features-list">
+        <li>Internet (browsers, communication)</li>
+        <li>Multimedia (players, audio editors)</li>
+        <li>Graphics (image editors, 3D tools)</li>
+        <li>Gaming (launchers, optimizers)</li>
+        <li>Development (IDEs, Git, Node, Python)</li>
+        <li>System (compressors, ISO tools, drivers)</li>
+      </ul>
+
+      <h2 class="section-title">🚀 How to Use</h2>
+      <p>No manual dependency installation needed—the script handles everything automatically.</p>
+      <ol class="features-list" style="list-style: none; padding: 0;">
+        <li style="padding-left: 30px;">Download the latest <code>SSLS_Setup.exe</code> from the Releases page
+        </li>
+        <li style="padding-left: 30px;">Execute the installer (administrator permissions required)</li>
+        <li style="padding-left: 30px;">Navigate through the tabs and select desired software or optimizations
+        </li>
+        <li style="padding-left: 30px;">Click the green Start button to apply changes</li>
+      </ol>
+
+      <h2 class="section-title">⚠️ Important Notes</h2>
+      <div class="highlight-box">
+        This script modifies Windows registry settings and installs third-party software. While tested and
+        including undo options, use at your own risk. The script automatically creates a restore point before
+        applying changes for safety.
+      </div>
+
+      <a href="https://github.com/realsnywy/SSLS" target="_blank" class="cta-link">
+        <i class="bi bi-github"></i> View on GitHub
+      </a>
+
+    </div>
+  </main>
+
+</body>
+
+</html>

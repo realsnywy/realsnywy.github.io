@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Projects - Snywy</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="../styles.css">
+  <style>
+    .projects-container {
+      max-width: 900px;
+      margin: 0 auto;
+      animation: fadeIn 0.8s ease-out;
+    }
+
+    .projects-container h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+
+    .subtitle {
+      color: rgba(var(--text-rgb), 0.7);
+      font-size: 1.1rem;
+      margin-bottom: 40px;
+    }
+
+    .project-item {
+      background: rgba(var(--text-rgb), 0.05);
+      border: 1px solid rgba(var(--text-rgb), 0.1);
+      border-radius: 8px;
+      padding: 25px;
+      margin-bottom: 20px;
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+
+    .project-item:hover {
+      background: rgba(var(--text-rgb), 0.08);
+      border-color: rgba(var(--text-rgb), 0.3);
+      transform: translateY(-5px);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+    }
+
+    .project-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 12px;
+      gap: 15px;
+    }
+
+    .project-title {
+      font-size: 1.4rem;
+      font-weight: 700;
+      margin: 0;
+      color: var(--text-primary);
+    }
+
+    .project-description {
+      color: rgba(var(--text-rgb), 0.8);
+      margin-bottom: 12px;
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+
+    .project-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .project-links {
+      display: flex;
+      gap: 12px;
+    }
+
+    .project-link-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      padding: 6px 12px;
+      background: rgba(var(--text-rgb), 0.1);
+      border: 1px solid rgba(var(--text-rgb), 0.2);
+      border-radius: 4px;
+      color: rgba(var(--text-rgb), 0.8);
+      text-decoration: none;
+      font-size: 0.85rem;
+      transition: all 0.2s ease;
+    }
+
+    .project-link-btn:hover {
+      background: rgba(var(--text-rgb), 0.15);
+      border-color: rgba(var(--text-rgb), 0.4);
+      color: var(--text-primary);
+    }
+
+    .section-heading {
+      font-size: 1.3rem;
+      font-weight: 700;
+      margin-top: 40px;
+      margin-bottom: 20px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid rgba(var(--text-rgb), 0.2);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+    .section-heading:first-of-type {
+      margin-top: 0;
+    }
+
+    .project-item-static {
+      cursor: default;
+    }
+
+    .project-item-static:hover {
+      transform: none;
+      box-shadow: none;
+    }
+  </style>
+</head>
+
+<body class="d-flex flex-column min-vh-100" style="background-color: var(--bg-primary); color: var(--text-primary);">
+
+  <main class="container px-3 flex-grow-1 py-4">
+    <div class="projects-container">
+      <h1>My Projects</h1>
+      <p class="subtitle">A collection of my creative endeavors. Click on any project to learn more.</p>
+
+      <!-- Completed Projects -->
+      <h2 class="section-heading">✅ Completed</h2>
+
+      <!-- SSLS -->
+      <div class="project-item" onclick="parent.navigateTo('projects/ssls')">
+        <div class="project-header">
+          <h3 class="project-title">SSLS - Snywy's Silly Little Script</h3>
+          <span class="status-badge status-completed">Completed</span>
+        </div>
+        <p class="project-description">
+          A modular PowerShell automation utility for Windows 11 (and 10) post-formatting setup. Install programs
+          in bulk, apply system tweaks, and optimize performance with ease.
+        </p>
+        <div class="project-footer">
+          <div>
+            <span class="project-tag">PowerShell</span>
+            <span class="project-tag">Windows</span>
+            <span class="project-tag">Automation</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/realsnywy/SSLS" class="project-link-btn" target="_blank"
+              onclick="event.stopPropagation()">
+              <i class="bi bi-github"></i> Repo
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- MagicCube3D -->
+      <div class="project-item" onclick="parent.navigateTo('projects/magiccube3d')">
+        <div class="project-header">
+          <h3 class="project-title">MagicCube3D</h3>
+          <span class="status-badge status-completed">Completed</span>
+        </div>
+        <p class="project-description">
+          An interactive JavaFX 3D Rubik's Cube simulator for educational purposes. Visualize algorithms,
+          practice solving techniques, and explore patterns with an intuitive interface.
+        </p>
+        <div class="project-footer">
+          <div>
+            <span class="project-tag">Java</span>
+            <span class="project-tag">JavaFX</span>
+            <span class="project-tag">3D Graphics</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/realsnywy/projeto-ccmp0151" class="project-link-btn" target="_blank"
+              onclick="event.stopPropagation()">
+              <i class="bi bi-github"></i> Repo
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- In Progress -->
+      <h2 class="section-heading">⚙️ In Progress</h2>
+
+      <!-- BeePR -->
+      <div class="project-item" onclick="parent.navigateTo('projects/beepr')">
+        <div class="project-header">
+          <h3 class="project-title">🐝 BeePR</h3>
+          <span class="status-badge status-wip">Work in Progress</span>
+        </div>
+        <p class="project-description">
+          A multi-purpose Discord bot featuring a music system, fun commands, and utility features. Currently
+          being actively developed with frequent updates and new functionality.
+        </p>
+        <div class="project-footer">
+          <div>
+            <span class="project-tag">Python</span>
+            <span class="project-tag">Discord.py</span>
+            <span class="project-tag">Bot</span>
+          </div>
+          <p style="margin: 0; font-size: 0.85rem; color: var(--soft-text);">
+            <i class="bi bi-lock me-1"></i>Source code not publicly available yet.
+          </p>
+        </div>
+      </div>
+
+      <!-- Ideas -->
+      <h2 class="section-heading">💡 Ideas</h2>
+
+      <div class="project-item project-item-static">
+        <div class="project-header">
+          <h3 class="project-title">Project A[MP]</h3>
+          <span class="status-badge status-unplanned">Unplanned</span>
+        </div>
+        <p class="project-description">
+          A modern audio player inspired by classic Winamp: lightweight, skinnable, plugin-friendly, and built for
+          desktop and mobile. Planned features include tracker and retro format support, visualizers, equalizer,
+          Last.fm scrobbling, and Discord Rich Presence.
+        </p>
+        <div class="project-footer">
+          <div>
+            <span class="project-tag">Flutter</span>
+            <span class="project-tag">Dart</span>
+            <span class="project-tag">Audio</span>
+            <span class="project-tag">Cross-platform</span>
+          </div>
+          <p style="margin: 0; font-size: 0.85rem; color: rgba(var(--text-rgb), 0.6);">
+            Concept saved in Notion.
+          </p>
+        </div>
+      </div>
+
+      <div class="project-item project-item-static">
+        <div class="project-header">
+          <h3 class="project-title">Project F[Fighting]</h3>
+          <span class="status-badge status-unplanned">Unplanned</span>
+        </div>
+        <p class="project-description">
+          A 3D fighter inspired by Virtua Fighter and Tekken, focused on precise timing, technical depth, and a
+          polished polygon-era visual identity. The goal is a classic arcade feel with modern smoothness.
+        </p>
+        <div class="project-footer">
+          <div>
+            <span class="project-tag">Fighting</span>
+            <span class="project-tag">3D</span>
+            <span class="project-tag">Arcade</span>
+            <span class="project-tag">Combo System</span>
+          </div>
+          <p style="margin: 0; font-size: 0.85rem; color: rgba(var(--text-rgb), 0.6);">
+            Concept saved in Notion.
+          </p>
+        </div>
+      </div>
+
+      <div class="project-item project-item-static">
+        <div class="project-header">
+          <h3 class="project-title">Project R[Racing]</h3>
+          <span class="status-badge status-unplanned">Unplanned</span>
+        </div>
+        <p class="project-description">
+          A fast-paced arcade racer inspired by Virtua Racing and Ridge Racer with low-poly visuals, bright
+          high-contrast colors, drift-heavy handling, and compact circuit tracks that are easy to learn but hard
+          to master.
+        </p>
+        <div class="project-footer">
+          <div>
+            <span class="project-tag">Racing</span>
+            <span class="project-tag">Arcade Physics</span>
+            <span class="project-tag">Low-poly</span>
+            <span class="project-tag">90s Style</span>
+          </div>
+          <p style="margin: 0; font-size: 0.85rem; color: rgba(var(--text-rgb), 0.6);">
+            Concept saved in Notion.
+          </p>
+        </div>
+      </div>
+
+      <div class="project-item project-item-static">
+        <div class="project-header">
+          <h3 class="project-title">Project P[Platforming]</h3>
+          <span class="status-badge status-unplanned">Unplanned</span>
+        </div>
+        <p class="project-description">
+          A high-speed 3D action-platformer with a dragon protagonist, inspired by the ambition and scale of
+          Sonic 06. Designed around momentum acts, non-stop rush stages, and aerial on-rails combat sequences.
+        </p>
+        <div class="project-footer">
+          <div>
+            <span class="project-tag">Action Platformer</span>
+            <span class="project-tag">High-speed</span>
+            <span class="project-tag">3D</span>
+            <span class="project-tag">Aerial Combat</span>
+          </div>
+          <p style="margin: 0; font-size: 0.85rem; color: rgba(var(--text-rgb), 0.6);">
+            Concept saved in Notion.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+</body>
+
+</html>

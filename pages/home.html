@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Home - Snywy</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="../styles.css">
+  <style>
+    .hero-section {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      animation: fadeIn 0.8s ease-out;
+    }
+
+    .hero-section h1 {
+      font-size: 3rem;
+      font-weight: 700;
+      margin-bottom: 20px;
+      background: linear-gradient(135deg, var(--text-primary), rgba(var(--text-rgb), 0.7));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .hero-section p {
+      font-size: 1.2rem;
+      color: rgba(var(--text-rgb), 0.8);
+      margin-bottom: 30px;
+      max-width: 600px;
+    }
+
+    .cta-buttons {
+      display: flex;
+      gap: 15px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 30px;
+    }
+
+    .spotlight-text {
+      color: rgba(var(--text-rgb), 0.6);
+      font-size: 0.9rem;
+      margin-top: 40px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    .social-links {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      margin-top: 40px;
+      font-size: 1.5rem;
+    }
+
+    .social-links a {
+      color: rgba(var(--text-rgb), 0.6);
+      transition: all 0.3s ease;
+    }
+
+    .social-links a:hover {
+      color: var(--text-primary);
+      transform: translateY(-3px);
+    }
+  </style>
+</head>
+
+<body class="d-flex flex-column min-vh-100" style="background-color: var(--bg-primary); color: var(--text-primary);">
+
+  <main class="container px-3 flex-grow-1 d-flex flex-column justify-content-center align-items-center">
+    <div class="hero-section">
+      <h1>Welcome, I'm Snywy</h1>
+      <p>A 23-year-old Brazilian creative juggling game development, music production, and graphic design. Sometimes
+        quiet, always thinking, perpetually caffeinated.</p>
+
+      <div style="margin-top: 40px; margin-bottom: 40px;">
+        <img src="https://i.imgur.com/E3wHUia.png" class="img-fluid" style="max-width:400px;"
+          alt="Creative workspace illustration">
+      </div>
+
+      <div class="cta-buttons">
+        <a href="#" onclick="parent.navigateTo('projects'); return false;" class="btn btn-outline-light custom-btn">
+          <i class="bi bi-rocket me-2"></i>Explore My Work
+        </a>
+        <a href="#" onclick="parent.navigateTo('about'); return false;" class="btn btn-outline-light custom-btn">
+          <i class="bi bi-person-circle me-2"></i>Get to Know Me
+        </a>
+      </div>
+
+      <div class="social-links">
+        <a href="https://linktr.ee/snywy" target="_blank" title="Link Tree">
+          <i class="bi bi-tree-fill"></i>
+        </a>
+        <a href="https://github.com/realsnywy" target="_blank" title="GitHub">
+          <i class="bi bi-github"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/gfcleao/" target="_blank" title="LinkedIn">
+          <i class="bi bi-linkedin"></i>
+        </a>
+        <a href="https://www.facebook.com/gfcleao/" target="_blank" title="Facebook">
+          <i class="bi bi-facebook"></i>
+        </a>
+      </div>
+    </div>
+  </main>
+
+</body>
+
+</html>
