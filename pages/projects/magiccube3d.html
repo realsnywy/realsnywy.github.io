@@ -92,24 +92,38 @@
       margin: 20px 0;
     }
 
-    .cta-link {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      margin-top: 20px;
-      padding: 10px 20px;
-      background: rgba(var(--text-rgb), 0.1);
-      border: 1px solid rgba(var(--text-rgb), 0.2);
-      border-radius: 4px;
-      color: var(--text-primary);
-      text-decoration: none;
-      transition: all 0.3s ease;
+    .project-cta {
+      margin-top: 26px;
+      display: flex;
+      justify-content: center;
     }
 
-    .cta-link:hover {
-      background: rgba(var(--text-rgb), 0.15);
-      border-color: rgba(var(--text-rgb), 0.4);
-      transform: translateY(-3px);
+    .project-cta .custom-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      border-radius: 6px;
+      text-decoration: none;
+    }
+
+    .github-btn {
+      background: #24292e;
+      border-color: #24292e;
+      color: #ffffff;
+    }
+
+    .github-btn:hover {
+      background: #1a1f24;
+      border-color: #1a1f24;
+      color: #ffffff;
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+    }
+
+    @media (max-width: 480px) {
+      .project-cta .custom-btn {
+        width: min(100%, 320px);
+      }
     }
   </style>
 </head>
@@ -193,10 +207,12 @@
         of a university Computer Science program.
       </div>
 
-      <a href="https://github.com/realsnywy/projeto-ccmp0151" target="_blank" rel="noopener noreferrer"
-        class="cta-link">
-        <i class="bi bi-github"></i> View on GitHub
-      </a>
+      <div class="project-cta">
+        <a href="https://github.com/realsnywy/projeto-ccmp0151" target="_blank" rel="noopener noreferrer"
+          class="btn custom-btn github-btn">
+          <i class="bi bi-github" aria-hidden="true"></i>View on GitHub
+        </a>
+      </div>
 
     </div>
   </main>

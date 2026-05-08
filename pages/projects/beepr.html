@@ -139,6 +139,31 @@
     .command-table th {
       background: rgba(var(--text-rgb), 0.05);
     }
+
+    .project-cta {
+      margin-top: 28px;
+      padding-top: 20px;
+      border-top: 1px solid rgba(var(--text-rgb), 0.12);
+      display: flex;
+      justify-content: center;
+    }
+
+    .discord-btn {
+      background: #5865F2;
+      border-color: #5865F2;
+      color: #ffffff;
+      opacity: 0.45;
+      cursor: not-allowed;
+      pointer-events: none;
+      box-shadow: none;
+    }
+
+    .discord-btn:disabled {
+      background: #5865F2;
+      border-color: #5865F2;
+      color: #ffffff;
+      opacity: 0.45;
+    }
   </style>
 </head>
 
@@ -358,6 +383,13 @@
       <div class="highlight-box">
         <strong>⚠️ Source Code:</strong> Currently not open-source. This is partly due to library licensing
         concerns and the heavy WIP nature of the project. Check back later for potential updates to this status.
+      </div>
+
+      <div class="project-cta">
+        <button type="button" class="btn custom-btn discord-btn" disabled aria-disabled="true"
+          title="Temporarily unavailable while BeePR is in development">
+          <i class="bi bi-discord me-2" aria-hidden="true"></i>Add to Server
+        </button>
       </div>
 
     </div>

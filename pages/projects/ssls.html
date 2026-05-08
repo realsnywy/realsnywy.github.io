@@ -117,45 +117,53 @@
       color: rgba(var(--text-rgb), 0.5);
     }
 
-    .cta-link {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      margin-top: 20px;
-      padding: 10px 20px;
-      background: rgba(var(--text-rgb), 0.1);
-      border: 1px solid rgba(var(--text-rgb), 0.2);
-      border-radius: 4px;
-      color: var(--text-primary);
-      text-decoration: none;
-      transition: all 0.3s ease;
-    }
-
-    .cta-link:hover {
-      background: rgba(var(--text-rgb), 0.15);
-      border-color: rgba(var(--text-rgb), 0.4);
-      transform: translateY(-3px);
-    }
-
-    .download-link {
-      background: rgba(62, 160, 90, 0.14);
-      border-color: rgba(62, 160, 90, 0.35);
-    }
-
-    .download-link:hover {
-      background: rgba(62, 160, 90, 0.22);
-      border-color: rgba(62, 160, 90, 0.55);
-    }
-
     .cta-actions {
       display: flex;
       gap: 12px;
       flex-wrap: wrap;
-      margin-top: 20px;
+      margin-top: 28px;
+      justify-content: center;
     }
 
-    .cta-actions .cta-link {
-      margin-top: 0;
+    .cta-actions .custom-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      border-radius: 6px;
+      text-decoration: none;
+    }
+
+    .download-btn {
+      background: #3ea05a;
+      border-color: #3ea05a;
+      color: #ffffff;
+    }
+
+    .download-btn:hover {
+      background: #32824a;
+      border-color: #32824a;
+      color: #ffffff;
+      box-shadow: 0 6px 16px rgba(62, 160, 90, 0.35);
+    }
+
+    .github-btn {
+      background: #24292e;
+      border-color: #24292e;
+      color: #ffffff;
+    }
+
+    .github-btn:hover {
+      background: #1a1f24;
+      border-color: #1a1f24;
+      color: #ffffff;
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+    }
+
+    @media (max-width: 480px) {
+      .cta-actions .custom-btn {
+        width: min(100%, 320px);
+      }
     }
 
     .highlight-box {
@@ -260,13 +268,13 @@
       </div>
 
       <div class="cta-actions">
-        <a class="cta-link download-link"
+        <a class="btn custom-btn download-btn"
           href="https://github.com/realsnywy/SSLS/releases/latest/download/SSLS_Setup.exe" target="_blank"
           rel="noopener noreferrer" download="SSLS_Setup.exe">
-          <i class="bi bi-download"></i> Download
+          <i class="bi bi-download" aria-hidden="true"></i>Download
         </a>
-        <a href="https://github.com/realsnywy/SSLS" target="_blank" class="cta-link">
-          <i class="bi bi-github"></i> View on GitHub
+        <a href="https://github.com/realsnywy/SSLS" target="_blank" class="btn custom-btn github-btn">
+          <i class="bi bi-github" aria-hidden="true"></i>View on GitHub
         </a>
       </div>
 

@@ -46,6 +46,18 @@
       max-width: 600px;
     }
 
+    .hero-art {
+      margin: 40px 0;
+      width: min(100%, 420px);
+    }
+
+    .hero-art img {
+      max-width: 400px;
+      width: 100%;
+      display: block;
+      margin: 0 auto;
+    }
+
     .cta-buttons {
       display: flex;
       gap: 15px;
@@ -79,6 +91,59 @@
       color: var(--text-primary);
       transform: translateY(-3px);
     }
+
+    @media (max-width: 768px) {
+      .hero-section {
+        padding-top: 24px;
+        padding-bottom: 14px;
+      }
+
+      .hero-section h1 {
+        font-size: clamp(2.2rem, 9vw, 3rem);
+        margin-bottom: 14px;
+        line-height: 1.1;
+      }
+
+      .hero-section p {
+        font-size: 1.05rem;
+        line-height: 1.6;
+        margin-bottom: 20px;
+      }
+
+      .hero-art {
+        margin: 26px 0 20px;
+      }
+
+      .cta-buttons {
+        width: 100%;
+        gap: 10px;
+        margin-top: 18px;
+      }
+
+      .cta-buttons .custom-btn {
+        width: min(100%, 320px);
+        justify-content: center;
+      }
+
+      .social-links {
+        margin-top: 26px;
+        gap: 18px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .hero-section p {
+        font-size: 1rem;
+      }
+
+      .hero-art {
+        margin: 22px 0 16px;
+      }
+
+      .social-links {
+        font-size: 1.35rem;
+      }
+    }
   </style>
 </head>
 
@@ -90,9 +155,8 @@
       <p>A 23-year-old Brazilian creative juggling game development, music production, and graphic design. Sometimes
         quiet, always thinking, perpetually caffeinated.</p>
 
-      <div style="margin-top: 40px; margin-bottom: 40px;">
-        <img src="https://i.imgur.com/E3wHUia.png" class="img-fluid" style="max-width:400px;"
-          alt="Creative workspace illustration">
+      <div class="hero-art">
+        <img src="https://i.imgur.com/E3wHUia.png" class="img-fluid" alt="Creative workspace illustration">
       </div>
 
       <div class="cta-buttons">

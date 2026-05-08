@@ -48,7 +48,7 @@
 <body class="d-flex flex-column min-vh-100 fade-in">
 
     <!-- Navigation Bar -->
-    <nav class="navbar navbar-dark sticky-top navbar-custom">
+    <nav class="navbar navbar-dark navbar-expand-md sticky-top navbar-custom">
         <div class="container-fluid">
             <a id="logo-home" class="navbar-brand" href="#" onclick="navigateTo('home'); return false;">
                 <svg class="navbar-logo" width="173.119mm" height="64.072998mm" viewBox="0 0 654.30807 242.16567"
@@ -84,29 +84,35 @@
                     </g>
                 </svg>
             </a>
-            <ul class="nav ms-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="#" onclick="navigateTo('home'); return false;">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#" onclick="navigateTo('about'); return false;">About</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#" onclick="navigateTo('projects'); return false;">Projects</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#" onclick="navigateTo('arsenal'); return false;">Arsenal</a>
-                </li>
-            </ul>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main-nav"
+                aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse justify-content-end" id="main-nav">
+                <ul class="navbar-nav align-items-md-center">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" onclick="navigateTo('home'); return false;">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" onclick="navigateTo('about'); return false;">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" onclick="navigateTo('projects'); return false;">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" onclick="navigateTo('arsenal'); return false;">Arsenal</a>
+                    </li>
+                </ul>
+            </div>
         </div>
     </nav>
 
     <audio id="logo-squeak" src="squeak.wav" preload="auto"></audio>
 
     <!-- Main Content Area -->
-    <main class="flex-grow-1" style="display: flex; flex-direction: column; min-height: calc(100vh - 140px);">
-        <iframe id="content-frame" class="content-frame" src="pages/home.html" frameborder="0"
-            style="flex: 1; width: 100%; border: none;"></iframe>
+    <main class="app-main flex-grow-1">
+        <iframe id="content-frame" class="content-frame" src="pages/home.html" frameborder="0"></iframe>
     </main>
 
     <!-- Footer -->
@@ -123,6 +129,12 @@
         function navigateTo(page) {
             const frame = document.getElementById('content-frame');
             frame.src = `pages/${page}.html`;
+
+            const nav = document.getElementById('main-nav');
+            if (nav && nav.classList.contains('show')) {
+                bootstrap.Collapse.getOrCreateInstance(nav).hide();
+            }
+
             window.scrollTo(0, 0);
         }
 
