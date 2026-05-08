@@ -5,6 +5,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Home - Snywy</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
@@ -86,11 +88,13 @@
       </div>
 
       <div class="cta-buttons">
-        <a href="#" onclick="parent.navigateTo('projects'); return false;" class="btn btn-outline-light custom-btn">
-          <i class="bi bi-rocket me-2"></i>Explore My Work
+        <a href="#" onclick="parent.navigateTo('projects'); return false;" class="btn custom-btn primary"
+          aria-label="Explore my projects" title="Explore my projects">
+          <i class="bi bi-rocket-fill me-2" aria-hidden="true"></i>Explore My Work
         </a>
-        <a href="#" onclick="parent.navigateTo('about'); return false;" class="btn btn-outline-light custom-btn">
-          <i class="bi bi-person-circle me-2"></i>Get to Know Me
+        <a href="#" onclick="parent.navigateTo('about'); return false;" class="btn custom-btn outline"
+          aria-label="Learn about me" title="Learn about me">
+          <i class="bi bi-person-fill me-2" aria-hidden="true"></i>Get to Know Me
         </a>
       </div>
 

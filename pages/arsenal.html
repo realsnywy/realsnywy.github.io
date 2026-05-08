@@ -5,6 +5,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Arsenal - Snywy</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
@@ -67,8 +69,11 @@
     }
 
     .skill-icon {
-      font-size: 2rem;
+      width: 36px;
+      height: 36px;
       margin-bottom: 8px;
+      display: block;
+      object-fit: contain;
     }
 
     .skill-name {
@@ -123,35 +128,43 @@
         <h2>Languages & Frameworks</h2>
         <div class="skill-grid">
           <div class="skill-card">
-            <div class="skill-icon">⚙️</div>
+            <span class="skill-icon" role="img" aria-label="C logo"
+              style="-webkit-mask: url('https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/c.svg') no-repeat center/contain; mask: url('https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/c.svg') no-repeat center/contain; background-color:#A8B9CC;"></span>
             <div class="skill-name">C</div>
           </div>
           <div class="skill-card">
-            <div class="skill-icon">☕</div>
+            <span class="skill-icon" role="img" aria-label="Java (Eclipse Adoptium) logo"
+              style="-webkit-mask: url('https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/eclipseadoptium.svg') no-repeat center/contain; mask: url('https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/eclipseadoptium.svg') no-repeat center/contain; background-color:#FF1464;"></span>
             <div class="skill-name">Java</div>
           </div>
           <div class="skill-card">
-            <div class="skill-icon">🐍</div>
+            <span class="skill-icon" role="img" aria-label="Python logo"
+              style="-webkit-mask: url('https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/python.svg') no-repeat center/contain; mask: url('https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/python.svg') no-repeat center/contain; background-color:#3776AB;"></span>
             <div class="skill-name">Python</div>
           </div>
           <div class="skill-card">
-            <div class="skill-icon">🖥️</div>
+            <span class="skill-icon" role="img" aria-label="PHP logo"
+              style="-webkit-mask: url('https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/php.svg') no-repeat center/contain; mask: url('https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/php.svg') no-repeat center/contain; background-color:#777BB4;"></span>
             <div class="skill-name">PHP</div>
           </div>
           <div class="skill-card">
-            <div class="skill-icon">🗄️</div>
+            <span class="skill-icon" role="img" aria-label="MySQL logo"
+              style="-webkit-mask: url('https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/mysql.svg') no-repeat center/contain; mask: url('https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/mysql.svg') no-repeat center/contain; background-color:#4479A1;"></span>
             <div class="skill-name">MySQL</div>
           </div>
           <div class="skill-card">
-            <div class="skill-icon">🌐</div>
+            <span class="skill-icon" role="img" aria-label="HTML5 logo"
+              style="-webkit-mask: url('https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/html5.svg') no-repeat center/contain; mask: url('https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/html5.svg') no-repeat center/contain; background-color:#E34F26;"></span>
             <div class="skill-name">HTML</div>
           </div>
           <div class="skill-card">
-            <div class="skill-icon">🎨</div>
+            <span class="skill-icon" role="img" aria-label="CSS3 logo"
+              style="-webkit-mask: url('https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/css3.svg') no-repeat center/contain; mask: url('https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/css3.svg') no-repeat center/contain; background-color:#1572B6;"></span>
             <div class="skill-name">CSS</div>
           </div>
           <div class="skill-card">
-            <div class="skill-icon">📱</div>
+            <span class="skill-icon" role="img" aria-label="Bootstrap logo"
+              style="-webkit-mask: url('https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/bootstrap.svg') no-repeat center/contain; mask: url('https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/bootstrap.svg') no-repeat center/contain; background-color:#7952B3;"></span>
             <div class="skill-name">Bootstrap</div>
           </div>
         </div>
@@ -161,27 +174,33 @@
         <h2>Tools & Creative Software</h2>
         <div class="skill-grid">
           <div class="skill-card">
-            <div class="skill-icon">💻</div>
+            <span class="skill-icon" role="img" aria-label="VS Code logo"
+              style="-webkit-mask: url('https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/visualstudiocode.svg') no-repeat center/contain; mask: url('https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/visualstudiocode.svg') no-repeat center/contain; background-color:#007ACC;"></span>
             <div class="skill-name">VS Code</div>
           </div>
           <div class="skill-card">
-            <div class="skill-icon">🔗</div>
+            <span class="skill-icon" role="img" aria-label="Git logo"
+              style="-webkit-mask: url('https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/git.svg') no-repeat center/contain; mask: url('https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/git.svg') no-repeat center/contain; background-color:#F05032;"></span>
             <div class="skill-name">Git</div>
           </div>
           <div class="skill-card">
-            <div class="skill-icon">🎮</div>
+            <span class="skill-icon" role="img" aria-label="Godot logo"
+              style="-webkit-mask: url('https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/godotengine.svg') no-repeat center/contain; mask: url('https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/godotengine.svg') no-repeat center/contain; background-color:#478CBF;"></span>
             <div class="skill-name">Godot</div>
           </div>
           <div class="skill-card">
-            <div class="skill-icon">🎨</div>
+            <span class="skill-icon" role="img" aria-label="Blender logo"
+              style="-webkit-mask: url('https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/blender.svg') no-repeat center/contain; mask: url('https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/blender.svg') no-repeat center/contain; background-color:#F5792A;"></span>
             <div class="skill-name">Blender</div>
           </div>
           <div class="skill-card">
-            <div class="skill-icon">🔴</div>
+            <span class="skill-icon" role="img" aria-label="Raspberry Pi logo"
+              style="-webkit-mask: url('https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/raspberrypi.svg') no-repeat center/contain; mask: url('https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/raspberrypi.svg') no-repeat center/contain; background-color:#C51A4A;"></span>
             <div class="skill-name">Raspberry Pi</div>
           </div>
           <div class="skill-card">
-            <div class="skill-icon">🪟</div>
+            <span class="skill-icon" role="img" aria-label="Windows logo"
+              style="-webkit-mask: url('https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/windows.svg') no-repeat center/contain; mask: url('https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/windows.svg') no-repeat center/contain; background-color:#0078D6;"></span>
             <div class="skill-name">Windows</div>
           </div>
         </div>
