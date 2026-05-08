@@ -147,45 +147,88 @@
   </style>
 </head>
 
-<body class="d-flex flex-column min-vh-100" style="background-color: var(--bg-primary); color: var(--text-primary);">
+<body class="d-flex flex-column min-vh-100" data-i18n-title="homeTitle"
+  style="background-color: var(--bg-primary); color: var(--text-primary);">
 
   <main class="container px-3 flex-grow-1 d-flex flex-column justify-content-center align-items-center">
     <div class="hero-section">
-      <h1>Welcome, I'm Snywy</h1>
-      <p>A 23-year-old Brazilian creative juggling game development, music production, and graphic design. Sometimes
+      <h1 data-i18n="homeHeading">Welcome, I'm Snywy</h1>
+      <p data-i18n="homeIntro">A 23-year-old Brazilian creative juggling game development, music production, and graphic
+        design. Sometimes
         quiet, always thinking, perpetually caffeinated.</p>
 
       <div class="hero-art">
-        <img src="https://i.imgur.com/E3wHUia.png" class="img-fluid" alt="Creative workspace illustration">
+        <img src="https://i.imgur.com/E3wHUia.png" class="img-fluid" alt="Creative workspace illustration"
+          data-i18n-alt="homeHeroAlt">
       </div>
 
       <div class="cta-buttons">
         <a href="#" onclick="parent.navigateTo('projects'); return false;" class="btn custom-btn primary"
-          aria-label="Explore my projects" title="Explore my projects">
-          <i class="bi bi-rocket-fill me-2" aria-hidden="true"></i>Explore My Work
+          aria-label="Explore my projects" title="Explore my projects" data-i18n-aria-label="homeCtaProjects"
+          data-i18n-title="homeCtaProjects">
+          <i class="bi bi-rocket-fill me-2" aria-hidden="true"></i><span data-i18n="homeCtaProjects">Explore My
+            Work</span>
         </a>
         <a href="#" onclick="parent.navigateTo('about'); return false;" class="btn custom-btn outline"
-          aria-label="Learn about me" title="Learn about me">
-          <i class="bi bi-person-fill me-2" aria-hidden="true"></i>Get to Know Me
+          aria-label="Learn about me" title="Learn about me" data-i18n-aria-label="homeCtaAbout"
+          data-i18n-title="homeCtaAbout">
+          <i class="bi bi-person-fill me-2" aria-hidden="true"></i><span data-i18n="homeCtaAbout">Get to Know Me</span>
         </a>
       </div>
 
       <div class="social-links">
-        <a href="https://linktr.ee/snywy" target="_blank" title="Link Tree">
+        <a href="https://linktr.ee/snywy" target="_blank" title="Link Tree" data-i18n-title="homeLinkTree">
           <i class="bi bi-tree-fill"></i>
         </a>
-        <a href="https://github.com/realsnywy" target="_blank" title="GitHub">
+        <a href="https://github.com/realsnywy" target="_blank" title="GitHub" data-i18n-title="homeGitHub">
           <i class="bi bi-github"></i>
         </a>
-        <a href="https://www.linkedin.com/in/gfcleao/" target="_blank" title="LinkedIn">
+        <a href="https://www.linkedin.com/in/gfcleao/" target="_blank" title="LinkedIn" data-i18n-title="homeLinkedIn">
           <i class="bi bi-linkedin"></i>
         </a>
-        <a href="https://www.facebook.com/gfcleao/" target="_blank" title="Facebook">
+        <a href="https://www.facebook.com/gfcleao/" target="_blank" title="Facebook" data-i18n-title="homeFacebook">
           <i class="bi bi-facebook"></i>
         </a>
       </div>
     </div>
   </main>
+
+  <script src="../lang.js"></script>
+  <script>
+    const pageTranslations = {
+      en: {
+        homeTitle: 'Home - Snywy',
+        homeHeading: "Welcome, I'm Snywy",
+        homeIntro: 'A 23-year-old Brazilian creative juggling game development, music production, and graphic design. Sometimes quiet, always thinking, perpetually caffeinated.',
+        homeCtaProjects: 'Explore My Work',
+        homeCtaAbout: 'Get to Know Me',
+        homeHeroAlt: 'Creative workspace illustration',
+        homeLinkTree: 'Link Tree',
+        homeGitHub: 'GitHub',
+        homeLinkedIn: 'LinkedIn',
+        homeFacebook: 'Facebook'
+      },
+      pt: {
+        homeTitle: 'Início - Snywy',
+        homeHeading: 'Bem-vindo, eu sou Snywy',
+        homeIntro: 'Um criativo brasileiro de 23 anos que equilibra desenvolvimento de jogos, produção musical e design gráfico. Às vezes quieto, sempre pensando e eternamente movido a café.',
+        homeCtaProjects: 'Ver Projetos',
+        homeCtaAbout: 'Conheça Mais',
+        homeHeroAlt: 'Ilustração de espaço criativo',
+        homeLinkTree: 'Link Tree',
+        homeGitHub: 'GitHub',
+        homeLinkedIn: 'LinkedIn',
+        homeFacebook: 'Facebook'
+      }
+    };
+
+    function applyLanguageFromParent(language) {
+      window.PortfolioLanguage.applyTranslations(pageTranslations, language);
+    }
+
+    window.applyLanguageFromParent = applyLanguageFromParent;
+    window.PortfolioLanguage.initPageLanguage(pageTranslations);
+  </script>
 
 </body>
 

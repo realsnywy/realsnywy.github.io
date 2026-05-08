@@ -45,7 +45,7 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 
-<body class="d-flex flex-column min-vh-100 fade-in">
+<body class="d-flex flex-column min-vh-100 fade-in" data-i18n-title="indexTitle">
 
     <!-- Navigation Bar -->
     <nav class="navbar navbar-dark navbar-expand-md sticky-top navbar-custom">
@@ -92,16 +92,29 @@
             <div class="collapse navbar-collapse justify-content-end" id="main-nav">
                 <ul class="navbar-nav align-items-md-center">
                     <li class="nav-item">
-                        <a class="nav-link" href="#" onclick="navigateTo('home'); return false;">Home</a>
+                        <a class="nav-link" href="#" onclick="navigateTo('home'); return false;"
+                            data-i18n="navHome">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#" onclick="navigateTo('about'); return false;">About</a>
+                        <a class="nav-link" href="#" onclick="navigateTo('about'); return false;"
+                            data-i18n="navAbout">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#" onclick="navigateTo('projects'); return false;">Projects</a>
+                        <a class="nav-link" href="#" onclick="navigateTo('projects'); return false;"
+                            data-i18n="navProjects">Projects</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#" onclick="navigateTo('arsenal'); return false;">Arsenal</a>
+                        <a class="nav-link" href="#" onclick="navigateTo('arsenal'); return false;"
+                            data-i18n="navArsenal">Arsenal</a>
+                    </li>
+                    <li class="nav-item">
+                        <div class="language-selector" role="group" aria-label="Language selector"
+                            data-i18n-aria-label="languageSelectorAria">
+                            <button type="button" id="lang-en" class="language-btn"
+                                onclick="setLanguage('en')">EN</button>
+                            <button type="button" id="lang-pt" class="language-btn"
+                                onclick="setLanguage('pt')">PT</button>
+                        </div>
                     </li>
                 </ul>
             </div>
@@ -116,15 +129,61 @@
     </main>
 
     <!-- Footer -->
-    <footer class="footer py-4">
+    <footer class="footer py-4" data-i18n="footerText">
         2026 @ Gabriel "Snywy" Furtado
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
+    <script src="lang.js"></script>
 
     <script>
+        const indexTranslations = {
+            en: {
+                indexTitle: 'Snywy',
+                navHome: 'Home',
+                navAbout: 'About',
+                navProjects: 'Projects',
+                navArsenal: 'Arsenal',
+                footerText: '2026 @ Gabriel "Snywy" Furtado',
+                languageSelectorAria: 'Language selector'
+            },
+            pt: {
+                indexTitle: 'Snywy',
+                navHome: 'Início',
+                navAbout: 'Sobre',
+                navProjects: 'Projetos',
+                navArsenal: 'Arsenal',
+                footerText: '2026 @ Gabriel "Snywy" Furtado',
+                languageSelectorAria: 'Seletor de idioma'
+            }
+        };
+
+        function getActiveLanguage() {
+            return window.PortfolioLanguage.getCurrentLanguage();
+        }
+
+        function updateLanguageButtons(language) {
+            document.getElementById('lang-en')?.classList.toggle('active', language === 'en');
+            document.getElementById('lang-pt')?.classList.toggle('active', language === 'pt');
+        }
+
+        function applyLanguage(language) {
+            window.PortfolioLanguage.applyTranslations(indexTranslations, language);
+            updateLanguageButtons(language);
+
+            const frame = document.getElementById('content-frame');
+            if (frame && frame.contentWindow && typeof frame.contentWindow.applyLanguageFromParent === 'function') {
+                frame.contentWindow.applyLanguageFromParent(language);
+            }
+        }
+
+        function setLanguage(language) {
+            const normalized = window.PortfolioLanguage.setCurrentLanguage(language);
+            applyLanguage(normalized);
+        }
+
         // Navigation function
         function navigateTo(page) {
             const frame = document.getElementById('content-frame');
@@ -137,6 +196,15 @@
 
             window.scrollTo(0, 0);
         }
+
+        document.getElementById('content-frame').addEventListener('load', () => {
+            const language = getActiveLanguage();
+            const frameWindow = document.getElementById('content-frame').contentWindow;
+
+            if (frameWindow && typeof frameWindow.applyLanguageFromParent === 'function') {
+                frameWindow.applyLanguageFromParent(language);
+            }
+        });
 
         // Play a squeak when clicking the logo.
         (function () {
@@ -154,6 +222,8 @@
                 });
             });
         })();
+
+        applyLanguage(getActiveLanguage());
     </script>
 </body>
 

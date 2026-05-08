@@ -128,12 +128,13 @@
   </style>
 </head>
 
-<body class="d-flex flex-column min-vh-100" style="background-color: var(--bg-primary); color: var(--text-primary);">
+<body class="d-flex flex-column min-vh-100" data-i18n-title="magicTitle"
+  style="background-color: var(--bg-primary); color: var(--text-primary);">
 
   <main class="container px-3 flex-grow-1 py-4">
     <div class="project-detail">
       <a href="#" onclick="parent.navigateTo('projects'); return false;" class="back-btn">
-        <i class="bi bi-arrow-left"></i> Back to Projects
+        <i class="bi bi-arrow-left"></i> <span data-i18n="projectBack">Back to Projects</span>
       </a>
 
       <div class="project-header-detail">
@@ -142,44 +143,45 @@
           <span class="project-tag">Java</span>
           <span class="project-tag">JavaFX</span>
           <span class="project-tag">3D Graphics</span>
-          <span class="status-badge status-completed">Completed</span>
+          <span class="status-badge status-completed" data-i18n="statusCompleted">Completed</span>
         </div>
       </div>
 
-      <p>
+      <p data-i18n="magicIntro">
         An interactive JavaFX 3D Rubik's Cube simulator developed for an Object-Oriented Programming course
         (CCMP0151) at UNIVASF. This educational tool provides an immersive way to visualize solving algorithms,
         practice techniques, and explore patterns in a digital environment.
       </p>
 
-      <h2 class="section-title">🎯 Project Goals</h2>
+      <h2 class="section-title" data-i18n="magicGoals">🎯 Project Goals</h2>
       <ul class="features-list">
-        <li>Provide an educational and recreational tool for cube enthusiasts</li>
-        <li>Enable visualization of solving algorithms and strategy tutorials</li>
-        <li>Assist beginners in learning with interactive features</li>
-        <li>Serve as a digital replacement for physical Rubik's Cubes</li>
+        <li data-i18n="magicGoal1">Provide an educational and recreational tool for cube enthusiasts</li>
+        <li data-i18n="magicGoal2">Enable visualization of solving algorithms and strategy tutorials</li>
+        <li data-i18n="magicGoal3">Assist beginners in learning with interactive features</li>
+        <li data-i18n="magicGoal4">Serve as a digital replacement for physical Rubik's Cubes</li>
       </ul>
 
-      <h2 class="section-title">✨ Features</h2>
+      <h2 class="section-title" data-i18n="magicFeatures">✨ Features</h2>
       <ul class="features-list">
-        <li>Fully interactive 3D visualization of a standard Rubik's Cube</li>
-        <li>Face manipulation with individual move controls</li>
-        <li>Intuitive graphical interface</li>
-        <li>Extensive keyboard shortcut system for cube control and visualization</li>
-        <li>Optional background music to enhance the experience</li>
+        <li data-i18n="magicFeature1">Fully interactive 3D visualization of a standard Rubik's Cube</li>
+        <li data-i18n="magicFeature2">Face manipulation with individual move controls</li>
+        <li data-i18n="magicFeature3">Intuitive graphical interface</li>
+        <li data-i18n="magicFeature4">Extensive keyboard shortcut system for cube control and visualization</li>
+        <li data-i18n="magicFeature5">Optional background music to enhance the experience</li>
       </ul>
 
-      <h2 class="section-title">🛠️ Technology Stack</h2>
+      <h2 class="section-title" data-i18n="magicStack">🛠️ Technology Stack</h2>
       <ul class="features-list">
-        <li><strong>Java 24</strong> - Core language</li>
-        <li><strong>JavaFX with 3D support</strong> - Graphics rendering</li>
-        <li><strong>Scene Builder</strong> - UI development</li>
-        <li><strong>Maven</strong> - Build and dependency management</li>
-        <li><strong>Git/GitHub</strong> - Version control</li>
+        <li data-i18n="magicStack1" data-i18n-html><strong>Java 24</strong> - Core language</li>
+        <li data-i18n="magicStack2" data-i18n-html><strong>JavaFX with 3D support</strong> - Graphics rendering</li>
+        <li data-i18n="magicStack3" data-i18n-html><strong>Scene Builder</strong> - UI development</li>
+        <li data-i18n="magicStack4" data-i18n-html><strong>Maven</strong> - Build and dependency management</li>
+        <li data-i18n="magicStack5" data-i18n-html><strong>Git/GitHub</strong> - Version control</li>
       </ul>
 
-      <h2 class="section-title">⌨️ Control System</h2>
-      <p>The cube supports an extensive keyboard shortcut system for complete control (remember to click on the
+      <h2 class="section-title" data-i18n="magicControls">⌨️ Control System</h2>
+      <p data-i18n="magicControlsIntro">The cube supports an extensive keyboard shortcut system for complete control
+        (remember to click on the
         cube to ensure focus):</p>
 
       <div class="highlight-box">
@@ -191,18 +193,21 @@
         <strong>Mouse:</strong> Right-click + drag (rotate) • Middle-click + drag (pan) • Scroll (zoom)
       </div>
 
-      <h2 class="section-title">🚀 Getting Started</h2>
-      <p><strong>Prerequisites:</strong> Java 24+</p>
+      <h2 class="section-title" data-i18n="magicGettingStarted">🚀 Getting Started</h2>
+      <p data-i18n="magicPrerequisites" data-i18n-html><strong>Prerequisites:</strong> Java 24+</p>
 
       <ol class="features-list" style="list-style: none; padding: 0;">
-        <li style="padding-left: 30px;">Clone: <code>git clone https://github.com/realsnywy/projeto-ccmp0151.git</code>
+        <li style="padding-left: 30px;" data-i18n="magicStep1" data-i18n-html>Clone:
+          <code>git clone https://github.com/realsnywy/projeto-ccmp0151.git</code>
         </li>
-        <li style="padding-left: 30px;">Build: <code>./mvnw clean install</code></li>
-        <li style="padding-left: 30px;">Run: <code>./mvnw javafx:run</code></li>
-        <li style="padding-left: 30px;">Or run <code>com.univasf.magiccube3d.MainApp</code> from your IDE</li>
+        <li style="padding-left: 30px;" data-i18n="magicStep2" data-i18n-html>Build: <code>./mvnw clean install</code>
+        </li>
+        <li style="padding-left: 30px;" data-i18n="magicStep3" data-i18n-html>Run: <code>./mvnw javafx:run</code></li>
+        <li style="padding-left: 30px;" data-i18n="magicStep4" data-i18n-html>Or run
+          <code>com.univasf.magiccube3d.MainApp</code> from your IDE</li>
       </ol>
 
-      <div class="highlight-box">
+      <div class="highlight-box" data-i18n="magicAcademicNote" data-i18n-html>
         <strong>Academic Note:</strong> This project is exclusively for educational purposes, developed as part
         of a university Computer Science program.
       </div>
@@ -210,12 +215,91 @@
       <div class="project-cta">
         <a href="https://github.com/realsnywy/projeto-ccmp0151" target="_blank" rel="noopener noreferrer"
           class="btn custom-btn github-btn">
-          <i class="bi bi-github" aria-hidden="true"></i>View on GitHub
+          <i class="bi bi-github" aria-hidden="true"></i><span data-i18n="projectViewGitHub">View on GitHub</span>
         </a>
       </div>
 
     </div>
   </main>
+
+  <script src="../../lang.js"></script>
+  <script>
+    const pageTranslations = {
+      en: {
+        magicTitle: 'MagicCube3D - Snywy',
+        projectBack: 'Back to Projects',
+        statusCompleted: 'Completed',
+        magicIntro: 'An interactive JavaFX 3D Rubik\'s Cube simulator developed for an Object-Oriented Programming course (CCMP0151) at UNIVASF. This educational tool provides an immersive way to visualize solving algorithms, practice techniques, and explore patterns in a digital environment.',
+        magicGoals: '🎯 Project Goals',
+        magicGoal1: 'Provide an educational and recreational tool for cube enthusiasts',
+        magicGoal2: 'Enable visualization of solving algorithms and strategy tutorials',
+        magicGoal3: 'Assist beginners in learning with interactive features',
+        magicGoal4: 'Serve as a digital replacement for physical Rubik\'s Cubes',
+        magicFeatures: '✨ Features',
+        magicFeature1: 'Fully interactive 3D visualization of a standard Rubik\'s Cube',
+        magicFeature2: 'Face manipulation with individual move controls',
+        magicFeature3: 'Intuitive graphical interface',
+        magicFeature4: 'Extensive keyboard shortcut system for cube control and visualization',
+        magicFeature5: 'Optional background music to enhance the experience',
+        magicStack: '🛠️ Technology Stack',
+        magicStack1: '<strong>Java 24</strong> - Core language',
+        magicStack2: '<strong>JavaFX with 3D support</strong> - Graphics rendering',
+        magicStack3: '<strong>Scene Builder</strong> - UI development',
+        magicStack4: '<strong>Maven</strong> - Build and dependency management',
+        magicStack5: '<strong>Git/GitHub</strong> - Version control',
+        magicControls: '⌨️ Control System',
+        magicControlsIntro: 'The cube supports an extensive keyboard shortcut system for complete control (remember to click on the cube to ensure focus):',
+        magicGettingStarted: '🚀 Getting Started',
+        magicPrerequisites: '<strong>Prerequisites:</strong> Java 24+',
+        magicStep1: 'Clone: <code>git clone https://github.com/realsnywy/projeto-ccmp0151.git</code>',
+        magicStep2: 'Build: <code>./mvnw clean install</code>',
+        magicStep3: 'Run: <code>./mvnw javafx:run</code>',
+        magicStep4: 'Or run <code>com.univasf.magiccube3d.MainApp</code> from your IDE',
+        magicAcademicNote: '<strong>Academic Note:</strong> This project is exclusively for educational purposes, developed as part of a university Computer Science program.',
+        projectViewGitHub: 'View on GitHub'
+      },
+      pt: {
+        magicTitle: 'MagicCube3D - Snywy',
+        projectBack: 'Voltar aos Projetos',
+        statusCompleted: 'Concluído',
+        magicIntro: 'Um simulador interativo de Cubo Mágico 3D em JavaFX, desenvolvido para a disciplina de Programação Orientada a Objetos (CCMP0151) na UNIVASF. Esta ferramenta educacional oferece uma forma imersiva de visualizar algoritmos de solução, praticar técnicas e explorar padrões em ambiente digital.',
+        magicGoals: '🎯 Objetivos do Projeto',
+        magicGoal1: 'Fornecer uma ferramenta educacional e recreativa para entusiastas do cubo',
+        magicGoal2: 'Permitir visualização de algoritmos de solução e tutoriais de estratégia',
+        magicGoal3: 'Ajudar iniciantes no aprendizado com recursos interativos',
+        magicGoal4: 'Servir como substituto digital de Cubos Mágicos físicos',
+        magicFeatures: '✨ Recursos',
+        magicFeature1: 'Visualização 3D totalmente interativa de um Cubo Mágico padrão',
+        magicFeature2: 'Manipulação das faces com controles de movimentos individuais',
+        magicFeature3: 'Interface gráfica intuitiva',
+        magicFeature4: 'Sistema extenso de atalhos de teclado para controle e visualização do cubo',
+        magicFeature5: 'Música de fundo opcional para melhorar a experiência',
+        magicStack: '🛠️ Tecnologias',
+        magicStack1: '<strong>Java 24</strong> - Linguagem principal',
+        magicStack2: '<strong>JavaFX com suporte 3D</strong> - Renderização gráfica',
+        magicStack3: '<strong>Scene Builder</strong> - Desenvolvimento de interface',
+        magicStack4: '<strong>Maven</strong> - Build e gerenciamento de dependências',
+        magicStack5: '<strong>Git/GitHub</strong> - Controle de versão',
+        magicControls: '⌨️ Sistema de Controles',
+        magicControlsIntro: 'O cubo possui um sistema amplo de atalhos de teclado para controle completo (lembre-se de clicar no cubo para garantir o foco):',
+        magicGettingStarted: '🚀 Primeiros Passos',
+        magicPrerequisites: '<strong>Pré-requisitos:</strong> Java 24+',
+        magicStep1: 'Clone: <code>git clone https://github.com/realsnywy/projeto-ccmp0151.git</code>',
+        magicStep2: 'Compile: <code>./mvnw clean install</code>',
+        magicStep3: 'Execute: <code>./mvnw javafx:run</code>',
+        magicStep4: 'Ou execute <code>com.univasf.magiccube3d.MainApp</code> pela sua IDE',
+        magicAcademicNote: '<strong>Nota Acadêmica:</strong> Este projeto é exclusivamente para fins educacionais, desenvolvido como parte de um curso universitário de Ciência da Computação.',
+        projectViewGitHub: 'Ver no GitHub'
+      }
+    };
+
+    function applyLanguageFromParent(language) {
+      window.PortfolioLanguage.applyTranslations(pageTranslations, language);
+    }
+
+    window.applyLanguageFromParent = applyLanguageFromParent;
+    window.PortfolioLanguage.initPageLanguage(pageTranslations);
+  </script>
 
 </body>
 

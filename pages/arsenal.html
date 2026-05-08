@@ -183,24 +183,27 @@
   </style>
 </head>
 
-<body class="d-flex flex-column min-vh-100" style="background-color: var(--bg-primary); color: var(--text-primary);">
+<body class="d-flex flex-column min-vh-100" data-i18n-title="arsenalTitle"
+  style="background-color: var(--bg-primary); color: var(--text-primary);">
 
   <main class="container px-3 flex-grow-1 py-4">
     <div class="arsenal-section">
-      <h1>My Arsenal</h1>
-      <p class="arsenal-subtitle">The tools & tech that power my creative pursuits</p>
+      <h1 data-i18n="arsenalHeading">My Arsenal</h1>
+      <p class="arsenal-subtitle" data-i18n="arsenalSubtitle">The tools & tech that power my creative pursuits</p>
 
       <div class="current-focus">
-        <h3>🎯 Currently Focused On</h3>
+        <h3 data-i18n="arsenalFocusHeading">🎯 Currently Focused On</h3>
         <ul>
-          <li><strong>Academic:</strong> Deepening my knowledge in Java and MySQL for university projects</li>
-          <li><strong>Game Dev:</strong> Experimenting with Godot</li>
-          <li><strong>Creative/Hardware:</strong> Learning 3D modeling in Blender and tinkering with Raspberry Pi</li>
+          <li data-i18n="arsenalFocusAcademic" data-i18n-html><strong>Academic:</strong> Deepening my knowledge in Java
+            and MySQL for university projects</li>
+          <li data-i18n="arsenalFocusGameDev" data-i18n-html><strong>Game Dev:</strong> Experimenting with Godot</li>
+          <li data-i18n="arsenalFocusCreative" data-i18n-html><strong>Creative/Hardware:</strong> Learning 3D modeling
+            in Blender and tinkering with Raspberry Pi</li>
         </ul>
       </div>
 
       <div class="category">
-        <h2>Languages & Frameworks</h2>
+        <h2 data-i18n="arsenalLangFrameworks">Languages & Frameworks</h2>
         <div class="skill-grid">
           <div class="skill-card">
             <span class="skill-icon skill-c" role="img" aria-label="C logo"></span>
@@ -238,7 +241,7 @@
       </div>
 
       <div class="category">
-        <h2>Tools & Creative Software</h2>
+        <h2 data-i18n="arsenalToolsCreative">Tools & Creative Software</h2>
         <div class="skill-grid">
           <div class="skill-card">
             <span class="skill-icon skill-vscode" role="img" aria-label="VS Code logo"></span>
@@ -269,6 +272,41 @@
 
     </div>
   </main>
+
+  <script src="../lang.js"></script>
+  <script>
+    const pageTranslations = {
+      en: {
+        arsenalTitle: 'Arsenal - Snywy',
+        arsenalHeading: 'My Arsenal',
+        arsenalSubtitle: 'The tools & tech that power my creative pursuits',
+        arsenalFocusHeading: '🎯 Currently Focused On',
+        arsenalFocusAcademic: '<strong>Academic:</strong> Deepening my knowledge in Java and MySQL for university projects',
+        arsenalFocusGameDev: '<strong>Game Dev:</strong> Experimenting with Godot',
+        arsenalFocusCreative: '<strong>Creative/Hardware:</strong> Learning 3D modeling in Blender and tinkering with Raspberry Pi',
+        arsenalLangFrameworks: 'Languages & Frameworks',
+        arsenalToolsCreative: 'Tools & Creative Software'
+      },
+      pt: {
+        arsenalTitle: 'Arsenal - Snywy',
+        arsenalHeading: 'Meu Arsenal',
+        arsenalSubtitle: 'As ferramentas e tecnologias que impulsionam meus projetos criativos',
+        arsenalFocusHeading: '🎯 Foco Atual',
+        arsenalFocusAcademic: '<strong>Acadêmico:</strong> Aprofundando meu conhecimento em Java e MySQL para projetos da universidade',
+        arsenalFocusGameDev: '<strong>Game Dev:</strong> Experimentando com Godot',
+        arsenalFocusCreative: '<strong>Criativo/Hardware:</strong> Aprendendo modelagem 3D no Blender e mexendo com Raspberry Pi',
+        arsenalLangFrameworks: 'Linguagens e Frameworks',
+        arsenalToolsCreative: 'Ferramentas e Software Criativo'
+      }
+    };
+
+    function applyLanguageFromParent(language) {
+      window.PortfolioLanguage.applyTranslations(pageTranslations, language);
+    }
+
+    window.applyLanguageFromParent = applyLanguageFromParent;
+    window.PortfolioLanguage.initPageLanguage(pageTranslations);
+  </script>
 
 </body>
 

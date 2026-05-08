@@ -167,12 +167,13 @@
   </style>
 </head>
 
-<body class="d-flex flex-column min-vh-100" style="background-color: var(--bg-primary); color: var(--text-primary);">
+<body class="d-flex flex-column min-vh-100" data-i18n-title="beeprTitle"
+  style="background-color: var(--bg-primary); color: var(--text-primary);">
 
   <main class="container px-3 flex-grow-1 py-4">
     <div class="project-detail">
       <a href="#" onclick="parent.navigateTo('projects'); return false;" class="back-btn">
-        <i class="bi bi-arrow-left"></i> Back to Projects
+        <i class="bi bi-arrow-left"></i> <span data-i18n="projectBack">Back to Projects</span>
       </a>
 
       <div class="project-header-detail">
@@ -246,154 +247,277 @@
           <span class="project-tag">Python</span>
           <span class="project-tag">Discord.py</span>
           <span class="project-tag">Bot</span>
-          <span class="status-badge status-wip">Work in Progress</span>
+          <span class="status-badge status-wip" data-i18n="statusWip">Work in Progress</span>
         </div>
       </div>
 
-      <p>
+      <p data-i18n="beeprIntro">
         A multi-purpose Discord bot packed with entertainment and utility features. BeePR combines a powerful
         music system, fun commands, and useful tools all in one package. It's actively being developed with
         new features being added regularly.
       </p>
 
-      <div class="wip-notice">
+      <div class="wip-notice" data-i18n="beeprWipNotice" data-i18n-html>
         <strong>⚙️ Status:</strong> Currently under heavy development. Features, commands, and the command
         structure are subject to change. The source code is not publicly available at this time.
       </div>
 
-      <h2 class="section-title">✨ Features</h2>
+      <h2 class="section-title" data-i18n="beeprFeatures">✨ Features</h2>
 
-      <h3 style="font-size: 1.1rem; margin-top: 20px; margin-bottom: 10px;">🎵 Music System</h3>
+      <h3 style="font-size: 1.1rem; margin-top: 20px; margin-bottom: 10px;" data-i18n="beeprMusicHeading">🎵 Music
+        System</h3>
       <ul class="features-list">
-        <li>Play songs or playlists from YouTube</li>
-        <li>Queue management with shuffle and loop controls</li>
-        <li>Volume control and playback speed adjustment</li>
-        <li>Bass boost and audio effects (Nightcore, Slowed)</li>
+        <li data-i18n="beeprMusic1">Play songs or playlists from YouTube</li>
+        <li data-i18n="beeprMusic2">Queue management with shuffle and loop controls</li>
+        <li data-i18n="beeprMusic3">Volume control and playback speed adjustment</li>
+        <li data-i18n="beeprMusic4">Bass boost and audio effects (Nightcore, Slowed)</li>
       </ul>
 
-      <h3 style="font-size: 1.1rem; margin-top: 20px; margin-bottom: 10px;">🖼️ Image Commands</h3>
+      <h3 style="font-size: 1.1rem; margin-top: 20px; margin-bottom: 10px;" data-i18n="beeprImageHeading">🖼️ Image
+        Commands</h3>
       <ul class="features-list">
-        <li>Fetch random SFW images from e926.net with custom tags</li>
-        <li>Fetch NSFW images from e621.net (NSFW channels only)</li>
+        <li data-i18n="beeprImage1">Fetch random SFW images from e926.net with custom tags</li>
+        <li data-i18n="beeprImage2">Fetch NSFW images from e621.net (NSFW channels only)</li>
       </ul>
 
-      <h3 style="font-size: 1.1rem; margin-top: 20px; margin-bottom: 10px;">🛠️ Utility & Automation</h3>
+      <h3 style="font-size: 1.1rem; margin-top: 20px; margin-bottom: 10px;" data-i18n="beeprUtilityHeading">🛠️ Utility
+        & Automation</h3>
       <ul class="features-list">
-        <li>Bot latency checking and diagnostics</li>
-        <li>Server information and statistics</li>
-        <li>User profile and member details</li>
-        <li>Automatic x.com link conversion to fixupx.com for better embeds</li>
+        <li data-i18n="beeprUtility1">Bot latency checking and diagnostics</li>
+        <li data-i18n="beeprUtility2">Server information and statistics</li>
+        <li data-i18n="beeprUtility3">User profile and member details</li>
+        <li data-i18n="beeprUtility4">Automatic x.com link conversion to fixupx.com for better embeds</li>
       </ul>
 
-      <h2 class="section-title">📋 Command Reference</h2>
-      <p><strong>Prefix:</strong> <code>b!</code> or <code>B!</code></p>
+      <h2 class="section-title" data-i18n="beeprCommands">📋 Command Reference</h2>
+      <p data-i18n="beeprPrefix" data-i18n-html><strong>Prefix:</strong> <code>b!</code> or <code>B!</code></p>
 
-      <h3 style="font-size: 1.1rem; margin-top: 20px; margin-bottom: 10px;">Music Commands</h3>
+      <h3 style="font-size: 1.1rem; margin-top: 20px; margin-bottom: 10px;" data-i18n="beeprMusicCommandsHeading">Music
+        Commands</h3>
       <table class="command-table">
         <tr>
           <td>b!join</td>
-          <td>Joins your voice channel</td>
+          <td data-i18n="beeprCmdJoin">Joins your voice channel</td>
         </tr>
         <tr>
           <td>b!play &lt;url or search&gt;</td>
-          <td>Plays a song or adds playlist to queue</td>
+          <td data-i18n="beeprCmdPlay">Plays a song or adds playlist to queue</td>
         </tr>
         <tr>
           <td>b!pause</td>
-          <td>Pauses current playback</td>
+          <td data-i18n="beeprCmdPause">Pauses current playback</td>
         </tr>
         <tr>
           <td>b!resume</td>
-          <td>Resumes paused song</td>
+          <td data-i18n="beeprCmdResume">Resumes paused song</td>
         </tr>
         <tr>
           <td>b!skip</td>
-          <td>Skips to next song</td>
+          <td data-i18n="beeprCmdSkip">Skips to next song</td>
         </tr>
         <tr>
           <td>b!queue</td>
-          <td>Shows the current queue</td>
+          <td data-i18n="beeprCmdQueue">Shows the current queue</td>
         </tr>
         <tr>
           <td>b!shuffle</td>
-          <td>Randomizes queue order</td>
+          <td data-i18n="beeprCmdShuffle">Randomizes queue order</td>
         </tr>
         <tr>
           <td>b!loop</td>
-          <td>Toggles loop mode</td>
+          <td data-i18n="beeprCmdLoop">Toggles loop mode</td>
         </tr>
         <tr>
           <td>b!stop</td>
-          <td>Stops music and clears queue</td>
+          <td data-i18n="beeprCmdStop">Stops music and clears queue</td>
         </tr>
         <tr>
           <td>b!bassboost &lt;level&gt;</td>
-          <td>Applies bass boost (off, on, ultra)</td>
+          <td data-i18n="beeprCmdBassboost">Applies bass boost (off, on, ultra)</td>
         </tr>
         <tr>
           <td>b!speed &lt;level&gt;</td>
-          <td>Changes speed (normal, slowed, nightcore)</td>
+          <td data-i18n="beeprCmdSpeed">Changes speed (normal, slowed, nightcore)</td>
         </tr>
         <tr>
           <td>b!leave</td>
-          <td>Leaves voice channel</td>
+          <td data-i18n="beeprCmdLeave">Leaves voice channel</td>
         </tr>
       </table>
 
-      <h3 style="font-size: 1.1rem; margin-top: 20px; margin-bottom: 10px;">Fun Commands</h3>
+      <h3 style="font-size: 1.1rem; margin-top: 20px; margin-bottom: 10px;" data-i18n="beeprFunCommandsHeading">Fun
+        Commands</h3>
       <table class="command-table">
         <tr>
           <td>b!e9pic [tags]</td>
-          <td>Fetch random SFW image from e926.net</td>
+          <td data-i18n="beeprCmdE9">Fetch random SFW image from e926.net</td>
         </tr>
         <tr>
           <td>b!e6pic [tags]</td>
-          <td>Fetch random NSFW image from e621.net</td>
+          <td data-i18n="beeprCmdE6">Fetch random NSFW image from e621.net</td>
         </tr>
       </table>
 
-      <h3 style="font-size: 1.1rem; margin-top: 20px; margin-bottom: 10px;">Utility Commands</h3>
+      <h3 style="font-size: 1.1rem; margin-top: 20px; margin-bottom: 10px;" data-i18n="beeprUtilityCommandsHeading">
+        Utility Commands</h3>
       <table class="command-table">
         <tr>
           <td>b!ping</td>
-          <td>Shows bot latency</td>
+          <td data-i18n="beeprCmdPing">Shows bot latency</td>
         </tr>
         <tr>
           <td>b!serverinfo</td>
-          <td>Displays server information</td>
+          <td data-i18n="beeprCmdServerinfo">Displays server information</td>
         </tr>
         <tr>
           <td>b!userinfo [member]</td>
-          <td>Shows user or member details</td>
+          <td data-i18n="beeprCmdUserinfo">Shows user or member details</td>
         </tr>
         <tr>
           <td>b!help [command]</td>
-          <td>Shows help for commands</td>
+          <td data-i18n="beeprCmdHelp">Shows help for commands</td>
         </tr>
       </table>
 
-      <h2 class="section-title">📗 Tech Stack</h2>
+      <h2 class="section-title" data-i18n="beeprStack">📗 Tech Stack</h2>
       <ul class="features-list">
-        <li><strong>Python 3.8+</strong> - Core language</li>
-        <li><strong>discord.py</strong> - Discord API wrapper</li>
-        <li><strong>yt-dlp</strong> - YouTube audio extraction</li>
-        <li><strong>aiohttp</strong> - Async HTTP requests</li>
+        <li data-i18n="beeprStack1" data-i18n-html><strong>Python 3.8+</strong> - Core language</li>
+        <li data-i18n="beeprStack2" data-i18n-html><strong>discord.py</strong> - Discord API wrapper</li>
+        <li data-i18n="beeprStack3" data-i18n-html><strong>yt-dlp</strong> - YouTube audio extraction</li>
+        <li data-i18n="beeprStack4" data-i18n-html><strong>aiohttp</strong> - Async HTTP requests</li>
       </ul>
 
-      <div class="highlight-box">
+      <div class="highlight-box" data-i18n="beeprSourceNotice" data-i18n-html>
         <strong>⚠️ Source Code:</strong> Currently not open-source. This is partly due to library licensing
         concerns and the heavy WIP nature of the project. Check back later for potential updates to this status.
       </div>
 
       <div class="project-cta">
         <button type="button" class="btn custom-btn discord-btn" disabled aria-disabled="true"
-          title="Temporarily unavailable while BeePR is in development">
-          <i class="bi bi-discord me-2" aria-hidden="true"></i>Add to Server
+          title="Temporarily unavailable while BeePR is in development" data-i18n-title="beeprAddServerTitle">
+          <i class="bi bi-discord me-2" aria-hidden="true"></i><span data-i18n="beeprAddServer">Add to Server</span>
         </button>
       </div>
 
     </div>
   </main>
+
+  <script src="../../lang.js"></script>
+  <script>
+    const pageTranslations = {
+      en: {
+        beeprTitle: 'BeePR - Snywy',
+        projectBack: 'Back to Projects',
+        statusWip: 'Work in Progress',
+        beeprIntro: 'A multi-purpose Discord bot packed with entertainment and utility features. BeePR combines a powerful music system, fun commands, and useful tools all in one package. It\'s actively being developed with new features being added regularly.',
+        beeprWipNotice: '<strong>⚙️ Status:</strong> Currently under heavy development. Features, commands, and the command structure are subject to change. The source code is not publicly available at this time.',
+        beeprFeatures: '✨ Features',
+        beeprMusicHeading: '🎵 Music System',
+        beeprMusic1: 'Play songs or playlists from YouTube',
+        beeprMusic2: 'Queue management with shuffle and loop controls',
+        beeprMusic3: 'Volume control and playback speed adjustment',
+        beeprMusic4: 'Bass boost and audio effects (Nightcore, Slowed)',
+        beeprImageHeading: '🖼️ Image Commands',
+        beeprImage1: 'Fetch random SFW images from e926.net with custom tags',
+        beeprImage2: 'Fetch NSFW images from e621.net (NSFW channels only)',
+        beeprUtilityHeading: '🛠️ Utility & Automation',
+        beeprUtility1: 'Bot latency checking and diagnostics',
+        beeprUtility2: 'Server information and statistics',
+        beeprUtility3: 'User profile and member details',
+        beeprUtility4: 'Automatic x.com link conversion to fixupx.com for better embeds',
+        beeprCommands: '📋 Command Reference',
+        beeprPrefix: '<strong>Prefix:</strong> <code>b!</code> or <code>B!</code>',
+        beeprMusicCommandsHeading: 'Music Commands',
+        beeprCmdJoin: 'Joins your voice channel',
+        beeprCmdPlay: 'Plays a song or adds playlist to queue',
+        beeprCmdPause: 'Pauses current playback',
+        beeprCmdResume: 'Resumes paused song',
+        beeprCmdSkip: 'Skips to next song',
+        beeprCmdQueue: 'Shows the current queue',
+        beeprCmdShuffle: 'Randomizes queue order',
+        beeprCmdLoop: 'Toggles loop mode',
+        beeprCmdStop: 'Stops music and clears queue',
+        beeprCmdBassboost: 'Applies bass boost (off, on, ultra)',
+        beeprCmdSpeed: 'Changes speed (normal, slowed, nightcore)',
+        beeprCmdLeave: 'Leaves voice channel',
+        beeprFunCommandsHeading: 'Fun Commands',
+        beeprCmdE9: 'Fetch random SFW image from e926.net',
+        beeprCmdE6: 'Fetch random NSFW image from e621.net',
+        beeprUtilityCommandsHeading: 'Utility Commands',
+        beeprCmdPing: 'Shows bot latency',
+        beeprCmdServerinfo: 'Displays server information',
+        beeprCmdUserinfo: 'Shows user or member details',
+        beeprCmdHelp: 'Shows help for commands',
+        beeprStack: '📗 Tech Stack',
+        beeprStack1: '<strong>Python 3.8+</strong> - Core language',
+        beeprStack2: '<strong>discord.py</strong> - Discord API wrapper',
+        beeprStack3: '<strong>yt-dlp</strong> - YouTube audio extraction',
+        beeprStack4: '<strong>aiohttp</strong> - Async HTTP requests',
+        beeprSourceNotice: '<strong>⚠️ Source Code:</strong> Currently not open-source. This is partly due to library licensing concerns and the heavy WIP nature of the project. Check back later for potential updates to this status.',
+        beeprAddServer: 'Add to Server',
+        beeprAddServerTitle: 'Temporarily unavailable while BeePR is in development'
+      },
+      pt: {
+        beeprTitle: 'BeePR - Snywy',
+        projectBack: 'Voltar aos Projetos',
+        statusWip: 'Em andamento',
+        beeprIntro: 'Um bot multifuncional para Discord cheio de recursos de entretenimento e utilidade. O BeePR combina um sistema de música poderoso, comandos divertidos e ferramentas úteis em um só pacote. Ele está em desenvolvimento ativo, com novos recursos sendo adicionados regularmente.',
+        beeprWipNotice: '<strong>⚙️ Status:</strong> Atualmente em desenvolvimento intenso. Recursos, comandos e a estrutura de comandos podem mudar. O código-fonte não está disponível publicamente no momento.',
+        beeprFeatures: '✨ Recursos',
+        beeprMusicHeading: '🎵 Sistema de Música',
+        beeprMusic1: 'Reproduz músicas ou playlists do YouTube',
+        beeprMusic2: 'Gerenciamento de fila com controles de shuffle e loop',
+        beeprMusic3: 'Controle de volume e ajuste de velocidade de reprodução',
+        beeprMusic4: 'Bass boost e efeitos de áudio (Nightcore, Slowed)',
+        beeprImageHeading: '🖼️ Comandos de Imagem',
+        beeprImage1: 'Busca imagens SFW aleatórias do e926.net com tags personalizadas',
+        beeprImage2: 'Busca imagens NSFW aleatórias do e621.net (apenas canais NSFW)',
+        beeprUtilityHeading: '🛠️ Utilidade e Automação',
+        beeprUtility1: 'Verificação de latência e diagnósticos do bot',
+        beeprUtility2: 'Informações e estatísticas do servidor',
+        beeprUtility3: 'Detalhes de perfil de usuário e membro',
+        beeprUtility4: 'Conversão automática de links x.com para fixupx.com para melhores embeds',
+        beeprCommands: '📋 Referência de Comandos',
+        beeprPrefix: '<strong>Prefixo:</strong> <code>b!</code> ou <code>B!</code>',
+        beeprMusicCommandsHeading: 'Comandos de Música',
+        beeprCmdJoin: 'Entra no seu canal de voz',
+        beeprCmdPlay: 'Toca uma música ou adiciona playlist à fila',
+        beeprCmdPause: 'Pausa a reprodução atual',
+        beeprCmdResume: 'Retoma a música pausada',
+        beeprCmdSkip: 'Pula para a próxima música',
+        beeprCmdQueue: 'Mostra a fila atual',
+        beeprCmdShuffle: 'Embaralha a ordem da fila',
+        beeprCmdLoop: 'Ativa/desativa o modo loop',
+        beeprCmdStop: 'Para a música e limpa a fila',
+        beeprCmdBassboost: 'Aplica bass boost (off, on, ultra)',
+        beeprCmdSpeed: 'Altera velocidade (normal, slowed, nightcore)',
+        beeprCmdLeave: 'Sai do canal de voz',
+        beeprFunCommandsHeading: 'Comandos Divertidos',
+        beeprCmdE9: 'Busca imagem SFW aleatória do e926.net',
+        beeprCmdE6: 'Busca imagem NSFW aleatória do e621.net',
+        beeprUtilityCommandsHeading: 'Comandos Utilitários',
+        beeprCmdPing: 'Mostra a latência do bot',
+        beeprCmdServerinfo: 'Exibe informações do servidor',
+        beeprCmdUserinfo: 'Mostra detalhes do usuário ou membro',
+        beeprCmdHelp: 'Mostra ajuda dos comandos',
+        beeprStack: '📗 Tecnologias',
+        beeprStack1: '<strong>Python 3.8+</strong> - Linguagem principal',
+        beeprStack2: '<strong>discord.py</strong> - Wrapper da API do Discord',
+        beeprStack3: '<strong>yt-dlp</strong> - Extração de áudio do YouTube',
+        beeprStack4: '<strong>aiohttp</strong> - Requisições HTTP assíncronas',
+        beeprSourceNotice: '<strong>⚠️ Código-fonte:</strong> Atualmente não é open-source. Isso ocorre em parte por questões de licenciamento de bibliotecas e pelo estágio altamente WIP do projeto. Volte mais tarde para possíveis atualizações desse status.',
+        beeprAddServer: 'Adicionar ao Servidor',
+        beeprAddServerTitle: 'Temporariamente indisponível enquanto o BeePR está em desenvolvimento'
+      }
+    };
+
+    function applyLanguageFromParent(language) {
+      window.PortfolioLanguage.applyTranslations(pageTranslations, language);
+    }
+
+    window.applyLanguageFromParent = applyLanguageFromParent;
+    window.PortfolioLanguage.initPageLanguage(pageTranslations);
+  </script>
 
 </body>
 

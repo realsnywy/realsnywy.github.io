@@ -176,12 +176,13 @@
   </style>
 </head>
 
-<body class="d-flex flex-column min-vh-100" style="background-color: var(--bg-primary); color: var(--text-primary);">
+<body class="d-flex flex-column min-vh-100" data-i18n-title="sslsTitle"
+  style="background-color: var(--bg-primary); color: var(--text-primary);">
 
   <main class="container px-3 flex-grow-1 py-4">
     <div class="project-detail">
       <a href="#" onclick="parent.navigateTo('projects'); return false;" class="back-btn">
-        <i class="bi bi-arrow-left"></i> Back to Projects
+        <i class="bi bi-arrow-left"></i> <span data-i18n="projectBack">Back to Projects</span>
       </a>
 
       <div class="project-header-detail">
@@ -200,68 +201,79 @@
             </span>
             <span>SSLS</span>
           </h1>
-          <p class="project-full-name">Snywy's Silly Little Script</p>
+          <p class="project-full-name" data-i18n="sslsFullName">Snywy's Silly Little Script</p>
         </div>
         <div class="project-meta-detail">
           <span class="project-tag">PowerShell</span>
           <span class="project-tag">Windows</span>
           <span class="project-tag">Automation</span>
-          <span class="status-badge status-completed">Completed</span>
+          <span class="status-badge status-completed" data-i18n="statusCompleted">Completed</span>
         </div>
       </div>
 
-      <p>
+      <p data-i18n="sslsIntro">
         A modular PowerShell automation utility designed for rapid Windows 11 (and 10) setup after a fresh
         installation. SSLS streamlines the tedious post-formatting process by bundling mass software
         installation, system optimizations, and quick shortcuts into one comprehensive tool.
       </p>
 
-      <div class="highlight-box">
+      <div class="highlight-box" data-i18n="sslsStatus" data-i18n-html>
         <strong>Status:</strong> Fully functional and ready to use. Updates are rare and focused on personal
         needs.
       </div>
 
-      <h2 class="section-title">✨ Key Features</h2>
+      <h2 class="section-title" data-i18n="sslsKeyFeatures">✨ Key Features</h2>
       <ul class="features-list">
-        <li><strong>Mass Installation (Ninite-style):</strong> Select multiple programs and install everything at
+        <li data-i18n="sslsFeature1" data-i18n-html><strong>Mass Installation (Ninite-style):</strong> Select multiple
+          programs and install everything at
           once via winget</li>
-        <li><strong>System Tweaks (Windows 11 Ready):</strong> Classic context menu restoration, performance
+        <li data-i18n="sslsFeature2" data-i18n-html><strong>System Tweaks (Windows 11 Ready):</strong> Classic context
+          menu restoration, performance
           mode, debloating, and privacy adjustments</li>
-        <li><strong>Optimization Presets:</strong> Input lag reduction (mouse, fullscreen, HAGS), visual tweaks
+        <li data-i18n="sslsFeature3" data-i18n-html><strong>Optimization Presets:</strong> Input lag reduction (mouse,
+          fullscreen, HAGS), visual tweaks
           (dark mode, transparency)</li>
-        <li><strong>Quick Shortcuts:</strong> Direct access to deep Windows settings (activation, default apps,
+        <li data-i18n="sslsFeature4" data-i18n-html><strong>Quick Shortcuts:</strong> Direct access to deep Windows
+          settings (activation, default apps,
           etc.)</li>
-        <li><strong>Smart Maintenance:</strong> Automatic restore point creation, manual command execution,
+        <li data-i18n="sslsFeature5" data-i18n-html><strong>Smart Maintenance:</strong> Automatic restore point
+          creation, manual command execution,
           undo functionality</li>
-        <li><strong>Multi-language Support:</strong> Real-time language switching via JSON configuration files
+        <li data-i18n="sslsFeature6" data-i18n-html><strong>Multi-language Support:</strong> Real-time language
+          switching via JSON configuration files
         </li>
       </ul>
 
-      <h2 class="section-title">📦 Included Software Categories</h2>
-      <p>The utility includes curated software from the official Windows Package Manager (winget) across these
+      <h2 class="section-title" data-i18n="sslsCategories">📦 Included Software Categories</h2>
+      <p data-i18n="sslsCategoriesIntro">The utility includes curated software from the official Windows Package Manager
+        (winget) across these
         categories:</p>
       <ul class="features-list">
-        <li>Internet (browsers, communication)</li>
-        <li>Multimedia (players, audio editors)</li>
-        <li>Graphics (image editors, 3D tools)</li>
-        <li>Gaming (launchers, optimizers)</li>
-        <li>Development (IDEs, Git, Node, Python)</li>
-        <li>System (compressors, ISO tools, drivers)</li>
+        <li data-i18n="sslsCategory1">Internet (browsers, communication)</li>
+        <li data-i18n="sslsCategory2">Multimedia (players, audio editors)</li>
+        <li data-i18n="sslsCategory3">Graphics (image editors, 3D tools)</li>
+        <li data-i18n="sslsCategory4">Gaming (launchers, optimizers)</li>
+        <li data-i18n="sslsCategory5">Development (IDEs, Git, Node, Python)</li>
+        <li data-i18n="sslsCategory6">System (compressors, ISO tools, drivers)</li>
       </ul>
 
-      <h2 class="section-title">🚀 How to Use</h2>
-      <p>No manual dependency installation needed—the script handles everything automatically.</p>
+      <h2 class="section-title" data-i18n="sslsHowToUse">🚀 How to Use</h2>
+      <p data-i18n="sslsHowToUseIntro">No manual dependency installation needed—the script handles everything
+        automatically.</p>
       <ol class="features-list" style="list-style: none; padding: 0;">
-        <li style="padding-left: 30px;">Download the latest <code>SSLS_Setup.exe</code> from the Releases page
+        <li style="padding-left: 30px;" data-i18n="sslsStep1" data-i18n-html>Download the latest
+          <code>SSLS_Setup.exe</code> from the Releases page
         </li>
-        <li style="padding-left: 30px;">Execute the installer (administrator permissions required)</li>
-        <li style="padding-left: 30px;">Navigate through the tabs and select desired software or optimizations
+        <li style="padding-left: 30px;" data-i18n="sslsStep2">Execute the installer (administrator permissions required)
         </li>
-        <li style="padding-left: 30px;">Click the green Start button to apply changes</li>
+        <li style="padding-left: 30px;" data-i18n="sslsStep3">Navigate through the tabs and select desired software or
+          optimizations
+        </li>
+        <li style="padding-left: 30px;" data-i18n="sslsStep4">Click the green Start button to apply changes</li>
       </ol>
 
-      <h2 class="section-title">⚠️ Important Notes</h2>
-      <div class="highlight-box">
+      <h2 class="section-title" data-i18n="sslsNotes">⚠️ Important Notes</h2>
+      <div class="highlight-box" data-i18n="sslsImportantNote">
         This script modifies Windows registry settings and installs third-party software. While tested and
         including undo options, use at your own risk. The script automatically creates a restore point before
         applying changes for safety.
@@ -271,15 +283,94 @@
         <a class="btn custom-btn download-btn"
           href="https://github.com/realsnywy/SSLS/releases/latest/download/SSLS_Setup.exe" target="_blank"
           rel="noopener noreferrer" download="SSLS_Setup.exe">
-          <i class="bi bi-download" aria-hidden="true"></i>Download
+          <i class="bi bi-download" aria-hidden="true"></i><span data-i18n="projectDownload">Download</span>
         </a>
         <a href="https://github.com/realsnywy/SSLS" target="_blank" class="btn custom-btn github-btn">
-          <i class="bi bi-github" aria-hidden="true"></i>View on GitHub
+          <i class="bi bi-github" aria-hidden="true"></i><span data-i18n="projectViewGitHub">View on GitHub</span>
         </a>
       </div>
 
     </div>
   </main>
+
+  <script src="../../lang.js"></script>
+  <script>
+    const pageTranslations = {
+      en: {
+        sslsTitle: 'SSLS - Snywy',
+        projectBack: 'Back to Projects',
+        sslsFullName: "Snywy's Silly Little Script",
+        sslsIntro: 'A modular PowerShell automation utility designed for rapid Windows 11 (and 10) setup after a fresh installation. SSLS streamlines the tedious post-formatting process by bundling mass software installation, system optimizations, and quick shortcuts into one comprehensive tool.',
+        sslsStatus: '<strong>Status:</strong> Fully functional and ready to use. Updates are rare and focused on personal needs.',
+        statusCompleted: 'Completed',
+        sslsKeyFeatures: '✨ Key Features',
+        sslsFeature1: '<strong>Mass Installation (Ninite-style):</strong> Select multiple programs and install everything at once via winget',
+        sslsFeature2: '<strong>System Tweaks (Windows 11 Ready):</strong> Classic context menu restoration, performance mode, debloating, and privacy adjustments',
+        sslsFeature3: '<strong>Optimization Presets:</strong> Input lag reduction (mouse, fullscreen, HAGS), visual tweaks (dark mode, transparency)',
+        sslsFeature4: '<strong>Quick Shortcuts:</strong> Direct access to deep Windows settings (activation, default apps, etc.)',
+        sslsFeature5: '<strong>Smart Maintenance:</strong> Automatic restore point creation, manual command execution, undo functionality',
+        sslsFeature6: '<strong>Multi-language Support:</strong> Real-time language switching via JSON configuration files',
+        sslsCategories: '📦 Included Software Categories',
+        sslsCategoriesIntro: 'The utility includes curated software from the official Windows Package Manager (winget) across these categories:',
+        sslsCategory1: 'Internet (browsers, communication)',
+        sslsCategory2: 'Multimedia (players, audio editors)',
+        sslsCategory3: 'Graphics (image editors, 3D tools)',
+        sslsCategory4: 'Gaming (launchers, optimizers)',
+        sslsCategory5: 'Development (IDEs, Git, Node, Python)',
+        sslsCategory6: 'System (compressors, ISO tools, drivers)',
+        sslsHowToUse: '🚀 How to Use',
+        sslsHowToUseIntro: 'No manual dependency installation needed—the script handles everything automatically.',
+        sslsStep1: 'Download the latest <code>SSLS_Setup.exe</code> from the Releases page',
+        sslsStep2: 'Execute the installer (administrator permissions required)',
+        sslsStep3: 'Navigate through the tabs and select desired software or optimizations',
+        sslsStep4: 'Click the green Start button to apply changes',
+        sslsNotes: '⚠️ Important Notes',
+        sslsImportantNote: 'This script modifies Windows registry settings and installs third-party software. While tested and including undo options, use at your own risk. The script automatically creates a restore point before applying changes for safety.',
+        projectDownload: 'Download',
+        projectViewGitHub: 'View on GitHub'
+      },
+      pt: {
+        sslsTitle: 'SSLS - Snywy',
+        projectBack: 'Voltar aos Projetos',
+        sslsFullName: 'Snywy\'s Silly Little Script',
+        sslsIntro: 'Um utilitário modular de automação em PowerShell projetado para configurar rapidamente o Windows 11 (e 10) após uma instalação limpa. O SSLS reduz o trabalho repetitivo de pós-formatação ao reunir instalação em massa de software, otimizações do sistema e atalhos úteis em uma única ferramenta.',
+        sslsStatus: '<strong>Status:</strong> Totalmente funcional e pronto para uso. As atualizações são raras e focadas em necessidades pessoais.',
+        statusCompleted: 'Concluído',
+        sslsKeyFeatures: '✨ Recursos Principais',
+        sslsFeature1: '<strong>Instalação em Massa (estilo Ninite):</strong> Selecione vários programas e instale tudo de uma vez via winget',
+        sslsFeature2: '<strong>Ajustes de Sistema (Windows 11):</strong> Restauração do menu de contexto clássico, modo de desempenho, debloat e ajustes de privacidade',
+        sslsFeature3: '<strong>Presets de Otimização:</strong> Redução de input lag (mouse, fullscreen, HAGS) e ajustes visuais (modo escuro, transparência)',
+        sslsFeature4: '<strong>Atalhos Rápidos:</strong> Acesso direto a configurações avançadas do Windows (ativação, apps padrão etc.)',
+        sslsFeature5: '<strong>Manutenção Inteligente:</strong> Criação automática de ponto de restauração, execução manual de comandos e função de desfazer',
+        sslsFeature6: '<strong>Suporte Multilíngue:</strong> Troca de idioma em tempo real via arquivos de configuração JSON',
+        sslsCategories: '📦 Categorias de Software Incluídas',
+        sslsCategoriesIntro: 'A ferramenta inclui softwares selecionados do Windows Package Manager (winget) nestas categorias:',
+        sslsCategory1: 'Internet (navegadores, comunicação)',
+        sslsCategory2: 'Multimídia (players, editores de áudio)',
+        sslsCategory3: 'Gráficos (editores de imagem, ferramentas 3D)',
+        sslsCategory4: 'Games (launchers, otimizadores)',
+        sslsCategory5: 'Desenvolvimento (IDEs, Git, Node, Python)',
+        sslsCategory6: 'Sistema (compactadores, ferramentas ISO, drivers)',
+        sslsHowToUse: '🚀 Como Usar',
+        sslsHowToUseIntro: 'Não é necessária instalação manual de dependências — o script cuida de tudo automaticamente.',
+        sslsStep1: 'Baixe o <code>SSLS_Setup.exe</code> mais recente na página de Releases',
+        sslsStep2: 'Execute o instalador (permissões de administrador são necessárias)',
+        sslsStep3: 'Navegue pelas abas e selecione os softwares ou otimizações desejados',
+        sslsStep4: 'Clique no botão verde Start para aplicar as alterações',
+        sslsNotes: '⚠️ Avisos Importantes',
+        sslsImportantNote: 'Este script modifica configurações de registro do Windows e instala softwares de terceiros. Apesar de testado e com opções de desfazer, use por sua conta e risco. O script cria automaticamente um ponto de restauração antes de aplicar mudanças para maior segurança.',
+        projectDownload: 'Baixar',
+        projectViewGitHub: 'Ver no GitHub'
+      }
+    };
+
+    function applyLanguageFromParent(language) {
+      window.PortfolioLanguage.applyTranslations(pageTranslations, language);
+    }
+
+    window.applyLanguageFromParent = applyLanguageFromParent;
+    window.PortfolioLanguage.initPageLanguage(pageTranslations);
+  </script>
 
 </body>
 

@@ -292,11 +292,12 @@
   </style>
 </head>
 
-<body class="d-flex flex-column min-vh-100" style="background-color: var(--bg-primary); color: var(--text-primary);">
+<body class="d-flex flex-column min-vh-100" data-i18n-title="aboutTitle"
+  style="background-color: var(--bg-primary); color: var(--text-primary);">
 
   <main class="container px-3 flex-grow-1 py-4">
     <div class="about-section">
-      <h1>About Me</h1>
+      <h1 data-i18n="aboutHeading">About Me</h1>
 
       <div class="profile-avatar">
         <svg viewBox="0 0 1024 863" version="1.1" xmlns="http://www.w3.org/2000/svg"
@@ -310,7 +311,7 @@
         </svg>
       </div>
 
-      <div class="bio-intro">
+      <div class="bio-intro" data-i18n="aboutBioIntro" data-i18n-html>
         <strong>Wassup, I'm Snywy!</strong> I'm a 23-year-old Brazilian furry with a playful, goofy side and a
         ton of interests (even if I don't always follow through). Social silence is kinda my thing, so don't
         worry if I go quiet—it's just how I roll. Still figuring out this whole internet life, but hey, we're
@@ -318,46 +319,46 @@
       </div>
 
       <div class="personality-traits">
-        <span class="trait">🌙 Night Owl</span>
-        <span class="trait">🎮 Gamer</span>
-        <span class="trait">✨ Creative</span>
-        <span class="trait">🧠 ADHD Haver</span>
+        <span class="trait" data-i18n="aboutTraitNight">🌙 Night Owl</span>
+        <span class="trait" data-i18n="aboutTraitGamer">🎮 Gamer</span>
+        <span class="trait" data-i18n="aboutTraitCreative">✨ Creative</span>
+        <span class="trait" data-i18n="aboutTraitAdhd">🧠 ADHD Haver</span>
         <span class="trait">🏳️‍🌈 MLM</span>
       </div>
 
-      <h3>The Creative & Academic Side</h3>
-      <p>
+      <h3 data-i18n="aboutCreativeHeading">The Creative & Academic Side</h3>
+      <p data-i18n="aboutCreativeIntro" data-i18n-html>
         I'm currently navigating the world of <strong>Computer Science</strong> at CIn-UFPE (Federal University of
         Pernambuco), currently on an academic exchange. My brain is a constant playground for creative hobbies, and I'm
         deeply into:
       </p>
       <div class="interests-grid">
-        <div class="interest-tag">🎨 Graphic Design</div>
-        <div class="interest-tag">🎵 Music Production</div>
-        <div class="interest-tag">🎮 Game Development</div>
+        <div class="interest-tag" data-i18n="aboutInterestDesign">🎨 Graphic Design</div>
+        <div class="interest-tag" data-i18n="aboutInterestMusic">🎵 Music Production</div>
+        <div class="interest-tag" data-i18n="aboutInterestGameDev">🎮 Game Development</div>
       </div>
 
-      <p>
+      <p data-i18n="aboutMilestones" data-i18n-html>
         I've set some big milestones for myself, aiming to turn my passion projects into reality by
         <strong>2027 or 2028</strong>. Some are already underway (check my projects!), while others are still
         brewing.
       </p>
 
-      <h3>Gaming & Identity</h3>
-      <p>
+      <h3 data-i18n="aboutGamingHeading">Gaming & Identity</h3>
+      <p data-i18n="aboutGamingText" data-i18n-html>
         When I'm not studying or designing, you'll likely find me lost in a digital world. My current rotation
         includes <em>WEBFISHING</em>, <em>VRChat</em>, <em>ROBLOX</em>,
         <em>Minecraft</em>, <em>Team Fortress 2</em>, and <em>Fortnite</em>.
       </p>
 
-      <p>
+      <p data-i18n="aboutIdentityText" data-i18n-html>
         On a personal note: I identify as <strong>gay (MLM)</strong> 🏳️‍🌈 and have been diagnosed with
         <strong>ADHD</strong>, which explains the ton of interests and the occasional unfinished project!
       </p>
 
       <div class="sona-section">
-        <h3>🐉 Meet Snywy (My Sona)</h3>
-        <p>
+        <h3 data-i18n="aboutSonaHeading">🐉 Meet Snywy (My Sona)</h3>
+        <p data-i18n="aboutSonaIntro" data-i18n-html>
           If you see a chubby, mint-scented dragon around, that's <strong>Snywy</strong>—my fursona and creative
           counterpart. He's a shy, mute <em>"Mint Dragon"</em> with a birthmark on his chest that smells like fresh
           mint.
@@ -391,23 +392,25 @@
                 </g>
               </svg>
             </span>
-            <span>Mintheon</span>
+            <span data-i18n="aboutMintheonLabel">Mintheon</span>
           </div>
-          <p class="mintheon-showcase-copy">This is what Mintheon looks like on Snywy: a mint-colored birthmark with a
+          <p class="mintheon-showcase-copy" data-i18n="aboutMintheonCopy">This is what Mintheon looks like on Snywy: a
+            mint-colored birthmark with a
             strong green tone and a soft glow effect.</p>
         </div>
         <div class="ref-sheet-card">
           <div class="ref-sheet-header">
-            <div class="ref-sheet-title">Reference Sheet</div>
-            <div class="ref-sheet-credit">
+            <div class="ref-sheet-title" data-i18n="aboutRefTitle">Reference Sheet</div>
+            <div class="ref-sheet-credit" data-i18n="aboutRefCredit" data-i18n-html>
               Ref sheet made by <a href="https://bsky.app/profile/darkgreyrai.bsky.social" target="_blank"
                 rel="noopener noreferrer">Darkgrey</a>
             </div>
           </div>
           <img src="https://i.imgur.com/bHIPuHn.png" class="ref-sheet-image" alt="Snywy sona reference sheet"
-            id="refSheetImage" role="button" tabindex="0" aria-label="Open reference sheet zoom view">
+            id="refSheetImage" role="button" tabindex="0" aria-label="Open reference sheet zoom view"
+            data-i18n-alt="aboutRefAlt" data-i18n-aria-label="aboutRefOpenAria">
         </div>
-        <p>
+        <p data-i18n="aboutSonaOutro" data-i18n-html>
           Since he's mute, he communicates through squeaks and is usually seen in his iconic <strong>blue
             glasses</strong> and <strong>orange bandana</strong>. His ears taste like mint bubblegum if nibbled
           (don't ask), and he always loves a big hug on his tail. He represents the playful, friendly side of who
@@ -419,10 +422,82 @@
   </main>
 
   <div class="ref-sheet-lightbox" id="refSheetLightbox" aria-hidden="true">
-    <button class="ref-sheet-lightbox-close" id="refSheetLightboxClose" type="button"
-      aria-label="Close zoom view">&times;</button>
-    <img class="ref-sheet-lightbox-image" id="refSheetLightboxImage" src="" alt="Zoomed Snywy sona reference sheet">
+    <button class="ref-sheet-lightbox-close" id="refSheetLightboxClose" type="button" aria-label="Close zoom view"
+      data-i18n-aria-label="aboutCloseZoomAria">&times;</button>
+    <img class="ref-sheet-lightbox-image" id="refSheetLightboxImage" src="" alt="Zoomed Snywy sona reference sheet"
+      data-i18n-alt="aboutRefZoomAlt">
   </div>
+
+  <script src="../lang.js"></script>
+  <script>
+    const pageTranslations = {
+      en: {
+        aboutTitle: 'About - Snywy',
+        aboutHeading: 'About Me',
+        aboutBioIntro: '<strong>Wassup, I\'m Snywy!</strong> I\'m a 23-year-old Brazilian furry with a playful, goofy side and a ton of interests (even if I don\'t always follow through). Social silence is kinda my thing, so don\'t worry if I go quiet, it\'s just how I roll. Still figuring out this whole internet life, but hey, we\'re all a work in progress!',
+        aboutTraitNight: '🌙 Night Owl',
+        aboutTraitGamer: '🎮 Gamer',
+        aboutTraitCreative: '✨ Creative',
+        aboutTraitAdhd: '🧠 ADHD Haver',
+        aboutCreativeHeading: 'The Creative & Academic Side',
+        aboutCreativeIntro: 'I\'m currently navigating the world of <strong>Computer Science</strong> at CIn-UFPE (Federal University of Pernambuco), currently on an academic exchange. My brain is a constant playground for creative hobbies, and I\'m deeply into:',
+        aboutInterestDesign: '🎨 Graphic Design',
+        aboutInterestMusic: '🎵 Music Production',
+        aboutInterestGameDev: '🎮 Game Development',
+        aboutMilestones: 'I\'ve set some big milestones for myself, aiming to turn my passion projects into reality by <strong>2027 or 2028</strong>. Some are already underway (check my projects!), while others are still brewing.',
+        aboutGamingHeading: 'Gaming & Identity',
+        aboutGamingText: 'When I\'m not studying or designing, you\'ll likely find me lost in a digital world. My current rotation includes <em>WEBFISHING</em>, <em>VRChat</em>, <em>ROBLOX</em>, <em>Minecraft</em>, <em>Team Fortress 2</em>, and <em>Fortnite</em>.',
+        aboutIdentityText: 'On a personal note: I identify as <strong>gay (MLM)</strong> 🏳️‍🌈 and have been diagnosed with <strong>ADHD</strong>, which explains the ton of interests and the occasional unfinished project!',
+        aboutSonaHeading: '🐉 Meet Snywy (My Sona)',
+        aboutSonaIntro: 'If you see a chubby, mint-scented dragon around, that\'s <strong>Snywy</strong>, my fursona and creative counterpart. He\'s a shy, mute <em>"Mint Dragon"</em> with a birthmark on his chest that smells like fresh mint.',
+        aboutMintheonLabel: 'Mintheon',
+        aboutMintheonCopy: 'This is what Mintheon looks like on Snywy: a mint-colored birthmark with a strong green tone and a soft glow effect.',
+        aboutRefTitle: 'Reference Sheet',
+        aboutRefCredit: 'Ref sheet made by <a href="https://bsky.app/profile/darkgreyrai.bsky.social" target="_blank" rel="noopener noreferrer">Darkgrey</a>',
+        aboutRefAlt: 'Snywy sona reference sheet',
+        aboutRefOpenAria: 'Open reference sheet zoom view',
+        aboutSonaOutro: 'Since he\'s mute, he communicates through squeaks and is usually seen in his iconic <strong>blue glasses</strong> and <strong>orange bandana</strong>. His ears taste like mint bubblegum if nibbled (don\'t ask), and he always loves a big hug on his tail. He represents the playful, friendly side of who I am! 💚',
+        aboutCloseZoomAria: 'Close zoom view',
+        aboutRefZoomAlt: 'Zoomed Snywy sona reference sheet'
+      },
+      pt: {
+        aboutTitle: 'Sobre - Snywy',
+        aboutHeading: 'Sobre Mim',
+        aboutBioIntro: '<strong>E aí, eu sou o Snywy!</strong> Sou um furry brasileiro de 23 anos com um lado brincalhão e cheio de interesses (mesmo quando não termino tudo). Ficar em silêncio socialmente é meio que minha vibe, então relaxa se eu sumir um pouco. Ainda estou descobrindo essa vida online, mas todo mundo está em constante evolução!',
+        aboutTraitNight: '🌙 Notívago',
+        aboutTraitGamer: '🎮 Gamer',
+        aboutTraitCreative: '✨ Criativo',
+        aboutTraitAdhd: '🧠 Tenho TDAH',
+        aboutCreativeHeading: 'Lado Criativo e Acadêmico',
+        aboutCreativeIntro: 'Atualmente estou navegando pelo mundo da <strong>Ciência da Computação</strong> no CIn-UFPE (Universidade Federal de Pernambuco), em intercâmbio acadêmico. Minha mente está sempre em modo criativo, e eu curto muito:',
+        aboutInterestDesign: '🎨 Design Gráfico',
+        aboutInterestMusic: '🎵 Produção Musical',
+        aboutInterestGameDev: '🎮 Desenvolvimento de Jogos',
+        aboutMilestones: 'Defini metas grandes para mim, querendo transformar meus projetos de paixão em realidade até <strong>2027 ou 2028</strong>. Alguns já estão em andamento (vê meus projetos!), enquanto outros ainda estão sendo planejados.',
+        aboutGamingHeading: 'Jogos e Identidade',
+        aboutGamingText: 'Quando não estou estudando ou criando, provavelmente estou perdido em algum mundo digital. Os jogos da vez incluem <em>WEBFISHING</em>, <em>VRChat</em>, <em>ROBLOX</em>, <em>Minecraft</em>, <em>Team Fortress 2</em> e <em>Fortnite</em>.',
+        aboutIdentityText: 'No lado pessoal: me identifico como <strong>gay (MLM)</strong> 🏳️‍🌈 e fui diagnosticado com <strong>TDAH</strong>, o que explica a quantidade de interesses e os projetos que às vezes ficam no meio do caminho!',
+        aboutSonaHeading: '🐉 Conheça o Snywy (Minha Sona)',
+        aboutSonaIntro: 'Se você vir um dragão gordinho com cheiro de menta por aí, esse é o <strong>Snywy</strong>, minha fursona e contraparte criativa. Ele é um <em>"Dragão de Menta"</em> tímido e mudo, com uma marca no peito que tem cheiro de menta fresca.',
+        aboutMintheonLabel: 'Mintheon',
+        aboutMintheonCopy: 'Esse é o visual do Mintheon no Snywy: uma marca de nascimento em tom de menta com verde forte e um brilho suave.',
+        aboutRefTitle: 'Ficha de Referência',
+        aboutRefCredit: 'Ficha feita por <a href="https://bsky.app/profile/darkgreyrai.bsky.social" target="_blank" rel="noopener noreferrer">Darkgrey</a>',
+        aboutRefAlt: 'Ficha de referência da sona Snywy',
+        aboutRefOpenAria: 'Abrir visualização ampliada da ficha',
+        aboutSonaOutro: 'Como ele é mudo, se comunica com guinchinhos e costuma aparecer com seus icônicos <strong>óculos azuis</strong> e <strong>bandana laranja</strong>. As orelhas dele têm gosto de chiclete de menta se você mordiscar (não pergunte), e ele ama um abraço no rabo. Ele representa meu lado mais brincalhão e amigável! 💚',
+        aboutCloseZoomAria: 'Fechar visualização ampliada',
+        aboutRefZoomAlt: 'Ficha ampliada da sona Snywy'
+      }
+    };
+
+    function applyLanguageFromParent(language) {
+      window.PortfolioLanguage.applyTranslations(pageTranslations, language);
+    }
+
+    window.applyLanguageFromParent = applyLanguageFromParent;
+    window.PortfolioLanguage.initPageLanguage(pageTranslations);
+  </script>
 
   <script>
     const refSheetImage = document.getElementById('refSheetImage');
