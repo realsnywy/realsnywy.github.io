@@ -376,3 +376,54 @@ a {
 a:hover {
   color: rgba(var(--text-rgb), 0.8);
 }
+
+/* Mobile-specific adjustments to improve layout and readability */
+@media (max-width: 480px) {
+  .navbar-brand {
+    font-size: 1rem;
+  }
+
+  .nav-link {
+    font-size: 0.75rem;
+    margin-left: 0.6rem;
+  }
+
+  .navbar-logo {
+    width: 56px;
+    height: auto;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  h2 {
+    font-size: 1rem;
+  }
+
+  /* Pages that define hero-section h1 will be affected via this rule */
+  .hero-section h1 {
+    font-size: 2rem;
+  }
+
+  .custom-btn {
+    padding: 8px 14px;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+  }
+
+  .skill-grid {
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 10px;
+  }
+
+  .skill-card {
+    padding: 14px;
+    min-height: 100px;
+  }
+
+  main.container {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+}

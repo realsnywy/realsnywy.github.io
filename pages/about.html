@@ -96,6 +96,43 @@
       margin-top: 0;
     }
 
+    .mintheon-showcase {
+      margin: 22px 0;
+      padding: 18px 20px;
+      border-radius: 14px;
+      border: 1px solid rgba(var(--text-rgb), 0.12);
+      background: rgba(var(--text-rgb), 0.04);
+    }
+
+    .mintheon-showcase-header {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 12px;
+      color: var(--text-primary);
+      font-weight: 700;
+      letter-spacing: 0.02em;
+    }
+
+    .mintheon-mark {
+      width: 3rem;
+      height: 3rem;
+      display: inline-flex;
+      flex: 0 0 auto;
+    }
+
+    .mintheon-mark svg {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+
+    .mintheon-showcase-copy {
+      margin: 0;
+      color: rgba(var(--text-rgb), 0.82);
+      line-height: 1.7;
+    }
+
     .ref-sheet-card {
       background: rgba(0, 0, 0, 0.22);
       border: 1px solid rgba(var(--text-rgb), 0.12);
@@ -158,6 +195,51 @@
       width: 100%;
       height: auto;
       background: rgba(255, 255, 255, 0.02);
+      cursor: zoom-in;
+      transition: transform 0.2s ease;
+    }
+
+    .ref-sheet-image:hover {
+      transform: scale(1.01);
+    }
+
+    .ref-sheet-lightbox {
+      position: fixed;
+      inset: 0;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      background: rgba(0, 0, 0, 0.78);
+      z-index: 9999;
+    }
+
+    .ref-sheet-lightbox.is-open {
+      display: flex;
+    }
+
+    .ref-sheet-lightbox-image {
+      max-width: min(1200px, 95vw);
+      max-height: 90vh;
+      width: auto;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 20px 48px rgba(0, 0, 0, 0.55);
+    }
+
+    .ref-sheet-lightbox-close {
+      position: absolute;
+      top: 16px;
+      right: 16px;
+      border: 1px solid rgba(255, 255, 255, 0.35);
+      background: rgba(0, 0, 0, 0.35);
+      color: #ffffff;
+      width: 38px;
+      height: 38px;
+      border-radius: 8px;
+      font-size: 1.2rem;
+      line-height: 1;
+      cursor: pointer;
     }
 
     .profile-avatar {
@@ -277,9 +359,43 @@
         <h3>🐉 Meet Snywy (My Sona)</h3>
         <p>
           If you see a chubby, mint-scented dragon around, that's <strong>Snywy</strong>—my fursona and creative
-          counterpart. He's a shy, mute <em>"Mint Dragon"</em> with a birthmark named <strong>Mintheon</strong> on
-          his chest that smells like fresh mint. He's a bit chubby and shy, but very friendly.
+          counterpart. He's a shy, mute <em>"Mint Dragon"</em> with a birthmark on his chest that smells like fresh
+          mint.
         </p>
+        <div class="mintheon-showcase">
+          <div class="mintheon-showcase-header">
+            <span class="mintheon-mark" aria-hidden="true">
+              <svg width="69.777mm" height="101.254mm" viewBox="0 0 263.72443 382.69275" version="1.1"
+                xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"
+                xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+                xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+                xmlns:svg="http://www.w3.org/2000/svg">
+                <defs id="defs2">
+                  <linearGradient inkscape:collect="always" xlink:href="#linearGradient1858" id="linearGradient98"
+                    gradientUnits="userSpaceOnUse" x1="507.77356" y1="53.487694" x2="507.77356" y2="312.99484"
+                    gradientTransform="matrix(0.75682194,-0.3933199,0.3933199,0.75682194,-759.72521,240.90049)" />
+                  <linearGradient id="linearGradient1858" inkscape:collect="always">
+                    <stop style="stop-color:#297373;stop-opacity:1;" offset="0" id="stop1858" />
+                    <stop style="stop-color:#1f5656;stop-opacity:1;" offset="1" id="stop1859" />
+                  </linearGradient>
+                </defs>
+                <g inkscape:label="Camada 1" inkscape:groupmode="layer" id="layer1"
+                  transform="translate(-4.8284283e-7,-1.4847951e-5)">
+                  <path
+                    style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:url(#linearGradient98);fill-opacity:1;stroke:url(#linearGradient98);stroke-width:17.4527;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1"
+                    d="M 160.46405,72.636005 C 137.284,112.71062 125.09089,132.9889 117.44305,176.34825 L 93.387114,148.40499 c -8.509574,44.1769 -3.564749,78.5771 -0.537352,90.26658 L 64.459386,219.74503 c -3.280648,18.60136 -7.889878,54.65133 6.326152,93.7186 C 63.3335,308.9857 47.148596,298.8053 37.328455,293.13775 c -0.0052,56.47112 48.004714,144.10614 123.135595,144.73867 75.13088,-0.63253 123.14078,-88.26755 123.13559,-144.73867 -9.82014,5.66755 -26.00504,15.84795 -33.45708,20.32588 14.21603,-39.06727 9.6068,-75.11724 6.32615,-93.7186 l -28.39037,18.92654 c 3.02739,-11.68948 7.97222,-46.08968 -0.53735,-90.26658 l -24.05594,27.94326 C 195.83721,132.9889 183.6441,112.71062 160.46405,72.636005 Z"
+                    id="path2009" class="UnoptimicedTransforms" sodipodi:nodetypes="cccccccc"
+                    inkscape:path-effect="#path-effect2013"
+                    inkscape:original-d="M 162.5903,68.957004 C 138.02319,111.50911 125.32142,131.68193 117.44305,176.34825 L 93.387114,148.40499 c -8.509574,44.1769 -3.564749,78.5771 -0.537352,90.26658 L 64.459386,219.74503 c -3.280648,18.60136 -7.889878,54.65133 6.326152,93.7186 C 63.3335,308.9857 47.148596,298.8053 37.328455,293.13775 c -0.0052,56.67688 48.355214,144.74518 123.957925,144.74211"
+                    transform="translate(-28.602081,-63.910511)" />
+                </g>
+              </svg>
+            </span>
+            <span>Mintheon</span>
+          </div>
+          <p class="mintheon-showcase-copy">This is what Mintheon looks like on Snywy: a mint-colored birthmark with a
+            strong green tone and a soft glow effect.</p>
+        </div>
         <div class="ref-sheet-card">
           <div class="ref-sheet-header">
             <div class="ref-sheet-title">Reference Sheet</div>
@@ -288,7 +404,8 @@
                 rel="noopener noreferrer">Darkgrey</a>
             </div>
           </div>
-          <img src="https://i.imgur.com/bHIPuHn.png" class="ref-sheet-image" alt="Snywy sona reference sheet">
+          <img src="https://i.imgur.com/bHIPuHn.png" class="ref-sheet-image" alt="Snywy sona reference sheet"
+            id="refSheetImage" role="button" tabindex="0" aria-label="Open reference sheet zoom view">
         </div>
         <p>
           Since he's mute, he communicates through squeaks and is usually seen in his iconic <strong>blue
@@ -300,6 +417,54 @@
 
     </div>
   </main>
+
+  <div class="ref-sheet-lightbox" id="refSheetLightbox" aria-hidden="true">
+    <button class="ref-sheet-lightbox-close" id="refSheetLightboxClose" type="button"
+      aria-label="Close zoom view">&times;</button>
+    <img class="ref-sheet-lightbox-image" id="refSheetLightboxImage" src="" alt="Zoomed Snywy sona reference sheet">
+  </div>
+
+  <script>
+    const refSheetImage = document.getElementById('refSheetImage');
+    const refSheetLightbox = document.getElementById('refSheetLightbox');
+    const refSheetLightboxImage = document.getElementById('refSheetLightboxImage');
+    const refSheetLightboxClose = document.getElementById('refSheetLightboxClose');
+
+    function openRefSheetLightbox() {
+      refSheetLightboxImage.src = refSheetImage.src;
+      refSheetLightbox.classList.add('is-open');
+      refSheetLightbox.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeRefSheetLightbox() {
+      refSheetLightbox.classList.remove('is-open');
+      refSheetLightbox.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = '';
+      refSheetLightboxImage.src = '';
+    }
+
+    refSheetImage.addEventListener('click', openRefSheetLightbox);
+    refSheetImage.addEventListener('keydown', (event) => {
+      if (event.key === 'Enter' || event.key === ' ') {
+        event.preventDefault();
+        openRefSheetLightbox();
+      }
+    });
+
+    refSheetLightboxClose.addEventListener('click', closeRefSheetLightbox);
+    refSheetLightbox.addEventListener('click', (event) => {
+      if (event.target === refSheetLightbox) {
+        closeRefSheetLightbox();
+      }
+    });
+
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape' && refSheetLightbox.classList.contains('is-open')) {
+        closeRefSheetLightbox();
+      }
+    });
+  </script>
 
 </body>
 
