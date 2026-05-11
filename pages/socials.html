@@ -11,6 +11,16 @@
     integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
   <link rel="stylesheet" href="../styles.css">
   <style>
+    :root {
+      --social-icon-color: #E5E5E5;
+    }
+
+    @media (prefers-color-scheme: light) {
+      :root {
+        --social-icon-color: #2D2D2D;
+      }
+    }
+
     .socials-section {
       max-width: 900px;
       margin: 0 auto;
@@ -73,6 +83,10 @@
       min-height: 68px;
     }
 
+    .social-card .social-icon {
+      background-color: var(--social-icon-color);
+    }
+
     .social-card:hover,
     .social-card:focus-visible {
       color: var(--text-primary);
@@ -89,7 +103,6 @@
       flex: 0 0 34px;
       -webkit-mask: var(--si-icon, none) no-repeat center/contain;
       mask: var(--si-icon, none) no-repeat center/contain;
-      background-color: #E5E5E5;
     }
 
     .social-name {
@@ -107,7 +120,7 @@
       position: relative;
       border-radius: 12px;
       overflow: hidden;
-      border: 1px solid rgba(var(--text-rgb), 0.14);
+      border: 1px solid rgba(var(--text-rgb), 0.12);
       min-height: 168px;
       text-decoration: none;
       color: #ffffff;
@@ -159,6 +172,7 @@
       width: 18px;
       height: 18px;
       flex: 0 0 18px;
+      background-color: #E5E5E5;
     }
 
     /* Simple Icons */
