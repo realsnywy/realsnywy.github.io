@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Socials - Snywy</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <link rel="stylesheet" href="../styles.css">
+  <style>
+    .socials-section {
+      max-width: 900px;
+      margin: 0 auto;
+      animation: fadeIn 0.8s ease-out;
+    }
+
+    .socials-header {
+      text-align: left;
+      margin-bottom: 30px;
+    }
+
+    .socials-header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+
+    .socials-subtitle {
+      color: rgba(var(--text-rgb), 0.68);
+      font-size: 1.1rem;
+      margin-bottom: 40px;
+    }
+
+    .social-category {
+      margin-bottom: 34px;
+    }
+
+    .social-category h2 {
+      margin-bottom: 14px;
+      font-size: 1.22rem;
+      border-bottom: 1px solid rgba(var(--text-rgb), 0.18);
+      padding-bottom: 10px;
+    }
+
+    .social-subgroup-title {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 0.9rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: rgba(var(--text-rgb), 0.72);
+      margin: 14px 0 8px;
+    }
+
+    .social-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 12px;
+    }
+
+    .social-card {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      background: rgba(var(--text-rgb), 0.04);
+      border: 1px solid rgba(var(--text-rgb), 0.12);
+      border-radius: 10px;
+      padding: 12px;
+      color: var(--text-primary);
+      text-decoration: none;
+      transition: all 0.18s ease;
+      min-height: 68px;
+    }
+
+    .social-card:hover,
+    .social-card:focus-visible {
+      color: var(--text-primary);
+      transform: translateY(-3px);
+      border-color: rgba(var(--text-rgb), 0.25);
+      background: rgba(var(--text-rgb), 0.07);
+      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.22);
+      outline: none;
+    }
+
+    .social-icon {
+      width: 34px;
+      height: 34px;
+      flex: 0 0 34px;
+      -webkit-mask: var(--si-icon, none) no-repeat center/contain;
+      mask: var(--si-icon, none) no-repeat center/contain;
+      background-color: #E5E5E5;
+    }
+
+    .social-name {
+      font-weight: 700;
+      letter-spacing: 0.01em;
+    }
+
+    .music-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 14px;
+    }
+
+    .music-card {
+      position: relative;
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid rgba(var(--text-rgb), 0.14);
+      min-height: 168px;
+      text-decoration: none;
+      color: #ffffff;
+      background: #1f1f1f;
+      display: block;
+      transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+    }
+
+    .music-card:hover,
+    .music-card:focus-visible {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 26px rgba(0, 0, 0, 0.28);
+      border-color: rgba(var(--text-rgb), 0.3);
+      outline: none;
+      color: #ffffff;
+    }
+
+    .music-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      position: absolute;
+      inset: 0;
+      filter: saturate(0.85) contrast(1.02);
+    }
+
+    .music-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(0, 0, 0, 0.16) 0%, rgba(0, 0, 0, 0.7) 100%);
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 14px;
+    }
+
+    .music-platform {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-family: 'Orbitron', sans-serif;
+      font-size: 0.85rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 2px;
+    }
+
+    .music-platform .social-icon {
+      width: 18px;
+      height: 18px;
+      flex: 0 0 18px;
+    }
+
+    /* Simple Icons */
+    .si-discord {
+      --si-icon: url('https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/discord.svg');
+    }
+
+    .si-telegram {
+      --si-icon: url('https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/telegram.svg');
+    }
+
+    .si-x {
+      --si-icon: url('https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/x.svg');
+    }
+
+    .si-bluesky {
+      --si-icon: url('https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/bluesky.svg');
+    }
+
+    .si-twitch {
+      --si-icon: url('https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/twitch.svg');
+    }
+
+    .si-tiktok {
+      --si-icon: url('https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/tiktok.svg');
+    }
+
+    .si-youtube {
+      --si-icon: url('https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/youtube.svg');
+    }
+
+    .si-instagram {
+      --si-icon: url('https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/instagram.svg');
+    }
+
+    .si-steam {
+      --si-icon: url('https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/steam.svg');
+    }
+
+    .si-roblox {
+      --si-icon: url('https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/roblox.svg');
+    }
+
+    .si-vrchat {
+      --si-icon: url('https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/vrchat.svg');
+    }
+
+    .si-osu {
+      --si-icon: url('https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/osu.svg');
+    }
+
+    .si-retroachievements {
+      --si-icon: url('https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/retroachievements.svg');
+    }
+
+    .si-spotify {
+      --si-icon: url('https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/spotify.svg');
+    }
+
+    .si-soundcloud {
+      --si-icon: url('https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/soundcloud.svg');
+    }
+
+    .si-github {
+      --si-icon: url('https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/github.svg');
+    }
+
+    @media (max-width: 480px) {
+      .social-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .music-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body class="d-flex flex-column min-vh-100" data-i18n-title="socialsTitle"
+  style="background-color: var(--bg-primary); color: var(--text-primary);">
+
+  <main class="container px-3 flex-grow-1 py-4">
+    <div class="socials-section">
+      <div class="socials-header">
+        <h1 data-i18n="socialsHeading">Find Me Online</h1>
+        <p class="socials-subtitle" data-i18n="socialsSubtitle">Tap any card to open my profile or page.</p>
+      </div>
+
+      <section class="social-category" aria-labelledby="socials-core">
+        <h2 id="socials-core" data-i18n="socialsCore">Core Socials</h2>
+        <h3 class="social-subgroup-title" data-i18n="socialsMessages">Messages</h3>
+        <div class="social-grid">
+          <a class="social-card" href="https://discord.com/users/272796106595893249" target="_blank"
+            rel="noopener noreferrer" aria-label="Open Discord">
+            <span class="social-icon si-discord" aria-hidden="true"></span>
+            <div>
+              <div class="social-name">Discord</div>
+            </div>
+          </a>
+
+          <a class="social-card" href="https://t.me/snywy" target="_blank" rel="noopener noreferrer"
+            aria-label="Open Telegram">
+            <span class="social-icon si-telegram" aria-hidden="true"></span>
+            <div>
+              <div class="social-name">Telegram</div>
+            </div>
+          </a>
+        </div>
+
+        <h3 class="social-subgroup-title" data-i18n="socialsFeeds">Feeds</h3>
+        <div class="social-grid">
+
+          <a class="social-card" href="https://x.com/RealSnywy" target="_blank" rel="noopener noreferrer"
+            aria-label="Open X">
+            <span class="social-icon si-x" aria-hidden="true"></span>
+            <div>
+              <div class="social-name">X</div>
+            </div>
+          </a>
+
+          <a class="social-card" href="https://bsky.app/profile/snywy.furry.camp" target="_blank"
+            rel="noopener noreferrer" aria-label="Open Bluesky">
+            <span class="social-icon si-bluesky" aria-hidden="true"></span>
+            <div>
+              <div class="social-name">Bluesky</div>
+            </div>
+          </a>
+
+          <a class="social-card" href="https://tiktok.com/@snywy" target="_blank" rel="noopener noreferrer"
+            aria-label="Open TikTok">
+            <span class="social-icon si-tiktok" aria-hidden="true"></span>
+            <div>
+              <div class="social-name">TikTok</div>
+            </div>
+          </a>
+
+          <a class="social-card" href="https://www.instagram.com/realsnywy" target="_blank" rel="noopener noreferrer"
+            aria-label="Open Instagram">
+            <span class="social-icon si-instagram" aria-hidden="true"></span>
+            <div>
+              <div class="social-name">Instagram</div>
+            </div>
+          </a>
+        </div>
+
+        <h3 class="social-subgroup-title" data-i18n="socialsChannels">Channels</h3>
+        <div class="social-grid">
+
+          <a class="social-card" href="https://www.twitch.tv/realsnywy" target="_blank" rel="noopener noreferrer"
+            aria-label="Open Twitch">
+            <span class="social-icon si-twitch" aria-hidden="true"></span>
+            <div>
+              <div class="social-name">Twitch</div>
+            </div>
+          </a>
+
+          <a class="social-card" href="https://www.youtube.com/channel/UClzeKYAY4cqeRWQZzBpYozw" target="_blank"
+            rel="noopener noreferrer" aria-label="Open YouTube">
+            <span class="social-icon si-youtube" aria-hidden="true"></span>
+            <div>
+              <div class="social-name">YouTube</div>
+            </div>
+          </a>
+        </div>
+      </section>
+
+      <section class="social-category" aria-labelledby="socials-gaming">
+        <h2 id="socials-gaming" data-i18n="socialsGaming">Gaming Profiles</h2>
+        <div class="social-grid">
+          <a class="social-card" href="https://steamcommunity.com/id/snywy/" target="_blank" rel="noopener noreferrer"
+            aria-label="Open Steam">
+            <span class="social-icon si-steam" aria-hidden="true"></span>
+            <div>
+              <div class="social-name">Steam</div>
+            </div>
+          </a>
+
+          <a class="social-card" href="https://www.roblox.com/users/372587317/profile" target="_blank"
+            rel="noopener noreferrer" aria-label="Open Roblox">
+            <span class="social-icon si-roblox" aria-hidden="true"></span>
+            <div>
+              <div class="social-name">Roblox</div>
+            </div>
+          </a>
+
+          <a class="social-card" href="https://vrchat.com/home/user/usr_8aef5982-ce1f-406a-a602-63e0cbb74dfc"
+            target="_blank" rel="noopener noreferrer" aria-label="Open VRChat">
+            <span class="social-icon si-vrchat" aria-hidden="true"></span>
+            <div>
+              <div class="social-name">VRChat</div>
+            </div>
+          </a>
+
+          <a class="social-card" href="https://osu.ppy.sh/users/11951421" target="_blank" rel="noopener noreferrer"
+            aria-label="Open osu">
+            <span class="social-icon si-osu" aria-hidden="true"></span>
+            <div>
+              <div class="social-name">osu!</div>
+            </div>
+          </a>
+
+          <a class="social-card" href="https://retroachievements.org/user/Snywy" target="_blank"
+            rel="noopener noreferrer" aria-label="Open RetroAchievements">
+            <span class="social-icon si-retroachievements" aria-hidden="true"></span>
+            <div>
+              <div class="social-name">RetroAchievements</div>
+            </div>
+          </a>
+        </div>
+      </section>
+
+      <section class="social-category" aria-labelledby="socials-music">
+        <h2 id="socials-music" data-i18n="socialsMusic">squeaky hits.</h2>
+        <div class="music-grid">
+          <a class="music-card" href="https://open.spotify.com/playlist/0RsTbX6c28ZdidYGcUhd3l" target="_blank"
+            rel="noopener noreferrer" aria-label="Open squeaky hits on Spotify">
+            <img src="https://i.imgur.com/Mxz7ezJ.jpeg" alt="Squeaky Hits cover art">
+            <div class="music-overlay">
+              <span class="music-platform"><span class="social-icon si-spotify" aria-hidden="true"></span>Spotify</span>
+            </div>
+          </a>
+
+          <a class="music-card" href="https://soundcloud.com/snywy/sets/squeaky-hits" target="_blank"
+            rel="noopener noreferrer" aria-label="Open squeaky hits on SoundCloud">
+            <img src="https://i.imgur.com/Mxz7ezJ.jpeg" alt="Squeaky Hits cover art">
+            <div class="music-overlay">
+              <span class="music-platform"><span class="social-icon si-soundcloud"
+                  aria-hidden="true"></span>SoundCloud</span>
+            </div>
+          </a>
+        </div>
+      </section>
+
+      <section class="social-category" aria-labelledby="socials-dev">
+        <h2 id="socials-dev" data-i18n="socialsDev">Dev & Extras</h2>
+        <div class="social-grid">
+          <a class="social-card" href="https://github.com/realsnywy" target="_blank" rel="noopener noreferrer"
+            aria-label="Open GitHub">
+            <span class="social-icon si-github" aria-hidden="true"></span>
+            <div>
+              <div class="social-name">GitHub</div>
+            </div>
+          </a>
+
+          <a class="social-card" href="https://t.me/addstickers/Snywy" target="_blank" rel="noopener noreferrer"
+            aria-label="Open Telegram stickers">
+            <span class="social-icon si-telegram" aria-hidden="true"></span>
+            <div>
+              <div class="social-name">Telegram Stickers</div>
+            </div>
+          </a>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <script src="../lang.js"></script>
+  <script>
+    const pageTranslations = {
+      en: {
+        socialsTitle: 'Socials - Snywy',
+        socialsHeading: 'Find Me Online',
+        socialsSubtitle: 'Tap any card to open my profile or page.',
+        socialsCore: 'Core Socials',
+        socialsMessages: 'Messages',
+        socialsFeeds: 'Feeds',
+        socialsChannels: 'Channels',
+        socialsGaming: 'Gaming Profiles',
+        socialsMusic: 'squeaky hits.',
+        socialsDev: 'Dev & Extras'
+      },
+      pt: {
+        socialsTitle: 'Redes - Snywy',
+        socialsHeading: 'Me Encontre Online',
+        socialsSubtitle: 'Toque em qualquer card para abrir meu perfil ou página.',
+        socialsCore: 'Redes Principais',
+        socialsMessages: 'Mensagens',
+        socialsFeeds: 'Feeds',
+        socialsChannels: 'Canais',
+        socialsGaming: 'Perfis de Jogos',
+        socialsMusic: 'squeaky hits.',
+        socialsDev: 'Dev e Extras'
+      }
+    };
+
+    function applyLanguageFromParent(language) {
+      window.PortfolioLanguage.applyTranslations(pageTranslations, language);
+    }
+
+    window.applyLanguageFromParent = applyLanguageFromParent;
+    window.PortfolioLanguage.initPageLanguage(pageTranslations);
+  </script>
+
+</body>
+
+</html>

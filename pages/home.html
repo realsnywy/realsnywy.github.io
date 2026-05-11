@@ -74,24 +74,6 @@
       text-transform: uppercase;
     }
 
-    .social-links {
-      display: flex;
-      gap: 20px;
-      justify-content: center;
-      margin-top: 40px;
-      font-size: 1.5rem;
-    }
-
-    .social-links a {
-      color: rgba(var(--text-rgb), 0.6);
-      transition: all 0.3s ease;
-    }
-
-    .social-links a:hover {
-      color: var(--text-primary);
-      transform: translateY(-3px);
-    }
-
     @media (max-width: 768px) {
       .hero-section {
         padding-top: 24px;
@@ -125,10 +107,6 @@
         justify-content: center;
       }
 
-      .social-links {
-        margin-top: 26px;
-        gap: 18px;
-      }
     }
 
     @media (max-width: 480px) {
@@ -140,9 +118,6 @@
         margin: 22px 0 16px;
       }
 
-      .social-links {
-        font-size: 1.35rem;
-      }
     }
   </style>
 </head>
@@ -174,22 +149,13 @@
           data-i18n-title="homeCtaAbout">
           <i class="bi bi-person-fill me-2" aria-hidden="true"></i><span data-i18n="homeCtaAbout">Get to Know Me</span>
         </a>
+        <a href="#" onclick="parent.navigateTo('socials'); return false;" class="btn custom-btn outline"
+          aria-label="See my social links" title="Find Me Online" data-i18n-aria-label="homeCtaSocials"
+          data-i18n-title="homeCtaSocials">
+          <i class="bi bi-broadcast me-2" aria-hidden="true"></i><span data-i18n="homeCtaSocials">Find Me Online</span>
+        </a>
       </div>
 
-      <div class="social-links">
-        <a href="https://linktr.ee/snywy" target="_blank" title="Link Tree" data-i18n-title="homeLinkTree">
-          <i class="bi bi-tree-fill"></i>
-        </a>
-        <a href="https://github.com/realsnywy" target="_blank" title="GitHub" data-i18n-title="homeGitHub">
-          <i class="bi bi-github"></i>
-        </a>
-        <a href="https://www.linkedin.com/in/gfcleao/" target="_blank" title="LinkedIn" data-i18n-title="homeLinkedIn">
-          <i class="bi bi-linkedin"></i>
-        </a>
-        <a href="https://www.facebook.com/gfcleao/" target="_blank" title="Facebook" data-i18n-title="homeFacebook">
-          <i class="bi bi-facebook"></i>
-        </a>
-      </div>
     </div>
   </main>
 
@@ -202,11 +168,8 @@
         homeIntro: 'A 23-year-old Brazilian Computer Science student and creative juggling game development, music production, and graphic design. Sometimes quiet, always thinking, perpetually caffeinated.',
         homeCtaProjects: 'Explore My Work',
         homeCtaAbout: 'Get to Know Me',
-        homeHeroAlt: 'Creative workspace illustration',
-        homeLinkTree: 'Link Tree',
-        homeGitHub: 'GitHub',
-        homeLinkedIn: 'LinkedIn',
-        homeFacebook: 'Facebook'
+        homeCtaSocials: 'Find Me Online',
+        homeHeroAlt: 'Creative workspace illustration'
       },
       pt: {
         homeTitle: 'Início - Snywy',
@@ -214,11 +177,8 @@
         homeIntro: 'Um estudante de Ciência da Computação e criativo brasileiro de 23 anos que equilibra desenvolvimento de jogos, produção musical e design gráfico. Às vezes quieto, sempre pensando e eternamente movido a café.',
         homeCtaProjects: 'Ver Projetos',
         homeCtaAbout: 'Conheça Mais',
-        homeHeroAlt: 'Ilustração de espaço criativo',
-        homeLinkTree: 'Link Tree',
-        homeGitHub: 'GitHub',
-        homeLinkedIn: 'LinkedIn',
-        homeFacebook: 'Facebook'
+        homeCtaSocials: 'Me Encontre Online',
+        homeHeroAlt: 'Ilustração de espaço criativo'
       }
     };
 
