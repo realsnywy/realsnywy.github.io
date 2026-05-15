@@ -224,6 +224,37 @@
         </div>
       </div>
 
+      <!-- LocalMemo -->
+      <div class="project-item" onclick="parent.navigateTo('projects/localmemo')">
+        <div class="project-header">
+          <h3 class="project-title">LocalMemo</h3>
+          <span class="status-badge status-wip" data-i18n="statusWip">Work in Progress</span>
+        </div>
+        <p class="project-description">
+          <span data-i18n="descLocalmemo">A polished vanilla JS notes and tasks app with localStorage persistence, JSON
+            import/export, color labels, and optional private GitHub Gist sync. It is currently in active development
+            and already usable as a personal productivity tool.</span>
+        </p>
+        <div class="project-footer">
+          <div>
+            <span class="project-tag" data-i18n="tagHtml">HTML</span>
+            <span class="project-tag" data-i18n="tagCss">CSS</span>
+            <span class="project-tag" data-i18n="tagJavaScript">JavaScript</span>
+            <span class="project-tag" data-i18n="tagLocalStorage">localStorage</span>
+          </div>
+          <div class="project-links">
+            <a href="https://realsnywy.github.io/LocalMemo/" class="project-link-btn" target="_blank"
+              rel="noopener noreferrer" onclick="event.stopPropagation()">
+              <i class="bi bi-box-arrow-up-right"></i> <span data-i18n="projectsOpen">Open</span>
+            </a>
+            <a href="https://github.com/realsnywy/LocalMemo" class="project-link-btn" target="_blank"
+              rel="noopener noreferrer" onclick="event.stopPropagation()">
+              <i class="bi bi-github"></i> <span data-i18n="projectsRepo">Repo</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
       <!-- Ideas -->
       <h2 class="section-heading" data-i18n="projectsIdeas">💡 Ideas</h2>
 
@@ -347,11 +378,13 @@
         statusUnplanned: 'Unplanned',
         projectsDownload: 'Download',
         projectsRepo: 'Repo',
+        projectsOpen: 'Open',
         projectsSourceClosed: '<i class="bi bi-lock me-1"></i>Source code not publicly available yet.',
         projectsConceptNotion: 'Concept saved in Notion.',
         descSsle: 'A modular PowerShell automation utility for Windows 11 (and 10) post-formatting setup. Install programs in bulk, apply system tweaks, and optimize performance with ease.',
         descMagiccube: 'An interactive JavaFX 3D Rubik\'s Cube simulator for educational purposes. Visualize algorithms, practice solving techniques, and explore patterns with an intuitive interface.',
         descBeepr: 'A multi-purpose Discord bot featuring a music system, fun commands, and utility features. Currently being actively developed with frequent updates and new functionality.',
+        descLocalmemo: 'A polished vanilla JS notes and tasks app with localStorage persistence, JSON import/export, color labels, and optional private GitHub Gist sync. It is currently in active development and already usable as a personal productivity tool.',
         descProjectA: 'A modern audio player inspired by classic Winamp: lightweight, skinnable, plugin-friendly, and built for desktop and mobile. Planned features include tracker and retro format support, visualizers, equalizer, Last.fm scrobbling, and Discord Rich Presence.',
         descProjectF: 'A 3D fighter inspired by Virtua Fighter and Tekken, focused on precise timing, technical depth, and a polished polygon-era visual identity. The goal is a classic arcade feel with modern smoothness.',
         descProjectP: 'A high-speed 3D action-platformer with a dragon protagonist, inspired by the ambition and scale of Sonic 06. Designed around momentum acts, non-stop rush stages, and aerial on-rails combat sequences.',
@@ -365,6 +398,10 @@
         tagPython: 'Python',
         tagDiscordPy: 'Discord.py',
         tagBot: 'Bot',
+        tagHtml: 'HTML',
+        tagCss: 'CSS',
+        tagJavaScript: 'JavaScript',
+        tagLocalStorage: 'localStorage',
         tagFlutter: 'Flutter',
         tagDart: 'Dart',
         tagAudio: 'Audio',
@@ -393,11 +430,13 @@
         statusUnplanned: 'Não planejado',
         projectsDownload: 'Baixar',
         projectsRepo: 'Repositório',
+        projectsOpen: 'Abrir',
         projectsSourceClosed: '<i class="bi bi-lock me-1"></i>Código-fonte ainda não está disponível publicamente.',
         projectsConceptNotion: 'Conceito salvo no Notion.',
         descSsle: 'Um utilitário modular de automação em PowerShell para configuração pós-formatação no Windows 11 (e 10). Instale programas em lote, aplique ajustes no sistema e otimize o desempenho com facilidade.',
         descMagiccube: 'Um simulador interativo de Cubo Mágico 3D em JavaFX para fins educacionais. Visualize algoritmos, pratique técnicas de resolução e explore padrões com uma interface intuitiva.',
         descBeepr: 'Um bot multifuncional para Discord com sistema de música, comandos divertidos e recursos utilitários. Está em desenvolvimento ativo com atualizações frequentes e novas funcionalidades.',
+        descLocalmemo: 'Um app refinado em JavaScript puro para notas e tarefas com persistência em localStorage, importação/exportação JSON, etiquetas por cor e sincronização opcional com GitHub Gist privado. Está em desenvolvimento ativo e já pode ser usado como ferramenta pessoal de produtividade.',
         descProjectA: 'Um player de áudio moderno inspirado no Winamp clássico: leve, personalizável, com suporte a plugins e pensado para desktop e mobile. Recursos planejados incluem suporte a trackers e formatos retrô, visualizadores, equalizador, scrobbling no Last.fm e Discord Rich Presence.',
         descProjectF: 'Um jogo de luta 3D inspirado em Virtua Fighter e Tekken, focado em timing preciso, profundidade técnica e uma identidade visual poligonal. A proposta é uma sensação clássica de arcade com fluidez moderna.',
         descProjectP: 'Um action-platformer 3D de alta velocidade com protagonista dragão, inspirado na ambição e escala de Sonic 06. Projetado em torno de fases de impulso contínuo e sequências aéreas on-rails.',
@@ -411,6 +450,10 @@
         tagPython: 'Python',
         tagDiscordPy: 'Discord.py',
         tagBot: 'Bot',
+        tagHtml: 'HTML',
+        tagCss: 'CSS',
+        tagJavaScript: 'JavaScript',
+        tagLocalStorage: 'localStorage',
         tagFlutter: 'Flutter',
         tagDart: 'Dart',
         tagAudio: 'Áudio',
