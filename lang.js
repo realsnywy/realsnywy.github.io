@@ -1,6 +1,6 @@
 (function () {
   const STORAGE_KEY = 'portfolioLanguage';
-  const SUPPORTED_LANGUAGES = ['en', 'pt'];
+  const SUPPORTED_LANGUAGES = ['en', 'pt', 'es'];
 
   function normalizeLanguage(language) {
     if (!language || typeof language !== 'string') {

@@ -138,6 +138,8 @@
                                 onclick="setLanguage('en')">EN</button>
                             <button type="button" id="lang-pt" class="language-btn"
                                 onclick="setLanguage('pt')">PT</button>
+                            <button type="button" id="lang-es" class="language-btn"
+                                onclick="setLanguage('es')">ES</button>
                         </div>
                     </li>
                 </ul>
@@ -183,6 +185,16 @@
                 navSocials: 'Redes',
                 footerText: '2026 @ Gabriel "Snywy" Furtado',
                 languageSelectorAria: 'Seletor de idioma'
+            },
+            es: {
+                indexTitle: 'Snywy',
+                navHome: 'Inicio',
+                navAbout: 'Sobre mí',
+                navProjects: 'Proyectos',
+                navArsenal: 'Arsenal',
+                navSocials: 'Redes',
+                footerText: '2026 @ Gabriel "Snywy" Furtado',
+                languageSelectorAria: 'Selector de idioma'
             }
         };
 
@@ -193,6 +205,7 @@
         function updateLanguageButtons(language) {
             document.getElementById('lang-en')?.classList.toggle('active', language === 'en');
             document.getElementById('lang-pt')?.classList.toggle('active', language === 'pt');
+            document.getElementById('lang-es')?.classList.toggle('active', language === 'es');
         }
 
         function applyLanguage(language) {
