@@ -168,46 +168,47 @@
           <span class="project-tag" data-i18n="tagCss">CSS</span>
           <span class="project-tag" data-i18n="tagJavaScript">JavaScript</span>
           <span class="project-tag" data-i18n="tagLocalStorage">localStorage</span>
-          <span class="status-badge status-wip" data-i18n="statusWip">Work in Progress</span>
+          <span class="status-badge status-completed" data-i18n="statusCompleted">Completed</span>
         </div>
       </div>
 
       <p data-i18n="localmemoIntro">
-        LocalMemo is my in-progress notes and tasks app built with vanilla HTML, CSS, and JavaScript. It is designed
-        to stay fully local by default, with automatic persistence, fast editing, and optional GitHub Gist sync for a
-        private cloud backup when I want it.
+        LocalMemo is a lightweight notes and tasks app built with vanilla HTML, CSS, and JavaScript. Everything stays
+        local by default, with optional private GitHub Gist sync for backup and restore.
       </p>
 
       <div class="notice-box" data-i18n="localmemoStatusNotice" data-i18n-html>
-        <strong>⚙️ Status:</strong> Active work in progress. The app is already usable, but I am still refining the
-        editor, sync flow, and overall polish.
+        <strong>⚙️ Status:</strong> Local-first and fully usable, with reminders, markdown editing, list views,
+        notifications, and backup tools.
       </div>
 
       <h2 class="section-title" data-i18n="localmemoFeatures">✨ Key Features</h2>
       <ul class="features-list">
-        <li data-i18n="localmemoFeature1">Create and manage notes and task lists</li>
-        <li data-i18n="localmemoFeature2">Automatic localStorage persistence with reload-safe state</li>
-        <li data-i18n="localmemoFeature3">JSON export and import for backups and transfers</li>
-        <li data-i18n="localmemoFeature4">Color labels for quick visual organization</li>
-        <li data-i18n="localmemoFeature5">Optional private GitHub Gist sync for remote backup</li>
-        <li data-i18n="localmemoFeature6">Built to be responsive and comfortable on desktop and mobile</li>
+        <li data-i18n="localmemoFeature1">Notes and tasks with colors, tags, reminders, pinning, archive, and trash</li>
+        <li data-i18n="localmemoFeature2">Custom lists for organizing and filtering items</li>
+        <li data-i18n="localmemoFeature3">Markdown editing with live preview and a rich toolbar</li>
+        <li data-i18n="localmemoFeature4">Multiple view modes with advanced search and filters</li>
+        <li data-i18n="localmemoFeature5">Private GitHub Gist sync for backup and restore</li>
+        <li data-i18n="localmemoFeature6">Browser notifications for reminders and local persistence</li>
       </ul>
 
       <h2 class="section-title" data-i18n="localmemoTechStack">📗 Tech Stack</h2>
       <ul class="features-list">
-        <li data-i18n="localmemoStack1" data-i18n-html><strong>HTML5</strong> - page structure and app layout</li>
-        <li data-i18n="localmemoStack2" data-i18n-html><strong>CSS3</strong> - styling, cards, modals, and responsive
-          layout</li>
-        <li data-i18n="localmemoStack3" data-i18n-html><strong>Vanilla JavaScript</strong> - app logic, rendering, and
-          state management</li>
-        <li data-i18n="localmemoStack4" data-i18n-html><strong>localStorage</strong> - local persistence</li>
-        <li data-i18n="localmemoStack5" data-i18n-html><strong>GitHub Gist API</strong> - optional private sync layer
+        <li data-i18n="localmemoStack1" data-i18n-html><strong>HTML5</strong> - app entry and markup</li>
+        <li data-i18n="localmemoStack2" data-i18n-html><strong>CSS3</strong> - global styles, responsive layout, and
+          dark mode</li>
+        <li data-i18n="localmemoStack3" data-i18n-html><strong>Vanilla JavaScript</strong> - rendering, editor logic,
+          and state management</li>
+        <li data-i18n="localmemoStack4" data-i18n-html><strong>ES modules</strong> - modular project structure</li>
+        <li data-i18n="localmemoStack5" data-i18n-html><strong>localStorage</strong> - local persistence and settings
+          storage</li>
+        <li data-i18n="localmemoStack6" data-i18n-html><strong>GitHub Gist API</strong> - optional private sync layer
         </li>
       </ul>
 
       <h2 class="section-title" data-i18n="localmemoLinks">🔗 Links</h2>
       <p data-i18n="localmemoLinksIntro">
-        The repository contains the work-in-progress source, and the live site is the current demo build.
+        The repository contains the source, and the live site is the current demo build.
       </p>
 
       <div class="cta-actions">
@@ -229,58 +230,60 @@
       en: {
         localmemoTitle: 'LocalMemo - Snywy',
         projectBack: 'Back to Projects',
-        statusWip: 'Work in Progress',
+        statusCompleted: 'Completed',
         projectsRepo: 'Repo',
         projectsOpen: 'Open',
         tagHtml: 'HTML',
         tagCss: 'CSS',
         tagJavaScript: 'JavaScript',
         tagLocalStorage: 'localStorage',
-        localmemoIntro: 'LocalMemo is my in-progress notes and tasks app built with vanilla HTML, CSS, and JavaScript. It is designed to stay fully local by default, with automatic persistence, fast editing, and optional GitHub Gist sync for a private cloud backup when I want it.',
-        localmemoStatusNotice: '<strong>⚙️ Status:</strong> Active work in progress. The app is already usable, but I am still refining the editor, sync flow, and overall polish.',
+        localmemoIntro: 'LocalMemo is a lightweight notes and tasks app built with vanilla HTML, CSS, and JavaScript. Everything stays local by default, with optional private GitHub Gist sync for backup and restore.',
+        localmemoStatusNotice: '<strong>⚙️ Status:</strong> Local-first and fully usable, with reminders, markdown editing, list views, notifications, and backup tools built into the current app.',
         localmemoFeatures: '✨ Key Features',
-        localmemoFeature1: 'Create and manage notes and task lists',
-        localmemoFeature2: 'Automatic localStorage persistence with reload-safe state',
-        localmemoFeature3: 'JSON export and import for backups and transfers',
-        localmemoFeature4: 'Color labels for quick visual organization',
-        localmemoFeature5: 'Optional private GitHub Gist sync for remote backup',
-        localmemoFeature6: 'Built to be responsive and comfortable on desktop and mobile',
+        localmemoFeature1: 'Notes and tasks with colors, tags, reminders, pinning, archive, and trash',
+        localmemoFeature2: 'Custom lists for organizing and filtering items',
+        localmemoFeature3: 'Markdown editing with live preview and a rich toolbar',
+        localmemoFeature4: 'Multiple view modes with advanced search and filters',
+        localmemoFeature5: 'Private GitHub Gist sync for backup and restore',
+        localmemoFeature6: 'Browser notifications for reminders and local persistence',
         localmemoTechStack: '📗 Tech Stack',
-        localmemoStack1: '<strong>HTML5</strong> - page structure and app layout',
-        localmemoStack2: '<strong>CSS3</strong> - styling, cards, modals, and responsive layout',
-        localmemoStack3: '<strong>Vanilla JavaScript</strong> - app logic, rendering, and state management',
-        localmemoStack4: '<strong>localStorage</strong> - local persistence',
-        localmemoStack5: '<strong>GitHub Gist API</strong> - optional private sync layer',
+        localmemoStack1: '<strong>HTML5</strong> - app entry and markup',
+        localmemoStack2: '<strong>CSS3</strong> - global styles, responsive layout, and dark mode',
+        localmemoStack3: '<strong>Vanilla JavaScript</strong> - rendering, editor logic, and state management',
+        localmemoStack4: '<strong>ES modules</strong> - modular project structure',
+        localmemoStack5: '<strong>localStorage</strong> - data, settings, and language preference persistence',
+        localmemoStack6: '<strong>GitHub Gist API</strong> - optional private sync layer',
         localmemoLinks: '🔗 Links',
-        localmemoLinksIntro: 'The repository contains the work-in-progress source, and the live site is the current demo build.'
+        localmemoLinksIntro: 'The repository contains the source, and the live site is the current demo build.'
       },
       pt: {
         localmemoTitle: 'LocalMemo - Snywy',
         projectBack: 'Voltar aos Projetos',
-        statusWip: 'Em andamento',
+        statusCompleted: 'Concluído',
         projectsRepo: 'Repositório',
         projectsOpen: 'Abrir',
         tagHtml: 'HTML',
         tagCss: 'CSS',
         tagJavaScript: 'JavaScript',
         tagLocalStorage: 'localStorage',
-        localmemoIntro: 'LocalMemo é meu app de notas e tarefas em andamento, feito com HTML, CSS e JavaScript puro. A proposta é manter tudo local por padrão, com persistência automática, edição rápida e sincronização opcional com GitHub Gist para um backup privado em nuvem quando eu quiser.',
-        localmemoStatusNotice: '<strong>⚙️ Status:</strong> Trabalho em andamento. O app já pode ser usado, mas ainda estou refinando o editor, o fluxo de sincronização e o polimento geral.',
+        localmemoIntro: 'LocalMemo é um app leve de notas e tarefas feito com HTML, CSS e JavaScript puro. Tudo fica local por padrão, com sincronização privada opcional com GitHub Gist para backup e restauração.',
+        localmemoStatusNotice: '<strong>⚙️ Status:</strong> Local-first e totalmente utilizável, com lembretes, edição Markdown, modos de visualização, notificações e ferramentas de backup integradas.',
         localmemoFeatures: '✨ Recursos Principais',
-        localmemoFeature1: 'Criar e gerenciar notas e listas de tarefas',
-        localmemoFeature2: 'Persistência automática em localStorage com estado seguro ao recarregar',
-        localmemoFeature3: 'Exportação e importação JSON para backup e transferência',
-        localmemoFeature4: 'Etiquetas por cor para organização visual rápida',
-        localmemoFeature5: 'Sincronização opcional com GitHub Gist privado para backup remoto',
-        localmemoFeature6: 'Construído para ser responsivo e confortável no desktop e no mobile',
+        localmemoFeature1: 'Notas e tarefas com cores, tags, lembretes, fixação, arquivo e lixeira',
+        localmemoFeature2: 'Listas personalizadas para organizar e filtrar itens',
+        localmemoFeature3: 'Edição Markdown com preview ao vivo e barra de ferramentas rica',
+        localmemoFeature4: 'Vários modos de visualização com busca e filtros avançados',
+        localmemoFeature5: 'Sincronização privada com GitHub Gist para backup e restauração',
+        localmemoFeature6: 'Notificações do navegador para lembretes e persistência local',
         localmemoTechStack: '📗 Tecnologias',
-        localmemoStack1: '<strong>HTML5</strong> - estrutura da página e layout do app',
-        localmemoStack2: '<strong>CSS3</strong> - estilo, cards, modais e layout responsivo',
-        localmemoStack3: '<strong>JavaScript puro</strong> - lógica do app, renderização e gerenciamento de estado',
-        localmemoStack4: '<strong>localStorage</strong> - persistência local',
-        localmemoStack5: '<strong>API do GitHub Gist</strong> - camada opcional de sincronização privada',
+        localmemoStack1: '<strong>HTML5</strong> - entrada e marcação do app',
+        localmemoStack2: '<strong>CSS3</strong> - estilos globais, layout responsivo e modo escuro',
+        localmemoStack3: '<strong>JavaScript puro</strong> - renderização, lógica do editor e gerenciamento de estado',
+        localmemoStack4: '<strong>ES modules</strong> - estrutura modular do projeto',
+        localmemoStack5: '<strong>localStorage</strong> - persistência de dados, configurações e idioma',
+        localmemoStack6: '<strong>API do GitHub Gist</strong> - camada opcional de sincronização privada',
         localmemoLinks: '🔗 Links',
-        localmemoLinksIntro: 'O repositório contém o código em andamento, e o site publicado é a build de demonstração atual.'
+        localmemoLinksIntro: 'O repositório contém o código-fonte, e o site publicado é a build de demonstração atual.'
       }
     };
 
