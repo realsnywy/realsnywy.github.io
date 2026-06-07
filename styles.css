@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Exo:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Exo:wght@400;700&display=fallback");
 
 :root {
   --bg-primary: #2d2d2d;
@@ -120,10 +120,35 @@ p {
   box-shadow: 0 4px 12px var(--btn-shadow);
 }
 
+.custom-btn.primary {
+  background-color: var(--text-primary);
+  color: var(--bg-primary);
+  border-color: transparent;
+}
+
+.custom-btn.primary:hover,
+.custom-btn.primary:focus-visible {
+  background-color: rgba(var(--text-rgb), 0.92);
+  color: var(--bg-primary);
+  border-color: transparent;
+}
+
+.custom-btn.outline {
+  background: transparent;
+  color: rgba(var(--text-rgb), 0.8);
+}
+
+.custom-btn.outline:hover,
+.custom-btn.outline:focus-visible {
+  background-color: rgba(var(--text-rgb), 0.12);
+  color: var(--text-primary);
+}
+
 /* Navbar Styling */
 .navbar-custom {
   background: linear-gradient(180deg, var(--nav-bg-start) 0%, var(--nav-bg-end) 100%);
   border-bottom: 1px solid var(--border-primary);
+  -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
   z-index: 1000;
 }
@@ -236,6 +261,17 @@ p {
 .language-btn.active {
   color: var(--bg-primary);
   background: var(--text-primary);
+}
+
+.language-btn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.language-btn:disabled:hover,
+.language-btn:disabled:focus-visible {
+  color: var(--muted-text);
+  background: transparent;
 }
 
 @media (max-width: 767.98px) {

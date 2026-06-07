@@ -19,7 +19,8 @@
   function getStoredLanguage() {
     try {
       return normalizeLanguage(window.localStorage.getItem(STORAGE_KEY));
-    } catch {
+    } catch (error) {
+      console.debug('Failed to retrieve stored language:', error);
       return null;
     }
   }
@@ -38,8 +39,8 @@
 
     try {
       window.localStorage.setItem(STORAGE_KEY, normalized);
-    } catch {
-      // Ignore storage failures.
+    } catch (error) {
+      console.debug('Failed to store language preference:', error);
     }
 
     return normalized;
@@ -73,7 +74,7 @@
     document.querySelectorAll('[data-i18n-title]').forEach((element) => {
       const key = element.getAttribute('data-i18n-title');
       const value = langMap[key];
-      if (typeof value !== 'undefined') {
+      if (typeof value !== 'undefined' && element !== document.body) {
         element.setAttribute('title', value);
       }
     });

@@ -1,0 +1,1060 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="../styles.css">
+  <style>
+    .comms-section {
+      max-width: 1100px;
+      margin: 0 auto;
+      animation: fadeIn 0.8s ease-out;
+    }
+
+    .comms-hero {
+      position: relative;
+      overflow: hidden;
+      padding: 28px;
+      border-radius: 20px;
+      border: 1px solid rgba(var(--text-rgb), 0.12);
+      background:
+        radial-gradient(circle at top right, rgba(var(--text-rgb), 0.13), transparent 34%),
+        linear-gradient(135deg, rgba(var(--text-rgb), 0.09), rgba(var(--text-rgb), 0.03));
+      box-shadow: 0 14px 34px var(--card-shadow);
+      margin-bottom: 22px;
+    }
+
+    .comms-hero h1 {
+      font-size: clamp(2.1rem, 5vw, 3rem);
+      margin-bottom: 10px;
+    }
+
+    .comms-lead {
+      max-width: 780px;
+      color: rgba(var(--text-rgb), 0.82);
+      font-size: 1.05rem;
+      line-height: 1.7;
+      margin-bottom: 18px;
+    }
+
+    .currency-note {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(var(--text-rgb), 0.15);
+      background: rgba(var(--text-rgb), 0.05);
+      color: rgba(var(--text-rgb), 0.78);
+      font-size: 0.82rem;
+      line-height: 1.3;
+    }
+
+    .comms-cta-row {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 18px;
+    }
+
+    .comms-cta-row .currency-note {
+      flex: 0 1 auto;
+      width: fit-content;
+    }
+
+    .comms-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 0;
+      margin-left: auto;
+      flex: 0 0 auto;
+    }
+
+    .comm-warning {
+      display: block;
+      margin-top: 12px;
+      padding: 12px 14px;
+      border-radius: 14px;
+      border: 1px solid rgba(255, 193, 7, 0.35);
+      background: rgba(255, 193, 7, 0.12);
+      color: rgba(var(--text-rgb), 0.88);
+      line-height: 1.55;
+    }
+
+    .comms-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
+      gap: 18px;
+      margin-bottom: 22px;
+    }
+
+    .comms-card,
+    .example-card,
+    .avatar-card,
+    .tos-card {
+      background: rgba(var(--text-rgb), 0.05);
+      border: 1px solid rgba(var(--text-rgb), 0.12);
+      border-radius: 18px;
+      padding: 20px;
+      box-shadow: 0 8px 22px rgba(0, 0, 0, 0.12);
+    }
+
+    .section-kicker {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 0.78rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: rgba(var(--text-rgb), 0.62);
+      margin-bottom: 10px;
+    }
+
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 14px;
+      margin-top: 18px;
+    }
+
+    .pricing-card {
+      background: rgba(var(--text-rgb), 0.04);
+      border: 1px solid rgba(var(--text-rgb), 0.1);
+      border-radius: 16px;
+      padding: 18px;
+      height: 100%;
+      transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+    }
+
+    .pricing-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(var(--text-rgb), 0.24);
+      background: rgba(var(--text-rgb), 0.06);
+    }
+
+    .pricing-title {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 0.95rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      margin-bottom: 6px;
+    }
+
+    .pricing-price {
+      font-size: 2rem;
+      font-weight: 700;
+      line-height: 1;
+      margin-bottom: 12px;
+    }
+
+    .pricing-desc {
+      color: rgba(var(--text-rgb), 0.78);
+      line-height: 1.65;
+      margin-bottom: 0;
+    }
+
+    .example-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 14px;
+      margin-top: 18px;
+    }
+
+    .example-slot {
+      position: relative;
+      min-height: 180px;
+      border-radius: 16px;
+      border: 2px dashed rgba(var(--text-rgb), 0.22);
+      background: rgba(var(--text-rgb), 0.04);
+      display: flex;
+      align-items: stretch;
+      justify-content: flex-start;
+      flex-direction: column;
+      text-align: left;
+      overflow: hidden;
+      padding: 0;
+      transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+      cursor: zoom-in;
+    }
+
+    .example-slot:hover {
+      transform: translateY(-4px);
+      border-color: rgba(var(--text-rgb), 0.38);
+      background: rgba(var(--text-rgb), 0.06);
+    }
+
+    .example-slot-content {
+      position: relative;
+      z-index: 1;
+      padding: 14px 16px 16px;
+    }
+
+    .example-slot-icon {
+      font-size: 1.9rem;
+      display: block;
+      margin-bottom: 10px;
+      color: rgba(var(--text-rgb), 0.85);
+    }
+
+    .example-slot-title {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 0.9rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 6px;
+    }
+
+    .example-slot-image {
+      display: block;
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+      background: rgba(var(--text-rgb), 0.08);
+    }
+
+    .example-slot-copy {
+      color: rgba(var(--text-rgb), 0.72);
+      font-size: 0.92rem;
+      margin-bottom: 0;
+    }
+
+    .avatar-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+      gap: 14px;
+      margin-top: 18px;
+    }
+
+    .avatar-card {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      min-height: 120px;
+    }
+
+    .avatar-card-link {
+      text-decoration: none;
+      color: inherit;
+      transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+    }
+
+    .avatar-card-link:hover {
+      transform: translateY(-4px);
+    }
+
+    .avatar-thumb {
+      width: 100%;
+      aspect-ratio: 1.15;
+      object-fit: cover;
+      border-radius: 14px;
+      border: 1px solid rgba(var(--text-rgb), 0.12);
+      background: rgba(var(--text-rgb), 0.08);
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04);
+      display: block;
+    }
+
+    .avatar-thumb-placeholder {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 180px;
+      color: rgba(var(--text-rgb), 0.55);
+      font-size: 2rem;
+    }
+
+    .avatar-body {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .avatar-name {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 1rem;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+
+    .avatar-meta {
+      color: rgba(var(--text-rgb), 0.76);
+      line-height: 1.6;
+      margin: 0;
+    }
+
+    .tos-list {
+      list-style: none;
+      padding: 0;
+      margin: 18px 0 0;
+      display: grid;
+      gap: 12px;
+    }
+
+    .tos-item {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+      padding: 14px 16px;
+      border-radius: 14px;
+      background: rgba(var(--text-rgb), 0.04);
+      border: 1px solid rgba(var(--text-rgb), 0.08);
+    }
+
+    .tos-index {
+      flex: 0 0 auto;
+      width: 28px;
+      height: 28px;
+      border-radius: 999px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Orbitron', sans-serif;
+      font-size: 0.78rem;
+      background: rgba(var(--text-rgb), 0.12);
+      color: var(--text-primary);
+    }
+
+    .tos-copy {
+      margin: 0;
+      color: rgba(var(--text-rgb), 0.82);
+      line-height: 1.65;
+    }
+
+    .gallery-lightbox {
+      position: fixed;
+      inset: 0;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      background: rgba(0, 0, 0, 0.78);
+      z-index: 9999;
+    }
+
+    .gallery-lightbox.is-open {
+      display: flex;
+    }
+
+    .gallery-lightbox-frame {
+      max-width: min(1200px, 95vw);
+      max-height: 90vh;
+      width: min(1200px, 95vw);
+      display: grid;
+      gap: 12px;
+    }
+
+    .gallery-lightbox-image {
+      display: block;
+      width: 100%;
+      max-height: 82vh;
+      object-fit: contain;
+      border-radius: 12px;
+      box-shadow: 0 20px 48px rgba(0, 0, 0, 0.55);
+      background: rgba(0, 0, 0, 0.18);
+    }
+
+    .gallery-lightbox-caption {
+      color: rgba(255, 255, 255, 0.88);
+      text-align: center;
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
+
+    .gallery-lightbox-close {
+      position: absolute;
+      top: 16px;
+      right: 16px;
+      border: 1px solid rgba(255, 255, 255, 0.35);
+      background: rgba(0, 0, 0, 0.35);
+      color: #ffffff;
+      width: 38px;
+      height: 38px;
+      border-radius: 8px;
+      font-size: 1.2rem;
+      line-height: 1;
+      cursor: pointer;
+    }
+
+    .section-heading {
+      font-size: 1.45rem;
+      margin-bottom: 0;
+    }
+
+    .section-subtitle {
+      color: rgba(var(--text-rgb), 0.72);
+      margin-top: 8px;
+      margin-bottom: 0;
+      line-height: 1.65;
+    }
+
+    @media (max-width: 991.98px) {
+      .comms-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 576px) {
+      .comms-cta-row {
+        align-items: flex-start;
+      }
+
+      .comms-actions {
+        margin-left: 0;
+        width: 100%;
+      }
+
+      .comms-actions .custom-btn {
+        width: min(100%, 320px);
+        justify-content: center;
+      }
+
+      .comms-hero,
+      .comms-card,
+      .example-card,
+      .avatar-card,
+      .tos-card {
+        padding: 16px;
+      }
+
+      .pricing-price {
+        font-size: 1.7rem;
+      }
+
+      .example-slot {
+        min-height: 160px;
+      }
+    }
+  </style>
+</head>
+
+<body class="d-flex flex-column min-vh-100" data-i18n-title="commsTitle"
+  style="background-color: var(--bg-primary); color: var(--text-primary);">
+
+  <main class="container px-3 flex-grow-1 py-4">
+    <div class="comms-section">
+      <section class="comms-hero">
+        <div class="section-kicker" data-i18n="commsKicker">Commission sheet</div>
+        <h1 data-i18n="commsHeading">Texturing Services</h1>
+        <p class="comms-lead" data-i18n="commsIntro">
+          I texture existing avatar files in Substance 3D Painter. Pricing is listed in BRL and USD for now.
+        </p>
+        <div class="comms-cta-row">
+          <div class="currency-note" data-i18n="commsCurrencyNote">
+            <i class="bi bi-exclamation-triangle-fill" aria-hidden="true"></i>
+            Other currencies can be discussed case by case.
+          </div>
+          <div class="comms-actions">
+            <a class="btn custom-btn outline" href="https://trello.com/b/j5bL0Izj/sny-comms" target="_blank"
+              rel="noopener noreferrer" data-i18n="commsTrelloButton">
+              <i class="bi bi-trello me-2" aria-hidden="true"></i><span>Trello board</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="comms-grid">
+        <div class="comms-card">
+          <div class="section-kicker" data-i18n="commsPricingKicker">Pricing</div>
+          <h2 class="section-heading" data-i18n="commsPricingHeading">Texturing Services</h2>
+          <p class="section-subtitle" data-i18n="commsPricingSubtitle">
+            Pick the tier that matches the amount of detail your avatar needs.
+          </p>
+
+          <div class="pricing-grid">
+            <article class="pricing-card">
+              <div class="pricing-title" data-i18n="commsSimpleTitle">Simple Retexture</div>
+              <div class="pricing-price" data-i18n="commsSimplePrice">R$50 / $25</div>
+              <p class="pricing-desc" data-i18n="commsSimpleDesc">
+                1 or 2 colors, simple patterns, eye and paw pad painting, and basic shading.
+              </p>
+            </article>
+            <article class="pricing-card">
+              <div class="pricing-title" data-i18n="commsComplexTitle">Complex Retexture</div>
+              <div class="pricing-price" data-i18n="commsComplexPrice">R$80 / $40</div>
+              <p class="pricing-desc" data-i18n="commsComplexDesc">
+                Detailed patterns, tattoos, scars, emission effects, and clothing textures.
+              </p>
+            </article>
+            <article class="pricing-card">
+              <div class="pricing-title" data-i18n="commsAddonTitle">Color Variation</div>
+              <div class="pricing-price" data-i18n="commsAddonPrice">+ R$20 / + $10</div>
+              <p class="pricing-desc" data-i18n="commsAddonDesc">
+                An extra version of the same texture, such as shiny, seasonal, or alternate colors.
+              </p>
+            </article>
+          </div>
+        </div>
+
+        <aside class="comms-card">
+          <div class="section-kicker" data-i18n="commsWorkflowKicker">Workflow</div>
+          <h2 class="section-heading" data-i18n="commsWorkflowHeading">How I Work</h2>
+          <p class="section-subtitle" data-i18n="commsWorkflowSubtitle">
+            I keep the process simple: clear references, WIP updates, and final delivery by email.
+          </p>
+          <ul class="tos-list mt-3">
+            <li class="tos-item">
+              <span class="tos-index">1</span>
+              <p class="tos-copy" data-i18n="commsWorkflowStep1">Send the avatar files and a clear reference sheet.</p>
+            </li>
+            <li class="tos-item">
+              <span class="tos-index">2</span>
+              <p class="tos-copy" data-i18n="commsWorkflowStep2">I will share WIP screenshots for feedback and
+                adjustments.</p>
+            </li>
+            <li class="tos-item">
+              <span class="tos-index">3</span>
+              <p class="tos-copy" data-i18n="commsWorkflowStep3">Final files are sent to the email address provided by
+                the client.</p>
+            </li>
+          </ul>
+        </aside>
+      </section>
+
+      <section class="comms-card mb-4">
+        <div class="section-kicker" data-i18n="commsExamplesKicker">Examples</div>
+        <h2 class="section-heading" data-i18n="commsExamplesHeading">Example Gallery</h2>
+        <p class="section-subtitle" data-i18n="commsExamplesSubtitle">
+          These are the characters and AVIs I’ve edited. Click any card to zoom in.
+        </p>
+
+        <div class="example-grid">
+          <div class="example-slot" role="button" tabindex="0" data-gallery-src="https://i.imgur.com/dPCkclV.png"
+            data-gallery-alt="Darkgrey Fennou preview image" data-gallery-title="Darkgrey (Fennou)">
+            <img class="example-slot-image" src="https://i.imgur.com/dPCkclV.png" alt="Darkgrey Fennou preview image"
+              loading="lazy">
+          </div>
+          <div class="example-slot" role="button" tabindex="0" data-gallery-src="https://i.imgur.com/jLgy9pL.png"
+            data-gallery-alt="Snywy Dragnou preview image" data-gallery-title="Snywy (Dragnou)">
+            <img class="example-slot-image" src="https://i.imgur.com/jLgy9pL.png" alt="Snywy Dragnou preview image"
+              loading="lazy">
+          </div>
+          <div class="example-slot" role="button" tabindex="0" data-gallery-src="https://i.imgur.com/CLq0bkS.png"
+            data-gallery-alt="Stylized Experiment Darkon preview image"
+            data-gallery-title="Stylized Experiment (Darkon)">
+            <img class="example-slot-image" src="https://i.imgur.com/CLq0bkS.png"
+              alt="Stylized Experiment Darkon preview image" loading="lazy">
+          </div>
+          <div class="example-slot" role="button" tabindex="0" data-gallery-src="https://i.imgur.com/uMEWeHl.png"
+            data-gallery-alt="Darkgrey Renou preview image" data-gallery-title="Darkgrey (Renou)">
+            <img class="example-slot-image" src="https://i.imgur.com/uMEWeHl.png" alt="Darkgrey Renou preview image"
+              loading="lazy">
+          </div>
+          <div class="example-slot" role="button" tabindex="0" data-gallery-src="https://i.imgur.com/yUU26sy.png"
+            data-gallery-alt="Bolinha Slugcat preview image" data-gallery-title="Bolinha (Slugcat)">
+            <img class="example-slot-image" src="https://i.imgur.com/yUU26sy.png" alt="Bolinha Slugcat preview image"
+              loading="lazy">
+          </div>
+          <div class="example-slot" role="button" tabindex="0" data-gallery-src="https://i.imgur.com/xIUd8Em.png"
+            data-gallery-alt="Sny Soap Cat preview image" data-gallery-title="Sny (Soap Cat)">
+            <img class="example-slot-image" src="https://i.imgur.com/xIUd8Em.png" alt="Sny Soap Cat preview image"
+              loading="lazy">
+          </div>
+        </div>
+      </section>
+
+      <section class="comms-card mb-4">
+        <div class="section-kicker" data-i18n="commsAvatarsKicker">Avatar List</div>
+        <h2 class="section-heading" data-i18n="commsAvatarsHeading">Featured Avatars</h2>
+        <p class="section-subtitle" data-i18n="commsAvatarsSubtitle">
+          Browse the available avatar bases and open any card to visit its listing.
+        </p>
+
+        <div class="avatar-grid">
+          <a class="avatar-card avatar-card-link" href="https://chaoticjay.gumroad.com/l/rvudkr" target="_blank"
+            rel="noopener noreferrer">
+            <img class="avatar-thumb" src="https://public-files.gumroad.com/0g2kmqwl3in9synscy3t9c0gl59z"
+              alt="Alpha Werewolf preview image" loading="lazy">
+            <div class="avatar-body">
+              <div class="avatar-name">Alpha Werewolf</div>
+              <p class="avatar-meta">Chaotic_Jay</p>
+            </div>
+          </a>
+          <a class="avatar-card avatar-card-link" href="https://jinxxy.com/Kokou/Dragnou" target="_blank"
+            rel="noopener noreferrer">
+            <img class="avatar-thumb"
+              src="https://jinxxy-cdn.com/1c4d28dd-e43b-5d82-90b2-4cc866a736fd/3657653855266539368/855410236421981184.png"
+              alt="Dragnou preview image" loading="lazy">
+            <div class="avatar-body">
+              <div class="avatar-name">Dragnou</div>
+              <p class="avatar-meta">Kokou</p>
+            </div>
+          </a>
+          <a class="avatar-card avatar-card-link" href="https://estefanoida.gumroad.com/l/Estellios" target="_blank"
+            rel="noopener noreferrer">
+            <img class="avatar-thumb" src="https://public-files.gumroad.com/3ho9ixlvbkk2xayzk0m2echj6ppu"
+              alt="Estellios Dragon preview image" loading="lazy">
+            <div class="avatar-body">
+              <div class="avatar-name">Estellios Dragon</div>
+              <p class="avatar-meta">Estefanoida</p>
+            </div>
+          </a>
+          <a class="avatar-card avatar-card-link" href="https://irix.gumroad.com/l/Fennibou" target="_blank"
+            rel="noopener noreferrer">
+            <img class="avatar-thumb" src="https://public-files.gumroad.com/rs4jza8rzfjt4wm7c31rq594luql"
+              alt="Fennibou preview image" loading="lazy">
+            <div class="avatar-body">
+              <div class="avatar-name">Fennibou</div>
+              <p class="avatar-meta">Irix</p>
+            </div>
+          </a>
+          <a class="avatar-card avatar-card-link" href="https://jinxxy.com/Kokou/fennou" target="_blank"
+            rel="noopener noreferrer">
+            <img class="avatar-thumb"
+              src="https://jinxxy-cdn.com/1c4d28dd-e43b-5d82-90b2-4cc866a736fd/3736400488740947031/894783651922220032.png"
+              alt="Fennou preview image" loading="lazy">
+            <div class="avatar-body">
+              <div class="avatar-name">Fennou</div>
+              <p class="avatar-meta">Kokou</p>
+            </div>
+          </a>
+          <a class="avatar-card avatar-card-link" href="https://nardoiri.gumroad.com/l/Nardoragon" target="_blank"
+            rel="noopener noreferrer">
+            <img class="avatar-thumb" src="https://public-files.gumroad.com/l8p2f7yd5i8kb9d6ttdxdap1jf2n"
+              alt="Nardoragon preview image" loading="lazy">
+            <div class="avatar-body">
+              <div class="avatar-name">Nardoragon</div>
+              <p class="avatar-meta">Nardo</p>
+            </div>
+          </a>
+          <a class="avatar-card avatar-card-link" href="https://kittomatic.gumroad.com/l/Novabeast" target="_blank"
+            rel="noopener noreferrer">
+            <img class="avatar-thumb" src="https://public-files.gumroad.com/39pxee2ooluf22ejrlwcacx8qvvc"
+              alt="Novabeast preview image" loading="lazy">
+            <div class="avatar-body">
+              <div class="avatar-name">Novabeast</div>
+              <p class="avatar-meta">Kittomatic</p>
+            </div>
+          </a>
+          <a class="avatar-card avatar-card-link" href="https://jinxxy.com/Kokou/Renou" target="_blank"
+            rel="noopener noreferrer">
+            <img class="avatar-thumb"
+              src="https://jinxxy-cdn.com/1c4d28dd-e43b-5d82-90b2-4cc866a736fd/3657084165100143754/855405437165121536.png"
+              alt="Renou preview image" loading="lazy">
+            <div class="avatar-body">
+              <div class="avatar-name">Renou</div>
+              <p class="avatar-meta">Kokou</p>
+            </div>
+          </a>
+          <a class="avatar-card avatar-card-link" href="https://nicoreda.gumroad.com/l/scugdal" target="_blank"
+            rel="noopener noreferrer">
+            <img class="avatar-thumb" src="https://public-files.gumroad.com/qu3288zbpj1136dmfchpczahx765"
+              alt="Scugdal preview image" loading="lazy">
+            <div class="avatar-body">
+              <div class="avatar-name">Scugdal</div>
+              <p class="avatar-meta">Nicoreda</p>
+            </div>
+          </a>
+          <a class="avatar-card avatar-card-link" href="https://teevz.gumroad.com/l/SlugcatDX" target="_blank"
+            rel="noopener noreferrer">
+            <img class="avatar-thumb" src="https://public-files.gumroad.com/m1y7x5ecugo0py24cg5x8s7kghw4"
+              alt="Slugcat DX preview image" loading="lazy">
+            <div class="avatar-body">
+              <div class="avatar-name">Slugcat DX</div>
+              <p class="avatar-meta">Teevz</p>
+            </div>
+          </a>
+          <a class="avatar-card avatar-card-link" href="https://ironicsoap.gumroad.com/l/SoapCats" target="_blank"
+            rel="noopener noreferrer">
+            <img class="avatar-thumb" src="https://public-files.gumroad.com/w70wdljy158qt043myseqmxpg5t3"
+              alt="Soap Cats preview image" loading="lazy">
+            <div class="avatar-body">
+              <div class="avatar-name">Soap Cats</div>
+              <p class="avatar-meta">ironicsoap</p>
+            </div>
+          </a>
+          <a class="avatar-card avatar-card-link" href="https://ironicsoap.gumroad.com/l/SoapDogs" target="_blank"
+            rel="noopener noreferrer">
+            <img class="avatar-thumb" src="https://public-files.gumroad.com/zr0urgxy6brwewmj82u6l4rbsm1o"
+              alt="Soap Dogs preview image" loading="lazy">
+            <div class="avatar-body">
+              <div class="avatar-name">Soap Dogs</div>
+              <p class="avatar-meta">ironicsoap</p>
+            </div>
+          </a>
+          <a class="avatar-card avatar-card-link" href="https://ironicsoap.gumroad.com/l/SoapDragons" target="_blank"
+            rel="noopener noreferrer">
+            <img class="avatar-thumb" src="https://public-files.gumroad.com/e8115ygqlj88rj3zhp32xcb2knx2"
+              alt="Soap Dragons preview image" loading="lazy">
+            <div class="avatar-body">
+              <div class="avatar-name">Soap Dragons</div>
+              <p class="avatar-meta">ironicsoap</p>
+            </div>
+          </a>
+          <a class="avatar-card avatar-card-link" href="https://jinxxy.com/akittu/stylizedexperiment" target="_blank"
+            rel="noopener noreferrer">
+            <img class="avatar-thumb" src="https://public-files.gumroad.com/ex9l2g4bef5ph4o7zpsxaqvhg3kv"
+              alt="Stylized Experiment preview image" loading="lazy">
+            <div class="avatar-body">
+              <div class="avatar-name">Stylized Experiment</div>
+              <p class="avatar-meta">Akittu</p>
+            </div>
+          </a>
+          <a class="avatar-card avatar-card-link" href="https://irix.gumroad.com/l/DpDFe" target="_blank"
+            rel="noopener noreferrer">
+            <img class="avatar-thumb" src="https://public-files.gumroad.com/afnqzpx3t77eb6r8lkj4m82hpg1b"
+              alt="Taidum preview image" loading="lazy">
+            <div class="avatar-body">
+              <div class="avatar-name">Taidum</div>
+              <p class="avatar-meta">Irix</p>
+            </div>
+          </a>
+          <a class="avatar-card avatar-card-link" href="https://hantnor.gumroad.com/l/thingy" target="_blank"
+            rel="noopener noreferrer">
+            <img class="avatar-thumb" src="https://public-files.gumroad.com/awibdx0vlu9git12jma55sed9aoe"
+              alt="Thingy preview image" loading="lazy">
+            <div class="avatar-body">
+              <div class="avatar-name">Thingy</div>
+              <p class="avatar-meta">Hantnor</p>
+            </div>
+          </a>
+          <a class="avatar-card avatar-card-link"
+            href="https://jinxxy.com/ItsGuusy/the-winterbold-fluffy-furred-kobold-avatar-base-for-vrchat-by-itsguusy"
+            target="_blank" rel="noopener noreferrer">
+            <img class="avatar-thumb"
+              src="https://jinxxy-cdn.com/635d373f-ba14-5d67-98cf-c57d7889eda0/3540658780851144013/797957281944729600.png"
+              alt="Winterbold preview image" loading="lazy">
+            <div class="avatar-body">
+              <div class="avatar-name">Winterbold</div>
+              <p class="avatar-meta">ItsGuusy</p>
+            </div>
+          </a>
+        </div>
+      </section>
+
+      <section class="tos-card">
+        <div class="section-kicker" data-i18n="commsTosKicker">Terms of Service</div>
+        <h2 class="section-heading" data-i18n="commsTosHeading">TOS</h2>
+        <p class="section-subtitle" data-i18n="commsTosSubtitle">
+          Read these before ordering so everything stays clear on both sides.
+        </p>
+        <p class="comm-warning" data-i18n="commsSlowWarning">Replies may be slow at times because of college
+          commitments.</p>
+
+        <ol class="tos-list">
+          <li class="tos-item">
+            <span class="tos-index">1</span>
+            <p class="tos-copy" data-i18n="commsTos1">You must legally own the avatar files — or don't. I don't care.
+            </p>
+          </li>
+          <li class="tos-item">
+            <span class="tos-index">2</span>
+            <p class="tos-copy" data-i18n="commsTos2">A clear ref sheet is required.</p>
+          </li>
+          <li class="tos-item">
+            <span class="tos-index">3</span>
+            <p class="tos-copy" data-i18n="commsTos3">Payment is via PayPal or Wise.</p>
+          </li>
+          <li class="tos-item">
+            <span class="tos-index">4</span>
+            <p class="tos-copy" data-i18n="commsTos4">Full payment upfront is preferred, but 50/50 is also available.
+            </p>
+          </li>
+          <li class="tos-item">
+            <span class="tos-index">5</span>
+            <p class="tos-copy" data-i18n="commsTos5">If I have not started yet, I refund 100%. If work has already
+              begun, the initial payment is non-refundable.</p>
+          </li>
+          <li class="tos-item">
+            <span class="tos-index">6</span>
+            <p class="tos-copy" data-i18n="commsTos6">I use Substance 3D Painter only.</p>
+          </li>
+          <li class="tos-item">
+            <span class="tos-index">7</span>
+            <p class="tos-copy" data-i18n="commsTos7">I do not use Blender, and I do not create models, clothing, or
+              mesh edits.</p>
+          </li>
+          <li class="tos-item">
+            <span class="tos-index">8</span>
+            <p class="tos-copy" data-i18n="commsTos8">I will send WIP screenshots during the process for adjustments.
+            </p>
+          </li>
+          <li class="tos-item">
+            <span class="tos-index">9</span>
+            <p class="tos-copy" data-i18n="commsTos9">Changes after final delivery may cost extra.</p>
+          </li>
+          <li class="tos-item">
+            <span class="tos-index">10</span>
+            <p class="tos-copy" data-i18n="commsTos10">Final files are sent to the customer's email address.</p>
+          </li>
+          <li class="tos-item">
+            <span class="tos-index">11</span>
+            <p class="tos-copy" data-i18n="commsTos11">Personal use only. Do not resell or claim the art as your own.
+            </p>
+          </li>
+        </ol>
+      </section>
+    </div>
+  </main>
+
+  <div class="gallery-lightbox" id="galleryLightbox" aria-hidden="true">
+    <button class="gallery-lightbox-close" id="galleryLightboxClose" type="button" aria-label="Close image zoom view">
+      &times;
+    </button>
+    <div class="gallery-lightbox-frame" role="dialog" aria-modal="true" aria-labelledby="galleryLightboxCaption">
+      <img class="gallery-lightbox-image" id="galleryLightboxImage" src="" alt="Zoomed gallery image">
+      <div class="gallery-lightbox-caption" id="galleryLightboxCaption"></div>
+    </div>
+  </div>
+
+  <script src="../lang.js"></script>
+  <script>
+    const pageTranslations = {
+      en: {
+        commsTitle: 'Commissions - Snywy',
+        commsKicker: 'Commission sheet',
+        commsHeading: 'Texturing Services',
+        commsIntro: 'I texture existing avatar files in Substance 3D Painter. Pricing is listed in BRL and USD for now.',
+        commsCurrencyNote: 'Other currencies can be discussed case by case.',
+        commsTrelloButton: 'Trello board',
+        commsPricingKicker: 'Pricing',
+        commsPricingHeading: 'Texturing Services',
+        commsPricingSubtitle: 'Pick the tier that matches the amount of detail your avatar needs.',
+        commsSimpleTitle: 'Simple Retexture',
+        commsSimplePrice: 'R$50 / $25',
+        commsSimpleDesc: '1 or 2 colors, simple patterns, eye and paw pad painting, and basic shading.',
+        commsComplexTitle: 'Complex Retexture',
+        commsComplexPrice: 'R$80 / $40',
+        commsComplexDesc: 'Detailed patterns, tattoos, scars, emission effects, and clothing textures.',
+        commsAddonTitle: 'Color Variation',
+        commsAddonPrice: '+ R$20 / + $10',
+        commsAddonDesc: 'An extra version of the same texture, such as shiny, seasonal, or alternate colors.',
+        commsWorkflowKicker: 'Workflow',
+        commsWorkflowHeading: 'How I Work',
+        commsWorkflowSubtitle: 'I keep the process simple: clear references, WIP updates, and final delivery by email.',
+        commsWorkflowStep1: 'Send the avatar files and a clear reference sheet.',
+        commsWorkflowStep2: 'I will share WIP screenshots for feedback and adjustments.',
+        commsWorkflowStep3: 'Final files are sent to the email address provided by the client.',
+        commsExamplesKicker: 'Examples',
+        commsExamplesHeading: 'Example Gallery',
+        commsExamplesSubtitle: 'These are the characters and AVIs I’ve edited. Click any card to zoom in.',
+        commsExampleOneTitle: 'Example 01',
+        commsExampleOneCopy: 'Replace with an Imgur PNG',
+        commsExampleTwoTitle: 'Example 02',
+        commsExampleTwoCopy: 'Replace with an Imgur PNG',
+        commsExampleThreeTitle: 'Example 03',
+        commsExampleThreeCopy: 'Replace with an Imgur PNG',
+        commsExampleFourTitle: 'Example 04',
+        commsExampleFourCopy: 'Replace with an Imgur PNG',
+        commsAvatarsKicker: 'Avatar List',
+        commsAvatarsHeading: 'Featured Avatars',
+        commsAvatarsSubtitle: 'Browse the available avatar bases and open any card to visit its listing.',
+        commsAvatarOneMeta: 'My sona / reference sheet avatar.',
+        commsAvatarTwoName: 'Add avatar name',
+        commsAvatarTwoMeta: 'Use this card for a previous commission or custom avatar.',
+        commsAvatarThreeName: 'Add avatar name',
+        commsAvatarThreeMeta: 'Use this card for a previous commission or custom avatar.',
+        commsAvatarFourName: 'Add avatar name',
+        commsAvatarFourMeta: 'Use this card for a previous commission or custom avatar.',
+        commsTosKicker: 'Terms of Service',
+        commsTosHeading: 'TOS',
+        commsTosSubtitle: 'Read these before ordering so everything stays clear on both sides.',
+        commsSlowWarning: 'Replies may be slow at times because of college commitments.',
+        commsTos1: 'You must legally own the avatar files — or don\'t. I don\'t care.',
+        commsTos2: 'A clear ref sheet is required.',
+        commsTos3: 'Payment is via PayPal or Wise.',
+        commsTos4: 'Full payment upfront is preferred, but 50/50 is also available.',
+        commsTos5: 'If I have not started yet, I refund 100%. If work has already begun, the initial payment is non-refundable.',
+        commsTos6: 'I use Substance 3D Painter only.',
+        commsTos7: 'I do not use Blender, and I do not create models, clothing, or mesh edits.',
+        commsTos8: 'I will send WIP screenshots during the process for adjustments.',
+        commsTos9: 'Changes after final delivery may cost extra.',
+        commsTos10: 'Final files are sent to the customer\'s email address.',
+        commsTos11: 'Personal use only. Do not resell or claim the art as your own.'
+      },
+      pt: {
+        commsTitle: 'Comissões - Snywy',
+        commsKicker: 'Tabela de comissões',
+        commsHeading: 'Serviços de Texturização',
+        commsIntro: 'Eu faço texturas de avatares já existentes no Substance 3D Painter. Os preços estão em BRL e USD por enquanto.',
+        commsCurrencyNote: 'Outras moedas podem ser combinadas caso a caso.',
+        commsTrelloButton: 'Quadro do Trello',
+        commsPricingKicker: 'Preços',
+        commsPricingHeading: 'Serviços de Texturização',
+        commsPricingSubtitle: 'Escolha o nível que combina com o quanto de detalhe o seu avatar precisa.',
+        commsSimpleTitle: 'Retextura Simples',
+        commsSimplePrice: 'R$50 / $25',
+        commsSimpleDesc: '1 ou 2 cores, padrões simples, pintura de olhos e beans (patinhas) e sombreamento básico.',
+        commsComplexTitle: 'Retextura Complexa',
+        commsComplexPrice: 'R$80 / $40',
+        commsComplexDesc: 'Padrões detalhados, tatuagens, cicatrizes, emissão e texturização de roupas.',
+        commsAddonTitle: 'Variação de Cor',
+        commsAddonPrice: '+ R$20 / + $10',
+        commsAddonDesc: 'Uma versão extra da mesma textura, como shiny, pelagem de estação ou cores alternativas.',
+        commsWorkflowKicker: 'Processo',
+        commsWorkflowHeading: 'Como eu trabalho',
+        commsWorkflowSubtitle: 'Eu mantenho o processo simples: referências claras, atualizações de WIP e entrega final por e-mail.',
+        commsWorkflowStep1: 'Envie os arquivos do avatar e uma ref sheet clara.',
+        commsWorkflowStep2: 'Eu envio prints de WIP para feedback e ajustes.',
+        commsWorkflowStep3: 'Os arquivos finais são enviados para o e-mail informado pelo cliente.',
+        commsExamplesKicker: 'Exemplos',
+        commsExamplesHeading: 'Galeria de Exemplos',
+        commsExamplesSubtitle: 'Estes são os personagens e AVIs que eu editei. Clique em qualquer card para dar zoom.',
+        commsExampleOneTitle: 'Exemplo 01',
+        commsExampleOneCopy: 'Substituir por um PNG do Imgur',
+        commsExampleTwoTitle: 'Exemplo 02',
+        commsExampleTwoCopy: 'Substituir por um PNG do Imgur',
+        commsExampleThreeTitle: 'Exemplo 03',
+        commsExampleThreeCopy: 'Substituir por um PNG do Imgur',
+        commsExampleFourTitle: 'Exemplo 04',
+        commsExampleFourCopy: 'Substituir por um PNG do Imgur',
+        commsAvatarsKicker: 'Lista de avatares',
+        commsAvatarsHeading: 'Avatares em Destaque',
+        commsAvatarsSubtitle: 'Navegue pelas bases de avatar disponíveis e abra qualquer card para ver a página do produto.',
+        commsAvatarOneMeta: 'Minha sona / avatar da ref sheet.',
+        commsAvatarTwoName: 'Adicione o nome do avatar',
+        commsAvatarTwoMeta: 'Use este card para uma comissão anterior ou avatar personalizado.',
+        commsAvatarThreeName: 'Adicione o nome do avatar',
+        commsAvatarThreeMeta: 'Use este card para uma comissão anterior ou avatar personalizado.',
+        commsAvatarFourName: 'Adicione o nome do avatar',
+        commsAvatarFourMeta: 'Use este card para uma comissão anterior ou avatar personalizado.',
+        commsTosKicker: 'Termos de Serviço',
+        commsTosHeading: 'TOS',
+        commsTosSubtitle: 'Leia isso antes de encomendar para tudo ficar claro dos dois lados.',
+        commsSlowWarning: 'As respostas podem demorar às vezes por causa da faculdade.',
+        commsTos1: 'Você deve possuir legalmente os arquivos do avatar — ou não. Eu não me importo.',
+        commsTos2: 'É uma boa ideia enviar uma ref sheet clara.',
+        commsTos3: 'O pagamento é apenas via Pix.',
+        commsTos4: 'Prefiro o valor completo no início, mas o método 50/50 também está disponível.',
+        commsTos5: 'Se eu ainda não tiver começado, devolvo 100%. Se o trabalho já tiver sido iniciado, o valor inicial não é reembolsável.',
+        commsTos6: 'Eu uso apenas Substance 3D Painter.',
+        commsTos7: 'Não uso Blender e não faço modelos, roupas ou alterações na mesh.',
+        commsTos8: 'Enviarei prints de WIP durante o processo para ajustes.',
+        commsTos9: 'Mudanças após a entrega final podem ter custo extra.',
+        commsTos10: 'Os arquivos finais são enviados para o e-mail do cliente.',
+        commsTos11: 'Uso apenas pessoal. Não revenda nem reivindique a arte como sua.'
+      },
+      es: {
+        commsTitle: 'Comisiones - Snywy',
+        commsKicker: 'Hoja de comisiones',
+        commsHeading: 'Servicios de texturizado',
+        commsIntro: 'Texturizo archivos de avatares existentes en Substance 3D Painter. Por ahora, los precios están en BRL y USD.',
+        commsCurrencyNote: 'Otras monedas se pueden conversar caso por caso.',
+        commsTrelloButton: 'Tablero de Trello',
+        commsPricingKicker: 'Precios',
+        commsPricingHeading: 'Servicios de texturizado',
+        commsPricingSubtitle: 'Elige el nivel que mejor encaje con la cantidad de detalle que necesita tu avatar.',
+        commsSimpleTitle: 'Retextura simple',
+        commsSimplePrice: 'R$50 / $25',
+        commsSimpleDesc: '1 o 2 colores, patrones simples, pintura de ojos y beans (almohadillas) y sombreado básico.',
+        commsComplexTitle: 'Retextura compleja',
+        commsComplexPrice: 'R$80 / $40',
+        commsComplexDesc: 'Patrones detallados, tatuajes, cicatrices, emisión y texturizado de ropa.',
+        commsAddonTitle: 'Variación de color',
+        commsAddonPrice: '+ R$20 / + $10',
+        commsAddonDesc: 'Una versión extra de la misma textura, como shiny, pelaje estacional o colores alternativos.',
+        commsWorkflowKicker: 'Proceso',
+        commsWorkflowHeading: 'Cómo trabajo',
+        commsWorkflowSubtitle: 'Mantengo el proceso simple: referencias claras, actualizaciones WIP y entrega final por correo.',
+        commsWorkflowStep1: 'Envía los archivos del avatar y una ref sheet clara.',
+        commsWorkflowStep2: 'Compartiré capturas WIP para feedback y ajustes.',
+        commsWorkflowStep3: 'Los archivos finales se envían al correo electrónico proporcionado por el cliente.',
+        commsExamplesKicker: 'Ejemplos',
+        commsExamplesHeading: 'Galería de ejemplos',
+        commsExamplesSubtitle: 'Estos son los personajes y AVIs que he editado. Haz clic en cualquier tarjeta para ampliar.',
+        commsExampleOneTitle: 'Ejemplo 01',
+        commsExampleOneCopy: 'Reemplazar con un PNG de Imgur',
+        commsExampleTwoTitle: 'Ejemplo 02',
+        commsExampleTwoCopy: 'Reemplazar con un PNG de Imgur',
+        commsExampleThreeTitle: 'Ejemplo 03',
+        commsExampleThreeCopy: 'Reemplazar con un PNG de Imgur',
+        commsExampleFourTitle: 'Ejemplo 04',
+        commsExampleFourCopy: 'Reemplazar con un PNG de Imgur',
+        commsAvatarsKicker: 'Lista de avatares',
+        commsAvatarsHeading: 'Avatares destacados',
+        commsAvatarsSubtitle: 'Explora las bases de avatar disponibles y abre cualquier tarjeta para ver su página.',
+        commsAvatarOneMeta: 'Mi sona / avatar de la ref sheet.',
+        commsAvatarTwoName: 'Añade el nombre del avatar',
+        commsAvatarTwoMeta: 'Usa esta tarjeta para una comisión anterior o un avatar personalizado.',
+        commsAvatarThreeName: 'Añade el nombre del avatar',
+        commsAvatarThreeMeta: 'Usa esta tarjeta para una comisión anterior o un avatar personalizado.',
+        commsAvatarFourName: 'Añade el nombre del avatar',
+        commsAvatarFourMeta: 'Usa esta tarjeta para una comisión anterior o un avatar personalizado.',
+        commsTosKicker: 'Términos de servicio',
+        commsTosHeading: 'TOS',
+        commsTosSubtitle: 'Lee esto antes de encargar para que todo quede claro para ambos lados.',
+        commsSlowWarning: 'Las respuestas pueden tardar a veces por los compromisos de la universidad.',
+        commsTos1: 'Debes poseer legalmente los archivos del avatar — o no. No me importa.',
+        commsTos2: 'Se requiere una ref sheet clara.',
+        commsTos3: 'El pago es por PayPal o Wise.',
+        commsTos4: 'Se prefiere el pago completo por adelantado, pero el método 50/50 también está disponible.',
+        commsTos5: 'Si aún no he empezado, reembolso el 100%. Si el trabajo ya comenzó, el pago inicial no es reembolsable.',
+        commsTos6: 'Solo uso Substance 3D Painter.',
+        commsTos7: 'No uso Blender ni creo modelos, ropa ni ediciones de la mesh.',
+        commsTos8: 'Enviaré capturas WIP durante el proceso para ajustes.',
+        commsTos9: 'Los cambios después de la entrega final pueden costar extra.',
+        commsTos10: 'Los archivos finales se envían al correo del cliente.',
+        commsTos11: 'Solo para uso personal. No revendas ni reclames la obra como tuya.'
+      }
+    };
+
+    function applyLanguageFromParent(language) {
+      window.PortfolioLanguage.applyTranslations(pageTranslations, language);
+    }
+
+    window.applyLanguageFromParent = applyLanguageFromParent;
+    window.PortfolioLanguage.initPageLanguage(pageTranslations);
+  </script>
+
+  <script>
+    const galleryLightbox = document.getElementById('galleryLightbox');
+    const galleryLightboxImage = document.getElementById('galleryLightboxImage');
+    const galleryLightboxCaption = document.getElementById('galleryLightboxCaption');
+    const galleryLightboxClose = document.getElementById('galleryLightboxClose');
+
+    function openGalleryLightbox(source, altText, titleText) {
+      galleryLightboxImage.src = source;
+      galleryLightboxImage.alt = altText;
+      galleryLightboxCaption.textContent = titleText;
+      galleryLightbox.classList.add('is-open');
+      galleryLightbox.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeGalleryLightbox() {
+      galleryLightbox.classList.remove('is-open');
+      galleryLightbox.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = '';
+      galleryLightboxImage.src = '';
+      galleryLightboxImage.alt = 'Zoomed gallery image';
+      galleryLightboxCaption.textContent = '';
+    }
+
+    document.querySelectorAll('[data-gallery-src]').forEach((card) => {
+      const activate = () => {
+        openGalleryLightbox(
+          card.getAttribute('data-gallery-src') || '',
+          card.getAttribute('data-gallery-alt') || 'Zoomed gallery image',
+          card.getAttribute('data-gallery-title') || ''
+        );
+      };
+
+      card.addEventListener('click', activate);
+      card.addEventListener('keydown', (event) => {
+        if (event.key === 'Enter' || event.key === ' ') {
+          event.preventDefault();
+          activate();
+        }
+      });
+    });
+
+    galleryLightboxClose.addEventListener('click', closeGalleryLightbox);
+    galleryLightbox.addEventListener('click', (event) => {
+      if (event.target === galleryLightbox) {
+        closeGalleryLightbox();
+      }
+    });
+
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape' && galleryLightbox.classList.contains('is-open')) {
+        closeGalleryLightbox();
+      }
+    });
+  </script>
+
+</body>
+
+</html>

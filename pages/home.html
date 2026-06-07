@@ -4,17 +4,6 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Home - Snywy</title>
-  <link rel="preload"
-    href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Exo:wght@400;700&display=swap"
-    as="style" onload="this.rel='stylesheet'">
-  <noscript>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Exo:wght@400;700&display=swap"
-      rel="stylesheet">
-  </noscript>
-  <link rel="preload" as="image" href="https://i.imgur.com/E3wHUia.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
@@ -60,10 +49,17 @@
 
     .cta-buttons {
       display: flex;
-      gap: 15px;
+      gap: 20px;
       justify-content: center;
       flex-wrap: wrap;
       margin-top: 30px;
+      align-items: center;
+    }
+
+    .cta-buttons .group {
+      display: flex;
+      gap: 15px;
+      align-items: center;
     }
 
     .spotlight-text {
@@ -100,10 +96,21 @@
         width: 100%;
         gap: 10px;
         margin-top: 18px;
+        flex-direction: column;
+        align-items: center;
       }
 
-      .cta-buttons .custom-btn {
-        width: min(100%, 320px);
+      .cta-buttons .group {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+        align-items: center;
+      }
+
+      .cta-buttons .group .custom-btn {
+        width: 100%;
+        max-width: 420px;
         justify-content: center;
       }
 
@@ -133,30 +140,28 @@
         quiet, always thinking, perpetually caffeinated.</p>
 
       <div class="hero-art">
-        <img src="https://i.imgur.com/E3wHUia.png" class="img-fluid" alt="Creative workspace illustration"
-          data-i18n-alt="homeHeroAlt">
+        <img src="https://i.imgur.com/E3wHUia.png" class="img-fluid" loading="lazy"
+          alt="Creative workspace illustration" data-i18n-alt="homeHeroAlt">
       </div>
 
       <div class="cta-buttons">
-        <a href="#" onclick="parent.navigateTo('projects'); return false;" class="btn custom-btn primary"
-          aria-label="Explore my projects" title="Explore my projects" data-i18n-aria-label="homeCtaProjects"
-          data-i18n-title="homeCtaProjects">
-          <i class="bi bi-rocket-fill me-2" aria-hidden="true"></i><span data-i18n="homeCtaProjects">Explore My
-            Work</span>
-        </a>
-        <a href="#" onclick="parent.navigateTo('about'); return false;" class="btn custom-btn outline"
-          aria-label="Learn about me" title="Learn about me" data-i18n-aria-label="homeCtaAbout"
-          data-i18n-title="homeCtaAbout">
-          <i class="bi bi-person-fill me-2" aria-hidden="true"></i><span data-i18n="homeCtaAbout">Get to Know Me</span>
-        </a>
-        <a href="#" onclick="parent.navigateTo('socials'); return false;" class="btn custom-btn outline"
-          aria-label="See my social links" title="Find Me Online" data-i18n-aria-label="homeCtaSocials"
-          data-i18n-title="homeCtaSocials">
-          <i class="bi bi-broadcast me-2" aria-hidden="true"></i><span data-i18n="homeCtaSocials">Find Me Online</span>
-        </a>
-      </div>
+        <div class="group">
+          <a href="#" onclick="parent.navigateTo('projects'); return false;" class="btn custom-btn primary"
+            aria-label="Explore my projects" title="Explore my projects" data-i18n-aria-label="homeCtaProjects"
+            data-i18n-title="homeCtaProjects">
+            <i class="bi bi-rocket-fill me-2" aria-hidden="true"></i><span data-i18n="homeCtaProjects">Explore My
+              Work</span>
+          </a>
+          <a href="#" onclick="parent.navigateTo('comms'); return false;" class="btn custom-btn primary"
+            aria-label="Commission Me" title="Commission Me" data-i18n-aria-label="homeCtaComms"
+            data-i18n-title="homeCtaComms">
+            <i class="bi bi-brush me-2" aria-hidden="true"></i><span data-i18n="homeCtaComms">Commission Me</span>
+          </a>
+        </div>
 
-    </div>
+
+
+      </div>
   </main>
 
   <script src="../lang.js"></script>
@@ -167,8 +172,7 @@
         homeHeading: "Welcome, I'm Snywy",
         homeIntro: 'A 23-year-old Brazilian Computer Science student and creative juggling game development, music production, and graphic design. Sometimes quiet, always thinking, perpetually caffeinated.',
         homeCtaProjects: 'Explore My Work',
-        homeCtaAbout: 'Get to Know Me',
-        homeCtaSocials: 'Find Me Online',
+        homeCtaComms: 'Commission Me',
         homeHeroAlt: 'Creative workspace illustration'
       },
       pt: {
@@ -176,8 +180,7 @@
         homeHeading: 'Bem-vindo, eu sou Snywy',
         homeIntro: 'Um estudante de Ciência da Computação e criativo brasileiro de 23 anos que equilibra desenvolvimento de jogos, produção musical e design gráfico. Às vezes quieto, sempre pensando e eternamente movido a café.',
         homeCtaProjects: 'Ver Projetos',
-        homeCtaAbout: 'Conheça Mais',
-        homeCtaSocials: 'Me Encontre Online',
+        homeCtaComms: 'Contrate-me',
         homeHeroAlt: 'Ilustração de espaço criativo'
       },
       es: {
@@ -185,8 +188,7 @@
         homeHeading: 'Bienvenido, soy Snywy',
         homeIntro: 'Soy un estudiante brasileño de Ciencias de la Computación y creativo de 23 años que equilibra desarrollo de juegos, producción musical y diseño gráfico. A veces callado, siempre pensando y eternamente alimentado por café.',
         homeCtaProjects: 'Ver mis proyectos',
-        homeCtaAbout: 'Conóceme mejor',
-        homeCtaSocials: 'Encuéntrame en línea',
+        homeCtaComms: 'Contrátame',
         homeHeroAlt: 'Ilustración de un espacio creativo'
       }
     };

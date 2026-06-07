@@ -8,28 +8,19 @@
 
     <meta name="description"
         content="Gabriel 'Snywy' Furtado's portfolio. Creative projects in game dev, audio, and automation.">
-    <meta property="og:title" content="Snywy">
-    <meta property="og:description" content="Gabriel 'Snywy' Furtado's portfolio.">
+    <meta property="og:title" content="Snywy — Gabriel 'Snywy' Furtado">
+    <meta property="og:description"
+        content="Portfolio of Gabriel 'Snywy' Furtado, featuring interactive game work, audio projects, automation tools, and creative systems.">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Snywy">
     <meta property="og:url" content="https://realsnywy.github.io/">
-    <meta property="og:image" content="/embed.svg">
-    <meta property="og:image" content="/embed.png">
-    <meta property="og:image:alt" content="Snywy — Gabriel 'Snywy' Furtado portfolio">
-    <meta property="og:image:type" content="image/svg+xml">
-    <meta property="og:image:type" content="image/png">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
     <meta property="og:locale" content="en_US">
 
-    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:card" content="summary">
     <meta name="twitter:site" content="@realsnywy">
-    <meta name="twitter:title" content="Snywy">
+    <meta name="twitter:title" content="Snywy — Gabriel 'Snywy' Furtado">
     <meta name="twitter:description"
-        content="Gabriel 'Snywy' Furtado's portfolio. Creative projects in game dev, audio, and automation.">
-    <meta name="twitter:image" content="/embed.png">
-
-    <link rel="image_src" href="/embed.png">
+        content="Portfolio of Gabriel 'Snywy' Furtado, with work in game development, audio, automation, and creative systems.">
     <meta name="theme-color" content="#264739">
 
     <link rel="icon" id="site-favicon" href="/favicon-dark.ico">
@@ -37,23 +28,34 @@
         (function () {
             const favicon = document.getElementById('site-favicon');
             const themeQuery = window.matchMedia('(prefers-color-scheme: dark)');
+            let debounceTimeout;
 
             function updateFavicon() {
                 favicon.href = themeQuery.matches ? '/favicon-dark.ico' : '/favicon-light.ico';
             }
 
+            function debouncedUpdate() {
+                clearTimeout(debounceTimeout);
+                debounceTimeout = setTimeout(updateFavicon, 100);
+            }
+
             updateFavicon();
-            themeQuery.addEventListener('change', updateFavicon);
+            themeQuery.addEventListener('change', debouncedUpdate);
         })();
     </script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+    <link rel="dns-prefetch" href="https://i.imgur.com">
+    <link rel="dns-prefetch" href="https://jinxxy-cdn.com">
+    <link rel="dns-prefetch" href="https://public-files.gumroad.com">
     <link rel="preload"
-        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Exo:wght@400;700&display=swap"
-        as="style" onload="this.rel='stylesheet'">
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Exo:wght@400;700&display=fallback"
+        as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript>
-        <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Exo:wght@400;700&display=swap"
+        <link
+            href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Exo:wght@400;700&display=fallback"
             rel="stylesheet">
     </noscript>
 
@@ -112,16 +114,16 @@
             <div class="collapse navbar-collapse justify-content-end" id="main-nav">
                 <ul class="navbar-nav align-items-md-center">
                     <li class="nav-item">
-                        <a class="nav-link" href="#" onclick="navigateTo('home'); return false;"
-                            data-i18n="navHome">Home</a>
+                        <a class="nav-link" href="#" onclick="navigateTo('projects'); return false;"
+                            data-i18n="navProjects">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" onclick="navigateTo('comms'); return false;"
+                            data-i18n="navComms">Comms</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#" onclick="navigateTo('about'); return false;"
                             data-i18n="navAbout">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#" onclick="navigateTo('projects'); return false;"
-                            data-i18n="navProjects">Projects</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#" onclick="navigateTo('arsenal'); return false;"
@@ -147,7 +149,7 @@
         </div>
     </nav>
 
-    <audio id="logo-squeak" src="squeak.wav" preload="auto"></audio>
+    <audio id="logo-squeak" src="squeak.wav"></audio>
 
     <!-- Main Content Area -->
     <main class="app-main flex-grow-1">
@@ -168,31 +170,32 @@
         const indexTranslations = {
             en: {
                 indexTitle: 'Snywy',
-                navHome: 'Home',
                 navAbout: 'About',
                 navProjects: 'Projects',
                 navArsenal: 'Arsenal',
                 navSocials: 'Socials',
+                navComms: 'Comms',
+
                 footerText: '2026 @ Gabriel "Snywy" Furtado',
                 languageSelectorAria: 'Language selector'
             },
             pt: {
                 indexTitle: 'Snywy',
-                navHome: 'Início',
                 navAbout: 'Sobre',
                 navProjects: 'Projetos',
                 navArsenal: 'Arsenal',
                 navSocials: 'Redes',
+                navComms: 'Comissões',
                 footerText: '2026 @ Gabriel "Snywy" Furtado',
                 languageSelectorAria: 'Seletor de idioma'
             },
             es: {
                 indexTitle: 'Snywy',
-                navHome: 'Inicio',
                 navAbout: 'Sobre mí',
                 navProjects: 'Proyectos',
                 navArsenal: 'Arsenal',
                 navSocials: 'Redes',
+                navComms: 'Comisiones',
                 footerText: '2026 @ Gabriel "Snywy" Furtado',
                 languageSelectorAria: 'Selector de idioma'
             }
