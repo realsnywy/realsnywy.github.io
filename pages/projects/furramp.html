@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FurrAMP - Snywy</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="../../styles.css">
+  <style>
+    .back-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: rgba(var(--text-rgb), 0.7);
+      text-decoration: none;
+      margin-bottom: 30px;
+      font-size: 0.95rem;
+      transition: all 0.3s ease;
+    }
+
+    .back-btn:hover {
+      color: var(--text-primary);
+      transform: translateX(-5px);
+    }
+
+    .project-detail {
+      max-width: 800px;
+      margin: 0 auto;
+      animation: fadeIn 0.8s ease-out;
+    }
+
+    .project-header-detail {
+      margin-bottom: 40px;
+    }
+
+    .project-detail h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+
+    .project-title-with-icon {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .project-icon {
+      flex: 0 0 auto;
+      width: 2.2rem;
+      height: 2.2rem;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .project-icon svg {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+
+    .project-meta-detail {
+      display: flex;
+      gap: 12px;
+      margin-bottom: 20px;
+      flex-wrap: wrap;
+    }
+
+    .section-title {
+      font-size: 1.3rem;
+      font-weight: 700;
+      margin-top: 30px;
+      margin-bottom: 15px;
+      color: var(--text-primary);
+    }
+
+    .project-detail p {
+      line-height: 1.8;
+      color: rgba(var(--text-rgb), 0.85);
+      margin-bottom: 15px;
+    }
+
+    .features-list {
+      list-style: none;
+      padding: 0;
+      margin: 20px 0;
+    }
+
+    .features-list li {
+      padding: 10px 0;
+      padding-left: 30px;
+      color: rgba(var(--text-rgb), 0.8);
+      position: relative;
+    }
+
+    .features-list li:before {
+      content: "▸";
+      position: absolute;
+      left: 0;
+      color: rgba(var(--text-rgb), 0.5);
+    }
+
+    .highlight-box {
+      background: rgba(var(--text-rgb), 0.05);
+      border-left: 3px solid rgba(var(--text-rgb), 0.3);
+      padding: 20px;
+      border-radius: 4px;
+      margin: 20px 0;
+    }
+
+    .project-cta,
+    .cta-actions {
+      margin-top: 28px;
+      padding-top: 20px;
+      border-top: 1px solid rgba(var(--text-rgb), 0.12);
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .cta-actions .custom-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      border-radius: 6px;
+      text-decoration: none;
+    }
+
+    .download-btn {
+      background: #3ea05a;
+      border-color: #3ea05a;
+      color: #ffffff;
+    }
+
+    .download-btn:disabled,
+    .download-btn[aria-disabled="true"] {
+      opacity: 0.45;
+      cursor: not-allowed;
+      pointer-events: none;
+      box-shadow: none;
+    }
+
+    .github-btn {
+      background: #24292e;
+      border-color: #24292e;
+      color: #ffffff;
+    }
+
+    .github-btn:disabled,
+    .github-btn[aria-disabled="true"] {
+      opacity: 0.45;
+      cursor: not-allowed;
+      pointer-events: none;
+      box-shadow: none;
+    }
+
+    .status-banner {
+      background: rgba(var(--text-rgb), 0.07);
+      padding: 14px 18px;
+      border-radius: 6px;
+      margin: 18px 0;
+      text-align: center;
+      font-weight: 600;
+      color: rgba(var(--text-rgb), 0.95);
+    }
+  </style>
+</head>
+
+<body class="d-flex flex-column min-vh-100" data-i18n-title="furrampTitle"
+  style="background-color: var(--bg-primary); color: var(--text-primary);">
+
+  <main class="container px-3 flex-grow-1 py-4">
+    <div class="project-detail">
+      <a href="#" onclick="parent.navigateTo('projects'); return false;" class="back-btn">
+        <i class="bi bi-arrow-left"></i> <span data-i18n="projectBack">Back to Projects</span>
+      </a>
+
+      <div class="project-header-detail">
+        <h1 class="project-title-with-icon">
+          <span class="project-icon" aria-hidden="true">
+            <!-- Inline SVG logo for FurrAMP -->
+            <svg width="96" height="95" viewBox="0 0 96 95" version="1.1" xmlns="http://www.w3.org/2000/svg">
+              <g transform="matrix(1,0,0,1,0,-2)">
+                <path
+                  d="M14,43.2L14,50.8C14,51.462 13.462,52 12.8,52L11.2,52C10.538,52 10,51.462 10,50.8L10,43.2C10,42.538 10.538,42 11.2,42L12.8,42C13.462,42 14,42.538 14,43.2Z"
+                  style="fill:rgb(0,147,162);" />
+                <path
+                  d="M20,37.2L20,54.8C20,55.462 19.462,56 18.8,56L17.2,56C16.538,56 16,55.462 16,54.8L16,37.2C16,36.538 16.538,36 17.2,36L18.8,36C19.462,36 20,36.538 20,37.2Z"
+                  style="fill:rgb(0,147,162);" />
+                <path
+                  d="M32,29.2L32,36.8C32,37.462 31.462,38 30.8,38L29.2,38C28.538,38 28,37.462 28,36.8L28,29.2C28,28.538 28.538,28 29.2,28L30.8,28C31.462,28 32,28.538 32,29.2Z"
+                  style="fill:rgb(0,147,162);" />
+                <path
+                  d="M38,19.2L38,40.8C38,41.462 37.462,42 36.8,42L35.2,42C34.538,42 34,41.462 34,40.8L34,19.2C34,18.538 34.538,18 35.2,18L36.8,18C37.462,18 38,18.538 38,19.2Z"
+                  style="fill:rgb(0,147,162);" />
+                <path
+                  d="M44,19.2L44,36.8C44,37.462 43.462,38 42.8,38L41.2,38C40.538,38 40,37.462 40,36.8L40,19.2C40,18.538 40.538,18 41.2,18L42.8,18C43.462,18 44,18.538 44,19.2Z"
+                  style="fill:rgb(0,147,162);" />
+                <path
+                  d="M56,19.2L56,36.8C56,37.462 55.462,38 54.8,38L53.2,38C52.538,38 52,37.462 52,36.8L52,19.2C52,18.538 52.538,18 53.2,18L54.8,18C55.462,18 56,18.538 56,19.2Z"
+                  style="fill:rgb(0,147,162);" />
+                <path
+                  d="M62,19.2L62,40.8C62,41.462 61.462,42 60.8,42L59.2,42C58.538,42 58,41.462 58,40.8L58,19.2C58,18.538 58.538,18 59.2,18L60.8,18C61.462,18 62,18.538 62,19.2Z"
+                  style="fill:rgb(0,147,162);" />
+                <path
+                  d="M68,29.2L68,36.8C68,37.462 67.462,38 66.8,38L65.2,38C64.538,38 64,37.462 64,36.8L64,29.2C64,28.538 64.538,28 65.2,28L66.8,28C67.462,28 68,28.538 68,29.2Z"
+                  style="fill:rgb(0,147,162);" />
+                <path
+                  d="M80,37.2L80,54.8C80,55.462 79.462,56 78.8,56L77.2,56C76.538,56 76,55.462 76,54.8L76,37.2C76,36.538 76.538,36 77.2,36L78.8,36C79.462,36 80,36.538 80,37.2Z"
+                  style="fill:rgb(0,147,162);" />
+                <path
+                  d="M86,43.2L86,50.8C86,51.462 85.462,52 84.8,52L83.2,52C82.538,52 82,51.462 82,50.8L82,43.2C82,42.538 82.538,42 83.2,42L84.8,42C85.462,42 86,42.538 86,43.2Z"
+                  style="fill:rgb(0,147,162);" />
+                <path
+                  d="M26,63.2L26,70.8C26,71.462 25.462,72 24.8,72L23.2,72C22.538,72 22,71.462 22,70.8L22,63.2C22,62.538 22.538,62 23.2,62L24.8,62C25.462,62 26,62.538 26,63.2Z"
+                  style="fill:rgb(0,147,162);" />
+                <path
+                  d="M32,51.2L32,76.8C32,77.462 31.462,78 30.8,78L29.2,78C28.538,78 28,77.462 28,76.8L28,51.2C28,50.538 28.538,50 29.2,50L30.8,50C31.462,50 32,50.538 32,51.2Z"
+                  style="fill:rgb(0,147,162);" />
+                <path
+                  d="M38,59.2L38,78.8C38,79.462 37.462,80 36.8,80L35.2,80C34.538,80 34,79.462 34,78.8L34,59.2C34,58.538 34.538,58 35.2,58L36.8,58C37.462,58 38,58.538 38,59.2Z"
+                  style="fill:rgb(0,147,162);" />
+                <path
+                  d="M44,47.2L44,79.8C44,80.462 43.462,81 42.8,81L41.2,81C40.538,81 40,80.462 40,79.8L40,47.2C40,46.538 40.538,46 41.2,46L42.8,46C43.462,46 44,46.538 44,47.2Z"
+                  style="fill:rgb(0,147,162);" />
+                <path
+                  d="M50,55.2L50,77.8C50,78.462 49.462,79 48.8,79L47.2,79C46.538,79 46,78.462 46,77.8L46,55.2C46,54.538 46.538,54 47.2,54L48.8,54C49.462,54 50,54.538 50,55.2Z"
+                  style="fill:rgb(0,147,162);" />
+                <path
+                  d="M56,47.2L56,79.8C56,80.462 55.462,81 54.8,81L53.2,81C52.538,81 52,80.462 52,79.8L52,47.2C52,46.538 52.538,46 53.2,46L54.8,46C55.462,46 56,46.538 56,47.2Z"
+                  style="fill:rgb(0,147,162);" />
+                <path
+                  d="M62,59.2L62,78.8C62,79.462 61.462,80 60.8,80L59.2,80C58.538,80 58,79.462 58,78.8L58,59.2C58,58.538 58.538,58 59.2,58L60.8,58C61.462,58 62,58.538 62,59.2Z"
+                  style="fill:rgb(0,147,162);" />
+                <path
+                  d="M68,51.2L68,76.8C68,77.462 67.462,78 66.8,78L65.2,78C64.538,78 64,77.462 64,76.8L64,51.2C64,50.538 64.538,50 65.2,50L66.8,50C67.462,50 68,50.538 68,51.2Z"
+                  style="fill:rgb(0,147,162);" />
+                <path
+                  d="M74,63.2L74,70.8C74,71.462 73.462,72 72.8,72L71.2,72C70.538,72 70,71.462 70,70.8L70,63.2C70,62.538 70.538,62 71.2,62L72.8,62C73.462,62 74,62.538 74,63.2Z"
+                  style="fill:rgb(0,147,162);" />
+              </g>
+            </svg>
+          </span>
+          <span>FurrAMP</span>
+        </h1>
+        <div class="project-meta-detail">
+          <span class="project-tag">Electron</span>
+          <span class="project-tag">React</span>
+          <span class="project-tag">TypeScript</span>
+          <span class="status-badge status-wip">Work in Progress</span>
+        </div>
+      </div>
+
+      <p data-i18n="furrampIntro">
+        FurrAMP is a modern, lightweight audio player with a Winamp-inspired soul. Desktop-first, built with Electron,
+        React and TypeScript. Features planned include local playback, queue management, visualizers, a 10-band
+        equalizer, tracker and retro format detection, Discord Rich Presence and Last.fm integration.
+      </p>
+
+      <div class="wip-notice status-banner" data-i18n="furrampWipNotice" data-i18n-html>
+        This project is actively evolving and may be significantly remade. The source code is not publicly available at
+        this time.
+      </div>
+
+      <h2 class="section-title" data-i18n="furrampHighlights">Highlights</h2>
+      <ul class="features-list">
+        <li data-i18n="furrampFeat1">Local file playback with queue management</li>
+        <li data-i18n="furrampFeat2">Real-time visualizer with multiple modes</li>
+        <li data-i18n="furrampFeat3">10-band equalizer with presets</li>
+        <li data-i18n="furrampFeat4">Tracker and retro format detection (.mod, .xm, .s3m, .it, .vgm, .nsf, .spc)</li>
+        <li data-i18n="furrampFeat5">Discord Rich Presence and Last.fm integrations</li>
+      </ul>
+
+      <!-- Quick Start, Format Support, and License removed per request -->
+
+
+    </div>
+  </main>
+
+  <script src="../../lang.js"></script>
+  <script>
+    const pageTranslations = {
+      en: {
+        projectBack: 'Back to Projects',
+        furrampTitle: 'FurrAMP - Snywy',
+        furrampIntro: 'FurrAMP is a modern, lightweight audio player with a Winamp-inspired soul. Desktop-first, built with Electron, React and TypeScript. Features planned include local playback, queue management, visualizers, a 10-band equalizer, tracker and retro format detection, Discord Rich Presence and Last.fm integration.',
+        furrampWipNotice: 'This project is actively evolving and may be significantly remade. The source code is not publicly available at this time.',
+        furrampHighlights: 'Highlights',
+        furrampFeat1: 'Local file playback with queue management',
+        furrampFeat2: 'Real-time visualizer with multiple modes',
+        furrampFeat3: '10-band equalizer with presets',
+        furrampFeat4: 'Tracker and retro format detection (.mod, .xm, .s3m, .it, .vgm, .nsf, .spc)',
+        furrampFeat5: 'Discord Rich Presence and Last.fm integrations',
+        /* Quick Start, Format Support, and License removed */
+      },
+      pt: {
+        projectBack: 'Voltar para Projetos',
+        furrampTitle: 'FurrAMP - Snywy',
+        furrampIntro: 'FurrAMP é um reprodutor de áudio moderno e leve com alma inspirada no Winamp. Prioriza desktop, construído com Electron, React e TypeScript. Recursos planejados incluem reprodução local, gerenciamento de fila, visualizadores, equalizador de 10 bandas, detecção de trackers e formatos retrô, Discord Rich Presence e integração com Last.fm.',
+        furrampWipNotice: 'Este projeto está em evolução e pode ser totalmente refeito. O código-fonte não está disponível publicamente no momento.',
+        furrampHighlights: 'Destaques',
+        furrampFeat1: 'Reprodução de arquivos locais com gerenciamento de fila',
+        furrampFeat2: 'Visualizador em tempo real com múltiplos modos',
+        furrampFeat3: 'Equalizador de 10 bandas com presets',
+        furrampFeat4: 'Detecção de trackers e formatos retrô (.mod, .xm, .s3m, .it, .vgm, .nsf, .spc)',
+        furrampFeat5: 'Integrações com Discord Rich Presence e Last.fm',
+        /* Quick Start, Format Support, and License removed */
+      },
+      es: {
+        projectBack: 'Volver a Proyectos',
+        furrampTitle: 'FurrAMP - Snywy',
+        furrampIntro: 'FurrAMP es un reproductor de audio moderno y ligero con alma inspirada en Winamp. Enfocado en escritorio, construido con Electron, React y TypeScript. Las características planificadas incluyen reproducción local, gestión de cola, visualizadores, un ecualizador de 10 bandas, detección de trackers y formatos retro, Discord Rich Presence e integración con Last.fm.',
+        furrampWipNotice: 'Este proyecto está en evolución y puede ser rehecho significativamente. El código fuente no está disponible públicamente en este momento.',
+        furrampHighlights: 'Puntos destacados',
+        furrampFeat1: 'Reproducción de archivos locales con gestión de cola',
+        furrampFeat2: 'Visualizador en tiempo real con múltiples modos',
+        furrampFeat3: 'Ecualizador de 10 bandas con presets',
+        furrampFeat4: 'Detección de trackers y formatos retro (.mod, .xm, .s3m, .it, .vgm, .nsf, .spc)',
+        furrampFeat5: 'Integraciones con Discord Rich Presence y Last.fm',
+        /* Quick Start, Format Support, and License removed */
+      }
+    };
+
+    function applyLanguageFromParent(language) {
+      window.PortfolioLanguage.applyTranslations(pageTranslations, language);
+    }
+
+    window.applyLanguageFromParent = applyLanguageFromParent;
+    window.PortfolioLanguage.initPageLanguage(pageTranslations);
+  </script>
+
+</body>
+
+</html>

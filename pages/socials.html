@@ -29,6 +29,31 @@
       margin-bottom: 30px;
     }
 
+    .discord-banner {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      background: #5865F2;
+      color: #ffffff;
+      padding: 12px;
+      border-radius: 10px;
+      text-decoration: none;
+      margin-bottom: 18px;
+    }
+
+    .discord-banner .icon {
+      width: 28px;
+      height: 28px;
+      flex: 0 0 28px;
+      -webkit-mask: var(--si-icon, none) no-repeat center/contain;
+      mask: var(--si-icon, none) no-repeat center/contain;
+      background-color: #ffffff;
+    }
+
+    .pt-only {
+      display: none;
+    }
+
     .socials-header h1 {
       font-size: 2.5rem;
       margin-bottom: 10px;
@@ -37,7 +62,7 @@
     .socials-subtitle {
       color: rgba(var(--text-rgb), 0.68);
       font-size: 1.1rem;
-      margin-bottom: 40px;
+      margin-bottom: 18px;
     }
 
     .social-category {
@@ -241,6 +266,66 @@
       --si-icon: url('https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/github.svg');
     }
 
+    /* PT-only Discord banner styling: centered and visually consistent */
+    .discord-banner {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      max-width: 900px;
+      margin: 12px auto;
+      padding: 14px 18px;
+      border-radius: 10px;
+      background: linear-gradient(90deg, rgba(88, 101, 242, 1) 0%, rgba(71, 82, 196, 1) 100%);
+      color: #ffffff;
+      border: none;
+      text-decoration: none;
+      box-shadow: 0 6px 18px rgba(71, 82, 196, 0.12);
+    }
+
+    .discord-banner .icon {
+      width: 40px;
+      height: 40px;
+      display: inline-block;
+      flex: 0 0 40px;
+    }
+
+    .discord-banner-img {
+      width: 40px;
+      height: 40px;
+      object-fit: cover;
+      border-radius: 8px;
+      flex: 0 0 40px;
+      box-shadow: none;
+    }
+
+    .discord-banner:hover {
+      transform: translateY(-4px) scale(1.01);
+      box-shadow: 0 16px 34px rgba(71, 82, 196, 0.22);
+      text-decoration: none;
+    }
+
+    .discord-banner {
+      transition: all 0.18s ease;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+    }
+
+    .discord-banner>div {
+      line-height: 1.25;
+      font-size: 0.98rem;
+    }
+
+    .discord-banner strong {
+      font-weight: 700;
+      margin-right: 6px;
+    }
+
+    .discord-banner:focus-visible {
+      outline: 3px solid rgba(88, 101, 242, 0.22);
+      outline-offset: 4px;
+    }
+
     @media (max-width: 480px) {
       .social-grid {
         grid-template-columns: 1fr;
@@ -248,6 +333,11 @@
 
       .music-grid {
         grid-template-columns: 1fr;
+      }
+
+      .discord-banner {
+        padding: 12px 14px;
+        gap: 10px;
       }
     }
   </style>
@@ -262,6 +352,17 @@
         <h1 data-i18n="socialsHeading">Find Me Online</h1>
         <p class="socials-subtitle" data-i18n="socialsSubtitle">Tap any card to open my profile or page.</p>
       </div>
+
+      <!-- PT-only Discord banner -->
+      <a class="discord-banner pt-only" href="https://discord.gg/tTgCYYMufr" target="_blank" rel="noopener noreferrer"
+        aria-label="Entrar no servidor Discord">
+        <img class="discord-banner-img" src="https://i.imgur.com/aQwS5gE.png" alt="Lixeira do Bolinha" width="40"
+          height="40">
+        <div>
+          <strong>Lixeira do Bolinha:</strong> Entre no servidor e receba o cargo de meu cobaia.
+        </div>
+        <i class="bi bi-box-arrow-up-right ms-auto" aria-hidden="true" style="font-size:1.05rem; opacity:0.95;"></i>
+      </a>
 
       <section class="social-category" aria-labelledby="socials-core">
         <h2 id="socials-core" data-i18n="socialsCore">Core Socials</h2>
@@ -413,6 +514,15 @@
                   aria-hidden="true"></span>SoundCloud</span>
             </div>
           </a>
+
+          <a class="music-card" href="https://music.youtube.com/playlist?list=PLqqNyoFFI7ZfUMR4hagNLmFsWXx2Ha66a"
+            target="_blank" rel="noopener noreferrer" aria-label="Open squeaky hits on YouTube Music">
+            <img src="https://i.imgur.com/Mxz7ezJ.jpeg" alt="Squeaky Hits cover art">
+            <div class="music-overlay">
+              <span class="music-platform"><span class="social-icon si-youtube" aria-hidden="true"></span>YouTube
+                Music</span>
+            </div>
+          </a>
         </div>
       </section>
 
@@ -480,12 +590,52 @@
       }
     };
 
+    function normalizeLangTag(tag) {
+      return (tag || '').toString().toLowerCase();
+    }
+
+    function updatePtVisibility(lang) {
+      const isPt = normalizeLangTag(lang).startsWith('pt');
+      const els = document.querySelectorAll('.pt-only');
+      els.forEach(e => {
+        e.style.display = isPt ? '' : 'none';
+      });
+    }
+
+    function getCurrentLang() {
+      if (window.PortfolioLanguage) {
+        // prefer explicit language property if available
+        const cand = window.PortfolioLanguage.language || window.PortfolioLanguage.currentLanguage || window.PortfolioLanguage.getLanguage && window.PortfolioLanguage.getLanguage();
+        if (cand) return normalizeLangTag(cand);
+      }
+      return normalizeLangTag(document.documentElement.lang) || 'en';
+    }
+
     function applyLanguageFromParent(language) {
       window.PortfolioLanguage.applyTranslations(pageTranslations, language);
+      updatePtVisibility(language);
     }
 
     window.applyLanguageFromParent = applyLanguageFromParent;
     window.PortfolioLanguage.initPageLanguage(pageTranslations);
+    // Ensure PT-only elements are shown/hidden on initial load
+    updatePtVisibility(getCurrentLang());
+
+    // Poll for language changes briefly in case the parent sets language after init
+    (function pollLanguage() {
+      let lastLang = getCurrentLang();
+      let checks = 0;
+      const maxChecks = 20; // ~5 seconds at 250ms
+      const interval = setInterval(() => {
+        const lang = getCurrentLang();
+        if (lang !== lastLang) {
+          updatePtVisibility(lang);
+          lastLang = lang;
+        }
+        checks++;
+        if (checks >= maxChecks) clearInterval(interval);
+      }, 250);
+    })();
   </script>
 
 </body>

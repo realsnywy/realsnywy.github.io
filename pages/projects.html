@@ -226,6 +226,30 @@
       <!-- In Progress -->
       <h2 class="section-heading" data-i18n="projectsInProgress">⚙️ In Progress</h2>
 
+      <!-- FurrAMP (moved from Ideas) -->
+      <div class="project-item" onclick="parent.navigateTo('projects/furramp')">
+        <div class="project-header">
+          <h3 class="project-title">FurrAMP</h3>
+          <span class="status-badge status-wip" data-i18n="statusWip">Work in Progress</span>
+        </div>
+        <p class="project-description">
+          <span data-i18n="descFurramp">A modern, lightweight audio player with a Winamp-inspired soul. Built with
+            Electron, React, and TypeScript for a desktop-first experience featuring local playback, visualizers, an
+            equalizer, and tracker/retro format detection.</span>
+        </p>
+        <div class="project-footer">
+          <div>
+            <span class="project-tag" data-i18n="tagJavaScript">JavaScript</span>
+            <span class="project-tag" data-i18n="tagAudio">Audio</span>
+            <span class="project-tag" data-i18n="tagCrossPlatform">Cross-platform</span>
+          </div>
+          <p style="margin: 0; font-size: 0.85rem; color: var(--soft-text);" data-i18n="projectsSourceClosed"
+            data-i18n-html>
+            <i class="bi bi-lock me-1"></i>Source code not publicly available yet.
+          </p>
+        </div>
+      </div>
+
       <!-- BeePR -->
       <div class="project-item" onclick="parent.navigateTo('projects/beepr')">
         <div class="project-header">
@@ -254,31 +278,7 @@
       <!-- Ideas -->
       <h2 class="section-heading" data-i18n="projectsIdeas">💡 Ideas</h2>
 
-      <div class="project-item project-item-static">
-        <div class="project-header">
-          <h3 class="project-title">Project A [AMP]</h3>
-          <span class="status-badge status-unplanned" data-i18n="statusUnplanned">Unplanned</span>
-        </div>
-        <p class="project-description">
-          <span data-i18n="descProjectA">A modern audio player inspired by classic Winamp: lightweight, skinnable,
-            plugin-friendly, and built for
-            desktop and mobile. Planned features include tracker and retro format support, visualizers, equalizer,
-            Last.fm scrobbling, and Discord Rich Presence.
-          </span>
-        </p>
-        <div class="project-footer">
-          <div>
-            <span class="project-tag" data-i18n="tagFlutter">Flutter</span>
-            <span class="project-tag" data-i18n="tagDart">Dart</span>
-            <span class="project-tag" data-i18n="tagAudio">Audio</span>
-            <span class="project-tag" data-i18n="tagCrossPlatform">Cross-platform</span>
-          </div>
-          <p style="margin: 0; font-size: 0.85rem; color: rgba(var(--text-rgb), 0.6);"
-            data-i18n="projectsConceptNotion">
-            Concept saved in Notion.
-          </p>
-        </div>
-      </div>
+
 
       <div class="project-item project-item-static">
         <div class="project-header">
@@ -382,6 +382,7 @@
         descBeepr: 'A multi-purpose Discord bot featuring a music system, fun commands, and utility features. Currently being actively developed with frequent updates and new functionality.',
         descLocalmemo: 'A lightweight vanilla JS notes and tasks app with localStorage persistence, custom lists, markdown editing, advanced search, and optional private GitHub Gist sync.',
         descProjectA: 'A modern audio player inspired by classic Winamp: lightweight, skinnable, plugin-friendly, and built for desktop and mobile. Planned features include tracker and retro format support, visualizers, equalizer, Last.fm scrobbling, and Discord Rich Presence.',
+        descFurramp: 'A modern, lightweight audio player with a Winamp-inspired soul. Built with Electron, React and TypeScript; desktop-first with visualizers, equalizer, and retro/tracker format support.',
         descProjectF: 'A 3D fighter inspired by Virtua Fighter and Tekken, focused on precise timing, technical depth, and a polished polygon-era visual identity. The goal is a classic arcade feel with modern smoothness.',
         descProjectP: 'A high-speed 3D action-platformer with a dragon protagonist, inspired by the ambition and scale of Sonic 06. Designed around momentum acts, non-stop rush stages, and aerial on-rails combat sequences.',
         descProjectR: 'A fast-paced arcade racer inspired by Virtua Racing and Ridge Racer with low-poly visuals, bright high-contrast colors, drift-heavy handling, and compact circuit tracks that are easy to learn but hard to master.',
@@ -434,6 +435,7 @@
         descBeepr: 'Um bot multifuncional para Discord com sistema de música, comandos divertidos e recursos utilitários. Está em desenvolvimento ativo com atualizações frequentes e novas funcionalidades.',
         descLocalmemo: 'Um app leve em JavaScript puro para notas e tarefas com persistência em localStorage, listas personalizadas, edição Markdown, busca avançada e sincronização opcional com GitHub Gist privado.',
         descProjectA: 'Um player de áudio moderno inspirado no Winamp clássico: leve, personalizável, com suporte a plugins e pensado para desktop e mobile. Recursos planejados incluem suporte a trackers e formatos retrô, visualizadores, equalizador, scrobbling no Last.fm e Discord Rich Presence.',
+        descFurramp: 'Um player de áudio moderno e leve com alma Winamp. Construído com Electron, React e TypeScript; foco desktop, com visualizadores, equalizador e suporte a formatos retrô e trackers.',
         descProjectF: 'Um jogo de luta 3D inspirado em Virtua Fighter e Tekken, focado em timing preciso, profundidade técnica e uma identidade visual poligonal. A proposta é uma sensação clássica de arcade com fluidez moderna.',
         descProjectP: 'Um action-platformer 3D de alta velocidade com protagonista dragão, inspirado na ambição e escala de Sonic 06. Projetado em torno de fases de impulso contínuo e sequências aéreas on-rails.',
         descProjectR: 'Um jogo de corrida arcade acelerado inspirado em Virtua Racing e Ridge Racer, com visual low-poly, cores vibrantes de alto contraste, dirigibilidade focada em drift e pistas compactas fáceis de aprender e difíceis de dominar.',
@@ -486,6 +488,7 @@
         descBeepr: 'Un bot multifuncional de Discord con sistema de música, comandos divertidos y funciones de utilidad. Actualmente se desarrolla activamente con actualizaciones frecuentes y nuevas funciones.',
         descLocalmemo: 'Una app ligera de notas y tareas en JavaScript puro con persistencia en localStorage, listas personalizadas, edición Markdown, búsqueda avanzada y sincronización privada opcional con GitHub Gist.',
         descProjectA: 'Un reproductor de audio moderno inspirado en el Winamp clásico: ligero, personalizable, compatible con plugins y pensado para escritorio y móvil. Las funciones previstas incluyen soporte para trackers y formatos retro, visualizadores, ecualizador, scrobbling de Last.fm y Discord Rich Presence.',
+        descFurramp: 'Un reproductor de audio moderno y ligero con espíritu Winamp. Construido con Electron, React y TypeScript; orientado a escritorio con visualizadores, ecualizador y soporte para formatos retro y trackers.',
         descProjectF: 'Un juego de lucha 3D inspirado en Virtua Fighter y Tekken, centrado en el timing preciso, la profundidad técnica y una identidad visual pulida de la era poligonal. La meta es una sensación clásica de arcade con fluidez moderna.',
         descProjectP: 'Un action-platformer 3D de alta velocidad con un protagonista dragón, inspirado en la ambición y escala de Sonic 06. Diseñado alrededor de fases de impulso continuo, secciones de rush sin pausa y secuencias aéreas sobre raíles.',
         descProjectR: 'Un juego de carreras arcade de ritmo rápido inspirado en Virtua Racing y Ridge Racer, con gráficos low-poly, colores brillantes de alto contraste, conducción centrada en el drift y circuitos compactos fáciles de aprender pero difíciles de dominar.',
