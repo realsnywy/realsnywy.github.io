@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Coinquiri - Snywy</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+    integrity="sha384-sRIlFvYILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="../../styles.css">
+  <style>
+    .project-detail {
+      max-width: 800px;
+      margin: 0 auto;
+      animation: fadeIn 0.8s ease-out;
+    }
+
+    .back-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: rgba(var(--text-rgb), 0.7);
+      text-decoration: none;
+      margin-bottom: 30px;
+      transition: all 0.3s ease;
+    }
+
+    .back-btn:hover {
+      color: var(--text-primary);
+      transform: translateX(-5px);
+    }
+
+    .project-detail h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+
+    .project-meta-detail {
+      display: flex;
+      gap: 12px;
+      margin-bottom: 30px;
+      flex-wrap: wrap;
+    }
+
+    .project-detail p {
+      line-height: 1.8;
+      color: rgba(var(--text-rgb), 0.85);
+    }
+
+    .features-list {
+      list-style: none;
+      padding: 0;
+      margin: 20px 0;
+    }
+
+    .features-list li {
+      padding: 10px 0 10px 30px;
+      color: rgba(var(--text-rgb), 0.8);
+      position: relative;
+    }
+
+    .features-list li::before {
+      content: "▸";
+      position: absolute;
+      left: 0;
+      color: rgba(var(--text-rgb), 0.5);
+    }
+
+    .status-banner {
+      background: rgba(var(--text-rgb), 0.07);
+      padding: 14px 18px;
+      border-radius: 6px;
+      margin: 18px 0;
+      text-align: center;
+      font-weight: 600;
+      color: rgba(var(--text-rgb), 0.95);
+    }
+
+    .section-title {
+      font-size: 1.3rem;
+      font-weight: 700;
+      margin-top: 30px;
+      margin-bottom: 15px;
+    }
+  </style>
+</head>
+
+<body class="d-flex flex-column min-vh-100" data-i18n-title="coinquiriTitle"
+  style="background-color: var(--bg-primary); color: var(--text-primary);">
+
+  <main class="container px-3 flex-grow-1 py-4">
+    <div class="project-detail">
+      <a href="#" onclick="parent.navigateTo('projects'); return false;" class="back-btn">
+        <i class="bi bi-arrow-left"></i> <span data-i18n="projectBack">Back to Projects</span>
+      </a>
+
+      <h1>Coinquiri</h1>
+      <div class="project-meta-detail">
+        <span class="project-tag">HTML</span>
+        <span class="project-tag">CSS</span>
+        <span class="project-tag">JavaScript</span>
+        <span class="project-tag">Tailwind CSS</span>
+        <span class="project-tag">Chart.js</span>
+        <span class="project-tag">SheetJS</span>
+        <span class="status-badge status-wip" data-i18n="statusWip">Work in Progress</span>
+      </div>
+
+      <p data-i18n="coinquiriIntro">
+        Coinquiri is a lightweight, local-first personal finance manager built as a static web app. It helps users track
+        transactions, plan budgets and savings goals, and understand their cash flow without an account or backend.
+      </p>
+
+      <div class="status-banner" data-i18n="coinquiriStatus" data-i18n-html>
+        <i class="bi bi-lock me-1"></i>Source code is not publicly available yet.
+      </div>
+
+      <h2 class="section-title" data-i18n="coinquiriFeatures">Key Features</h2>
+      <ul class="features-list">
+        <li data-i18n="coinquiriFeature1">Local transaction tracking with search, filters, and individual deletion</li>
+        <li data-i18n="coinquiriFeature2">Budgets, savings goals, currency, language, and theme settings</li>
+        <li data-i18n="coinquiriFeature3">Expense and 12-month cash-flow charts</li>
+        <li data-i18n="coinquiriFeature4">Filtered monthly spreadsheet export and JSON backup/restore</li>
+        <li data-i18n="coinquiriFeature5">Browser-local persistence with no account or server required</li>
+      </ul>
+    </div>
+  </main>
+
+  <script src="../../lang.js"></script>
+  <script>
+    const pageTranslations = {
+      en: {
+        coinquiriTitle: 'Coinquiri - Snywy',
+        projectBack: 'Back to Projects',
+        statusWip: 'Work in Progress',
+        coinquiriIntro: 'Coinquiri is a lightweight, local-first personal finance manager built as a static web app. It helps users track transactions, plan budgets and savings goals, and understand their cash flow without an account or backend.',
+        coinquiriStatus: '<i class="bi bi-lock me-1"></i>Source code is not publicly available yet.',
+        coinquiriFeatures: 'Key Features',
+        coinquiriFeature1: 'Local transaction tracking with search, filters, and individual deletion',
+        coinquiriFeature2: 'Budgets, savings goals, currency, language, and theme settings',
+        coinquiriFeature3: 'Expense and 12-month cash-flow charts',
+        coinquiriFeature4: 'Filtered monthly spreadsheet export and JSON backup/restore',
+        coinquiriFeature5: 'Browser-local persistence with no account or server required'
+      },
+      pt: {
+        coinquiriTitle: 'Coinquiri - Snywy',
+        projectBack: 'Voltar para Projetos',
+        statusWip: 'Em andamento',
+        coinquiriIntro: 'Coinquiri é um gerenciador leve e local-first de finanças pessoais, criado como um app web estático. Ele ajuda a acompanhar transações, planejar orçamentos e metas de economia e entender o fluxo de caixa sem conta ou backend.',
+        coinquiriStatus: '<i class="bi bi-lock me-1"></i>O código-fonte ainda não está disponível publicamente.',
+        coinquiriFeatures: 'Recursos Principais',
+        coinquiriFeature1: 'Controle local de transações com busca, filtros e exclusão individual',
+        coinquiriFeature2: 'Configurações de orçamentos, metas de economia, moeda, idioma e tema',
+        coinquiriFeature3: 'Gráficos de despesas e fluxo de caixa de 12 meses',
+        coinquiriFeature4: 'Exportação mensal filtrada para planilhas e backup/restauração em JSON',
+        coinquiriFeature5: 'Persistência local no navegador sem necessidade de conta ou servidor'
+      },
+      es: {
+        coinquiriTitle: 'Coinquiri - Snywy',
+        projectBack: 'Volver a Proyectos',
+        statusWip: 'En progreso',
+        coinquiriIntro: 'Coinquiri es un gestor ligero y local-first de finanzas personales creado como una app web estática. Ayuda a registrar transacciones, planificar presupuestos y metas de ahorro y entender el flujo de caja sin cuenta ni backend.',
+        coinquiriStatus: '<i class="bi bi-lock me-1"></i>El código fuente aún no está disponible públicamente.',
+        coinquiriFeatures: 'Funciones clave',
+        coinquiriFeature1: 'Seguimiento local de transacciones con búsqueda, filtros y eliminación individual',
+        coinquiriFeature2: 'Configuración de presupuestos, metas de ahorro, moneda, idioma y tema',
+        coinquiriFeature3: 'Gráficos de gastos y flujo de caja de 12 meses',
+        coinquiriFeature4: 'Exportación mensual filtrada a hojas de cálculo y copia de seguridad/restauración en JSON',
+        coinquiriFeature5: 'Persistencia local del navegador sin necesidad de cuenta ni servidor'
+      }
+    };
+
+    function applyLanguageFromParent(language) {
+      window.PortfolioLanguage.applyTranslations(pageTranslations, language);
+    }
+
+    window.applyLanguageFromParent = applyLanguageFromParent;
+    window.PortfolioLanguage.initPageLanguage(pageTranslations);
+  </script>
+
+</body>
+
+</html>
