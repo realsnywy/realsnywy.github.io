@@ -1,0 +1,76 @@
+body {
+  background-color: #2d2d2d;
+  color: #e5e5e5;
+  font-family: 'Orbitron', sans-serif;
+  margin: 0;
+}
+
+h1 {
+  margin: 10px 0;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+h2 {
+  margin: 10px 0;
+  font-size: 1.2rem;
+}
+
+/* Refined Button - Not too big or bold */
+.custom-btn {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border-width: 1px;
+  padding: 8px 20px;
+  transition: all 0.3s ease;
+  border-color: rgba(229, 229, 229, 0.4);
+  color: rgba(229, 229, 229, 0.8);
+}
+
+.custom-btn:hover {
+  background-color: #e5e5e5;
+  color: #2d2d2d;
+  border-color: #e5e5e5;
+  transform: translateY(-2px);
+}
+
+/* Page entrance animation */
+.fade-in {
+  animation: fadeIn 1.2s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive adjustments */
+@media (min-width: 768px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+}
+
+footer {
+  font-size: 14px;
+  font-family: 'Exo', sans-serif;
+  opacity: 0.6;
+}
+
+img {
+  height: auto;
+}
